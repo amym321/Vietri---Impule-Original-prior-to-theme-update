@@ -1,0 +1,175 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-555597070470.css' | asset_url }}" class="gf_page_style">
+<link data-instant-track rel="stylesheet" type="text/css" href= "https://d1um8515vdn9kb.cloudfront.net/libs/css/owl.carousel.min.css" class="gf_libs">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+         
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" id="r-1570091707033" class="gf_row gf_row-fluid gf_row-no-padding gf_row-gap-0" data-icon="gpicon-row" data-id="1570091707033" data-extraclass="" data-row-gap="0px"><div class="gf_col-md-12 gf_column" id="c-1543293209614" data-id="1543293209614" style="min-height: auto;"><div data-label="Hero Banner" id="m-1570091707080" class="module-wrap" data-icon="gpicon-herobanner" data-ver="1" data-id="1570091707080"><div class="module " data-image="https://ucarecdn.com/c1f21949-601c-4f50-be58-da11a64a2039/-/format/auto/-/preview/3000x3000/-/quality/lighter/" data-height="auto" data-effect="none" data-transition="0.5" data-fixedmode="0"><span data-index="1" class="item-content align-middle"></span></div><div class="gf_hero-bg-wrap"><div class="gf_hero-bg"></div></div><div class="gf_hero-overlay" style="background:transparent;opacity:0.2"></div></div></div></div><!--gfsplit--><div data-label="Row" id="r-1570091707023" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1570091707023" data-row-gap="0px" data-extraclass=""><div class="gf_col-md-12 gf_column" id="c-1543293255234" data-id="1543293255234" style="min-height: auto;"><div data-label="Heading" id="e-1570091707065" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1570091707065"><div class="elm text-edit gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><h2><font color="#0a0a3a">AMELIA'S STORY</font></h2></div></div><div data-label="Text Block" id="e-1570091707039" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1570091707039"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-justify-xs gf-elm-justify-lg" data-gemlang="en" data-exc=""><p>Founded in 2000 by Josephine Reid, AMELIA has a reputation for being the strictest organic skin care online store. That’s because we just won’t go near toxins! We’re obsessed about the products we stock. We research every ingredient, we probe each formulator and decline most brands. Our extensive ingredient ban list includes some found in products labelled as ‘natural’ and ‘organic’.</p></div></div><div data-label="Text Block" id="e-1570091707104" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1570091707104"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-justify-xs gf-elm-justify-lg" data-gemlang="en" data-exc=""><p>Ethical, vegan and cruelty free products are our speciality. All of our products are ethically sourced and cruelty free and we have also categorized every product on our shelves so you can shop vegan only with our easy to use drop-down filters. Our vegan makeup primers are ideal for perfect base.</p></div></div></div></div><!--gfsplit--><div data-label="Row" id="r-1570091706964" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1570091706964" data-row-gap="0px" data-extraclass=""><div class="gf_col-md-12 gf_column" id="c-1543293394283" data-id="1543293394283" style="min-height: auto;"><div data-label="Heading" id="e-1570091706981" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1570091706981"><div class="elm text-edit gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><h2>100% NATURAL</h2></div></div><div data-label="Text Block" id="e-1570091707049" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1570091707049"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-justify-xs gf-elm-justify-lg" data-gemlang="en" data-exc=""><p>Ethical, vegan and cruelty free products are our speciality. All of our products are ethically sourced and cruelty free and we have also categorized every product on our shelves so you can shop vegan only with our easy to use drop-down filters. Our vegan makeup primers are ideal for perfect base.</p></div></div><div data-label="Carousel" id="m-1570091707015" class="module-wrap" data-icon="gpicon-carousel" data-ver="1" data-id="1570091707015"><div class="module main-slider owl-carousel owl-theme " data-collg="5" data-colmd="5" data-colsm="5" data-colxs="5" data-marginlg="25px" data-marginmd="25px" data-marginsm="25px" data-marginxs="5px" data-dotslg="1" data-dotsmd="1" data-dotssm="1" data-dotsxs="1" data-navlg="1" data-navmd="1" data-navsm="0" data-navxs="0" data-navspeed="1200" data-autoplay="0" data-autoplaytimeout="5000" data-autoplayhoverpause="0" data-loop="0"><div class="item"><div data-index="1" class="item-content"><div data-label="Image" id="e-1570091707086" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1570091707086"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/acef59f0-7a7e-4a65-80b7-8fe7b2ec9f5e/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en"></div></div></div></div><div class="item"><div data-index="2" class="item-content"><div data-label="Image" id="e-1570091707047" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1570091707047"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/0898eeee-1967-46e6-9920-881e949bce35/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en"></div></div></div></div><div class="item"><div data-index="3" class="item-content"><div data-label="Image" id="e-1570091707017" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1570091707017"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/e750912b-28ba-4949-898e-c71af8ba8e8e/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en"></div></div></div></div><div class="item"><div data-index="4" class="item-content"><div data-label="Image" id="e-1570091706966" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1570091706966"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/9dbfbaa4-3f46-4491-b6ed-b458ca6da642/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en"></div></div></div></div><div class="item"><div data-index="5" class="item-content"><div data-label="Image" id="e-1570091706958" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1570091706958"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/121c415f-d6a6-4462-9304-cd91396f1a8f/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en"></div></div></div></div></div></div></div></div><!--gfsplit--><div data-label="Row" id="r-1570091707031" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1570091707031" data-row-gap="0px" data-extraclass=""><div class="gf_col-md-12 gf_column" id="c-1543293815357" data-id="1543293815357" style="min-height: auto;"><div data-label="Heading" id="e-1570091707056" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1570091707056"><div class="elm text-edit gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><h2>HOW IT'S MADE</h2></div></div><div data-label="Text Block" id="e-1570091707110" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1570091707110"><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p>Learn how AMELIA’s natural skin care products was made.</p></div></div><div data-label="Youtube" id="m-1570091707070" class="module-wrap" data-icon="gpicon-youtube" data-ver="1" data-id="1570091707070"><div class="module gf_module- " data-url="https://www.youtube.com/watch?v=rfphM8cZnC0" data-width="" data-height="" data-responsive="1" data-autoplay="0" data-controls="1" data-showinfo="0" data-modestbranding="0" data-fs="0" data-rel="0" data-hd="1" data-start="" data-end=""></div><div class="gf_youtube-overlay"></div></div></div></div><!--gfsplit--><div data-label="Row" id="r-1570091707094" class="gf_row" data-icon="gpicon-row" data-id="1570091707094"><div class="gf_col-md-12 gf_column" id="c-1543293964995" data-id="1543293964995"><div data-label="Heading" id="e-1570091706975" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1570091706975"><div class="elm text-edit gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><h2>OUR CUSTOMERS</h2></div></div><div data-label="Carousel" id="m-1570091706979" class="module-wrap" data-icon="gpicon-carousel" data-ver="1" data-id="1570091706979"><div class="module main-slider owl-carousel owl-theme " data-collg="1" data-colmd="1" data-colsm="1" data-colxs="1" data-marginlg="5px" data-marginmd="5px" data-marginsm="5px" data-marginxs="5px" data-dotslg="1" data-dotsmd="1" data-dotssm="1" data-dotsxs="1" data-navlg="1" data-navmd="1" data-navsm="0" data-navxs="0" data-navspeed="1200" data-autoplay="0" data-autoplaytimeout="5000" data-autoplayhoverpause="0" data-loop="0"><div class="item"><div data-index="1" class="item-content"><div data-label="Row" id="r-1570091707011" class="gf_row" data-icon="gpicon-row" data-id="1570091707011"><div class="gf_col-md-12 gf_column" id="c-1570091707011" data-id="1570091707011"><div data-label="Image" id="e-1570091707103" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1570091707103"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/bb29619e-1bec-4523-b585-462560d5fc1a/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en"></div></div><div data-label="Text Block" id="e-1570091707058" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1570091707058"><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><i>“I’m 47, I've used a lot of eye products but this is my favorite ever eye cream. I've barely any lines around my eyes now and I also use it on my frown lines between my brows, they're gone! I had an aha moment and decided to try it on my one deepish forehead line about a month ago and it's barely noticeable. Just get this stuff, you won't be disappointed!!”</i></p></div></div><div data-label="Text Block" id="e-1570091707004" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1570091707004"><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><font color="#ff4751"><b>Marlene W. Gordon</b></font></p></div></div><div data-label="Text Block" id="e-1570091706996" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1570091706996"><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p>Rated 5/5 stars on Coffee Bean Eye Cream</p></div></div></div></div></div></div><div class="item"><div data-index="2" class="item-content"><div data-label="Row" id="r-1570091707040" class="gf_row" data-icon="gpicon-row" data-id="1570091707040"><div class="gf_col-md-12 gf_column" id="c-1570091707040" data-id="1570091707040"><div data-label="Image" id="e-1570091707055" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1570091707055"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/2532d6d5-9276-4966-af0e-a23601874ad1/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en"></div></div><div data-label="Text Block" id="e-1570091707068" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1570091707068"><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p>“I’m 47, I've used a lot of eye products but this is my favorite ever eye cream. I've barely any lines around my eyes now and I also use it on my frown lines between my brows, they're gone! I had an aha moment and decided to try it on my one deepish forehead line about a month ago and it's barely noticeable. Just get this stuff, you won't be disappointed!!”</p></div></div><div data-label="Text Block" id="e-1570091707036" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1570091707036"><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><font color="#ff4751"><b>Marlene W. Gordon</b></font></p></div></div><div data-label="Text Block" id="e-1570091707034" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1570091707034"><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p>Rated 5/5 stars on Coffee Bean Eye Cream</p></div></div></div></div></div></div></div></div></div></div><!--gfsplit--><div data-label="Row" id="r-1570091707060" class="gf_row gf_row-fluid gf_row-no-padding gf_row-gap-0" data-icon="gpicon-row" data-id="1570091707060" data-extraclass="" data-row-gap="0px"><div class="gf_column gf_col-md-4 gf_col-sm-4" id="c-1543294413636" data-id="1543294413636" style="min-height: auto;"><div data-label="Hero Banner" id="m-1570091707028" class="module-wrap" data-icon="gpicon-herobanner" data-ver="1" data-id="1570091707028"><div class="module " data-image="https://d3dfaj4bukarbm.cloudfront.net/production/placeholders/image-1.svg" data-height="auto" data-effect="none" data-transition="0.5" data-fixedmode="0"><span data-index="1" class="item-content align-middle"></span></div><div class="gf_hero-bg-wrap"><div class="gf_hero-bg"></div></div><div class="gf_hero-overlay" style="background:transparent;opacity:0.2"></div></div></div><div class="gf_column gf_col-md-4 gf_col-sm-4" id="c-1543294443924" data-id="1543294443924" style="min-height: auto;"><div data-label="Hero Banner" id="m-1570091707095" class="module-wrap" data-icon="gpicon-herobanner" data-ver="1" data-id="1570091707095"><div class="module " data-image="https://d3dfaj4bukarbm.cloudfront.net/production/placeholders/image-1.svg" data-height="auto" data-effect="none" data-transition="0.5" data-fixedmode="0"><span data-index="1" class="item-content align-middle"></span></div><div class="gf_hero-bg-wrap"><div class="gf_hero-bg"></div></div><div class="gf_hero-overlay" style="background:transparent;opacity:0.2"></div></div></div><div class="gf_column gf_col-md-4 gf_col-sm-4" id="c-1543294443876" data-id="1543294443876" style="min-height: auto;"><div data-label="Hero Banner" id="m-1570091707111" class="module-wrap" data-icon="gpicon-herobanner" data-ver="1" data-id="1570091707111"><div class="module " data-image="https://d3dfaj4bukarbm.cloudfront.net/production/placeholders/image-1.svg" data-height="auto" data-effect="none" data-transition="0.5" data-fixedmode="0"><span data-index="1" class="item-content align-middle"></span></div><div class="gf_hero-bg-wrap"><div class="gf_hero-bg"></div></div><div class="gf_hero-overlay" style="background:transparent;opacity:0.2"></div></div></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		"https://d1um8515vdn9kb.cloudfront.net/libs/js/owl.carousel.min.js",
+		 "https://d1um8515vdn9kb.cloudfront.net/libs/js/gfyoutube.js",
+		 "https://www.youtube.com/player_api",
+		'{{ 'gem-article-555597070470.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

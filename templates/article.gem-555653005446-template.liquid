@@ -1,0 +1,170 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-555653005446.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1620404163150" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1620404163150" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1620404163182" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620404163182"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><strong>IL RITROVO: </strong>MOTHER'S DAY</p></div></div><div data-label="Image" data-key="image" id="e-1620404821625" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1620404821625" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/2d36e9c7-84d3-49c9-9727-82387c2ee8e5/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="2000" natural-height="1000"></div></div><div data-label="Row" data-key="row" id="r-1620406139973" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1620406139973" data-extraclass="" data-row-gap="0px" data-layout-lg="12" data-layout-md="12" data-layout-sm="12" data-layout-xs="12"><div class="gf_column gf_col-lg-12 gf_col-md-12 gf_col-sm-12 gf_col-xs-12" id="c-1614760291866" data-id="1614760291866"><div data-label="Row" data-key="row" id="r-1620406139986" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1620406139986" data-row-gap="0px" data-extraclass=""><div class="gf_col-lg-12 gf_column" id="c-1614760857017" data-id="1614760857017"><div data-label="Separator" data-key="separator" id="e-1620406139917" class="element-wrap" data-icon="gpicon-separator" data-ver="1.0" data-id="1620406139917"><div class="elm gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-xs gf-elm-center-sm" data-align="left" data-exc=""><hr class="gf_separator"></div></div></div></div><div data-label="Text Block" data-key="text-block" id="e-1620406139951" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620406139951"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-left-lg" data-gemlang="en" data-exc=""><p>A very special thank you to our beloved mothers and daughters - Betta, Novella, Annie, and Gracie - for today's Il Ritrovo cooking class.&nbsp;</p></div></div><div data-label="Text Block" data-key="text-block" id="e-1620407037549" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620407037549"><div class="elm text-edit gf-elm-left" data-gemlang="en"><p>The bond between a mother and daughter is so sacred and one to be cherished for a lifetime.&nbsp;<span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0.025em;">Wishing everyone a joyful and heartfelt Mother's Day weekend. xx!</span></p></div></div><div data-label="Heading" data-key="heading" id="e-1620407025707" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1620407025707"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1><strong>Mama Betta’s Tiramisu (Tiramisu di Mama Betta)</strong></h1></div></div><div data-label="Text Block" data-key="text-block" id="e-1620404163116" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620404163116"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><b>Tools</b></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">electric blender (preferred)</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">2 mixing bowls</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">8”Sq baker</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">spatula &amp; wooden spoon</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">measuring cup &amp; spoons</span></p><p><br><b><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">Ingredients</span></b></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">3 eggs</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">1 cup (150 gr) sugar</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">2 cups (300 gr) mascarpone</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">1 teaspoon (0.5 gr) vanilla</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">1 1/4 cup (300 ml) espresso coffee (cooled)</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">1 package ladyfingers</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">2-3 Tablespoons cocoa powder, unsweetened</span><br></p></div></div><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1620406059212" data-icon="gpicon-row" data-id="1620406059212" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620406059208" data-id="1620406059208"><div data-label="Image" data-key="image" id="e-1620406078433" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1620406078433" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/fbd57a61-aded-4c2d-8048-b2f5d9390254/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="3000" natural-height="2155"></div></div></div></div><div data-label="Text Block" data-key="text-block" id="e-1620406884666" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620406884666"><div class="elm text-edit gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-left" data-gemlang="en" data-exc=""><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(10, 10, 10);"><b style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">Directions</b></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(10, 10, 10);"><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">1. Brew the coffee, preferably in a moka. Set aside and let cool.</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">2. Separate egg yolks from egg whites.</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">3. In a bowl, whip the egg whites until stiff. In order to whip the egg whites pretty stiff there should not be any trace of yolk. When ready, set aside.</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">4. In a separate bowl, whisk the egg yolks with the sugar and vanilla until pale and smooth (2-3 minutes).</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">5. Add the mascarpone and whisk the cream slowly with the electric mixer.</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">6. Add the egg whites and mix with a wooden spoon, from bottom to top. Mix very slowly until it’s smooth and creamy.</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">7. Quickly dip ladyfingers into the espresso, one or two at a time. Line baker with the espresso dipped ladyfingers. IMPORTANT: Cookies should not soak up too much coffee, otherwise your tiramisu will turn out soggy.&nbsp;</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">8. Spread the mascarpone cream on top of the ladyfingers.</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">9. Add another layer of ladyfingers and then cover with the remaining mascarpone cream.</span><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">10. Lastly, sprinkle with cocoa powder. Let sit 3 hours in the refrigerator before serving (even better if you make the tiramisu the day before and let it sit overnight).</span></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(10, 10, 10);"><br><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><i>Buon appetito!</i></span></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(10, 10, 10);"><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(10, 10, 10);"><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">IGTV Il Ritrovo:&nbsp;</span><a href="http://bit.ly/ilRitrovo_MothersDay" class="" style="letter-spacing: 0px; box-shadow: rgb(71, 109, 242) 0px 2px 0px 0px;"><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">http://bit.ly/ilRitrovo_MothersDay</span></a></p></div></div></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1620406917973" data-icon="gpicon-row" data-id="1620406917973" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620406059208" data-id="1620406059208"><div data-label="Image" data-key="image" id="e-1620406917876" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1620406917876" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/07c0f77e-9ebe-40a5-bc8e-623820105dbd/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="1125" natural-height="1125"></div></div></div></div><!--gfsplit--><div data-label="Text Block" data-key="text-block" id="e-1620406255748" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620406255748"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;"><strong>A Mother's Day poem from Novella to Betta.</strong></p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;"><strong><br></strong></p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;"><strong>ITALIAN</strong></p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Dedicato a tutte le mamme, ma un po di più alla mia.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">L’essere madre è sempre una questione di ‘momento giusto’.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Prendersi per poi dare responsabilità,&nbsp;Iimitare&nbsp;per poi elargire libertà.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Le madri si addossano sì tutta la gioia, ma anche tutte le rogne senza riceverne nessun merito.&nbsp;</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Nonostante ciò sanno che nella vita (e in famiglia) i problemi si risolvono tanto con le azioni&nbsp;quanto con&nbsp;il silenzio. E lo fanno impeccabilmente.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Grazie per essere oltre che una donna sapiente un bellissimo essere umano.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Confido nell'apprendimento.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Con affetto,</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Titta</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;"><br></p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;"><strong>ENGLISH</strong></p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">To all mothers, but a little more to mine.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Being a mother and raising kids is all about ‘the right moment’.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">First you take responsibility then you give responsibility, first you restrict freedom then you lavish freedom.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Mothers take all the crap and get very few claps in return.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Nonetheless, they know that problems in life (and within the family) are solved through&nbsp;action as much as through inaction. And they do it flawlessly.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Thank you for being not only a wise woman but also a great human.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">I could settle for half the qualities.</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Love,</p><p style="margin-bottom: 1em; line-height: 1.4; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: start;">Titta</p></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-555653005446.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

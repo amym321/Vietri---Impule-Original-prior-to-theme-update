@@ -1,0 +1,44 @@
+<!-- Vip Table Section Code Start -->
+<div class="vip-table-section">
+  <div class="swell-heading-section">
+    <h2 class="swell-heading">VIPs EARN EVEN MORE</h2>
+  </div>
+  <div class="swell-tier-status">
+    <ul class="swell-status-row">
+      <li class="tier silver">
+        <a href="javascript:void(0);" class="swell-silver">Silver</a>
+      </li>
+      <li class="tier gold">
+        <a href="javascript:void(0);" class="swell-gold">Gold</a>
+      </li>
+      <li class="tier platinum">
+        <a href="javascript:void(0);" class="swell-platinum">Platinum</a>
+      </li>
+    </ul>
+  </div>
+  <div class="swell-referral-loader">
+    <img src="{{ 'swell-loader.svg' | asset_url }}"/>
+  </div>
+  <table class="swell-tier-table"></table>
+</div>
+<!-- Vip Table Section Code End -->
+
+<!-- Redemption Section Code Start -->
+<div class="swell-redemption-section">
+  <div class="swell-redeem-heading-detail">
+    <h2 class="swell-heading">REDEEM FOR DISCOUNT</h2>
+    <p>Redeeming your hard earned points is easy! Simply apply your rewards balance at checkout!</p>
+  </div>
+  <div class="swell-redeem-points-detail">
+    <img src="{{ 'swell-pts.png' | asset_url }}" alt="caption_img" class="swell-pts-img">  
+    <span>100 Points</span>
+    <span> = </span>
+    <img src="{{ 'swell-Dollar.png' | asset_url }}" alt="caption_img" class="swell-dollar-img">  
+  </div>
+  {% if customer %}
+    <a href="/checkout" class="swell-redeem-btn btn">REDEEM NOW</a>
+  {% else %}
+    <a href="/account/register" class="swell-redeem-btn btn">JOIN NOW</a>
+  {% endif %}
+</div>
+<!-- Redemption Section Code End -->

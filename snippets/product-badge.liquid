@@ -1,0 +1,7 @@
+ <div class="product-badge-wrapper">
+        {% for tag in product.tags %}
+            {% if tag contains 'New' %}
+            <span class="product-badge product-badge-new">New</span>
+            {% endif %}
+        {% endfor %}
+      </div>

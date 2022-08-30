@@ -1,0 +1,44 @@
+/*================ FOOTER STYLES ================*/
+.site-footer {
+    .row.footer-top {
+        .footer-wrap {
+            & > li {
+                font-size: 14px;
+                
+                @media only screen and (min-width: 860px) {
+                    font-size: 16px;
+                }
+
+                @media only screen and (min-width: 992px) {
+                    font-size: 17px;
+                }
+            }
+
+            .footer-top-link {
+                display: flex;
+                align-items: center;
+    
+                .footer-top-icon {
+                    margin-right: 10px;
+    
+                    img {
+                        width: 30px;
+                        position: relative;
+                        top: 4px;
+                        max-width: unset;
+                      }
+                }
+            }
+        }
+    }
+
+    .page-width {
+        .social-icons {
+            justify-content: center;
+
+            @media only screen and (min-width: 769px) {
+                justify-content: left;
+            }
+        }
+    }
+}

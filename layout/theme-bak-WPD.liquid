@@ -1,0 +1,312 @@
+<!doctype html>
+<html class="no-js" lang="{{ shop.locale }}">
+<head>
+<script>
+/* >> TriplePixel :: start*/
+~function(W,H,A,L,E){try{A.setItem(H,1+(0|A.getItem(H)||0)),W.includes("⇈")&&A.setItem(H+"Stg",1+(0|A.getItem(H+"Stg")||0))}catch(e){}function O(T,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET","//triplewhale-pixel.web.app/triplepx.txt?"+~(Date.now()/9e7),!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?setTimeout(function(){return eval(H.responseText)},50):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(T-1))}}A=window,A[H]||(L=function(){return"tp.."+Date.now().toString(36)+Math.random().toString(36)},E=A[H]=function(t,e,n){return W=L(),(E._q=E._q||[]).push([W,e,n]),W},E.ch=W,O(5))}("","TriplePixel",localStorage);
+/* << TriplePixel :: end*/
+</script>
+
+<meta name="google-site-verification" content="9MTuKrH1RfxyB4jnZaXqRTtyWC4qgl-FKDrHTTFR5p0" />
+   <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TCJFWLM');</script>
+  <!-- End Google Tag Manager --> 
+
+    
+  <!-- End Google Dynamic remarketing tag -->
+  <!-- Zmags Editor -->
+  <script type="text/javascript" data-channel="5d9c5b5ead042310447079a7" src="//creator.zmags.com/channels.js"></script>
+  <!-- End Zmags Editor -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_button }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta name="format-detection" content="telephone=no">
+
+  {%- if settings.favicon -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
+  {%- endif -%}
+
+  {% include 'seo-title' %}
+  <title>{{ seo_title }}</title>
+
+  {%- if page_description -%}
+  <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+  {% include 'header-scripts' %}
+  <!--   <!-- starapps_scripts_start -->
+<!-- This code is automatically managed by StarApps Studio -->
+<!-- Please contact support@starapps.studio for any help -->
+{% render "starapps-product-json", product: product, starapps_app: "VIA", starapps_attribute: "sa-product-json" %}
+<script type="text/javascript" src="https://bcdn.starapps.studio/apps/via/vietri1/script-1605528982.js?shop={{shop.permanent_domain}}" async></script>
+<!-- starapps_scripts_end -->
+<!-- {{ content_for_header }}
+{%- render 'bold-pr' -%} -->
+  {{ content_for_header | replace:'Google Gtag Pixel', '' }}
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  {% include 'hulkcode_common' %}
+  <script src='https://volumediscount.hulkapps.com/api/v2/frontend/hulkcode.js' defer='defer'></script>
+  <script src="{{ 'hulk_vd.js' | asset_url }}"></script>
+  <script src="{{ 'vendor-scripts.js' | asset_url | split: '?' | first }}"></script>
+  <script src="{{ 'theme.js' | asset_url }}"></script>
+  
+
+  <!-- Start MyRegistry Javascript -->
+<script type='text/javascript' xml='space'> (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = 'https://www.myregistry.com/ScriptPlatform/Shopify/AddToMrButton.js?siteKey=I8gn8gWLwrUBUWVo_9-_jg2&version=' + (new Date().getTime()); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(as, s); })(); </script>
+<!-- End MyRegistry Javascript -->
+  
+  {% if template contains 'rewards' or template contains 'refer' or template contains 'account' %}
+    {{ "swell_rewards.scss.css" | asset_url | stylesheet_tag }}
+    {{ "swell_rewards.js" | asset_url | script_tag }}
+  {% endif %}
+  {% if product.metafields.inventory.ShappifyHidden == "true" %} <meta name="robots" content="noindex"> {% endif %}
+    <!-- Google  Dynamic remarketing tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1019764137"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-1019764137', {'send_page_view': false});
+  </script>
+  <!-- End Google Dynamic remarketing tag -->
+  <!-- Curalate -->
+  <script>var CRL8_SITENAME = 'vietri-epkllz';!function(){var e=window.crl8=window.crl8||{},n=!1,i=[];e.ready=function(e){n?e():i.push(e)},e.pixel=e.pixel||function(){e.pixel.q.push(arguments)},e.pixel.q=e.pixel.q||[];var t=window.document,o=t.createElement("script"),c=e.debug||-1!==t.location.search.indexOf("crl8-debug=true")?"js":"min.js";o.async=!0,o.src=t.location.protocol+"//edge.curalate.com/sites/"+CRL8_SITENAME+"/site/latest/site."+c,o.onload=function(){n=!0,i.forEach(function(e){e()})};var r=t.getElementsByTagName("script")[0];r.parentNode.insertBefore(o,r.nextSibling)}();</script>
+  {% include 'sca-quick-view-init' %}
+  <script src="https://secure.api.viewer.zmags.com/viewer/viewer.js" type="text/javascript"></script>
+  {% include 'giftship' %}
+
+
+{%- assign yotpo_offload_content = shop.metafields.yotpo.yotpo_offload_content %}
+{%- assign time_now = 'now' | date: '%s' %}
+{%- assign yotpo_live_time = shop.metafields.yotpo.yotpo_live | date: '%s' %}
+{%- assign diffSeconds = time_now | minus: yotpo_live_time %}
+{%- if yotpo_offload_content == 'yes' and diffSeconds < 86400 -%}
+{{ 'yotpo-full-css.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+    <script src="https://kit.fontawesome.com/d6029905a8.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/GCGBNhF3xrzW7KtAX9H2iQ" async></script>
+
+<!-- GSSTART Show variants. Do not change -->
+{% if request.path contains "/products/" %}{% else %}<script  type="text/javascript"> 
+  gsVSCollectionId = {% if collection.id > 1 %} "{{ collection.id }}" {% else %} "0" {% endif %}; gsVSCollectionTags = '{{ current_tags | join: '&' | replace: "'", "\'" }}';  gsCollectionProdCnt = {% if collection.id > 1 %} {{ collection.products_count }} {% else %} 0 {% endif %}  ;			
+  gsCollection = {
+    {% if collection.products %}      {% paginate collection.products by 50 %}        {% for product in collection.products %} {% assign imagescount = product.images | size %}            {% if imagescount > 1 %}             '{{ product.handle }}' : [ 
+                {% for image in product.images  limit:2 %} "{{ image | img_url: '256x' }}", {% endfor %}
+                ],
+            {% endif %}        {% endfor %}      {% endpaginate %}    {% endif %}  };
+</script>  
+
+{% if request.path contains "/products/" %}{% else %}{% if request.path contains "/collections/" %}<script type="text/javascript" src="https://gravity-apps.com/variantmanager/js/shopify/image_swapvietria5413.js?v=b6e6cedefe62a365493a3960b6aec5bc"></script>{% endif %}{% endif %}{% endif %}
+<!-- Show variants code end. Do not change GSEND --></head>
+
+<body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if settings.enable_currencies %} currencies-enabled{% endif %}" data-transitions="false">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCJFWLM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+ 
+<div id="overlay"></div>
+  {% comment %}
+    Enable below script if page transitions enabled
+  {% endcomment %}
+  {% comment %}
+  <script type="text/javascript">window.setTimeout(function() { document.body.className += " loaded"; }, 25);</script>
+  {% endcomment %}
+    <!-- Klarna Messaging -->
+  <script async src="https://us-library.klarnaservices.com/merchant.js?uci=6de6466b-402a-4eac-a2e0-6f34de3c1bfc&country=US"></script>
+   <!-- End Klarna Messaging -->
+
+  <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+  <div id="PageContainer" class="page-container">
+    <div class="transition-body">
+
+    {% section 'header' %}
+    {% comment %}{% include 'header-scripts' %}{% endcomment %}
+
+      <main class="main-content" id="MainContent">
+        {{ content_for_layout }}
+      </main>
+
+      {% section 'footer-promotions' %}
+      {% section 'footer' %}
+
+    </div>
+  </div>
+
+  {% section 'newsletter-popup' %}
+
+  {% if settings.cart_type == 'drawer' %}
+    {% include 'ajax-cart-template' %}
+  {% endif %}
+
+  {% if settings.enable_currencies %}
+    <span
+      id="CurrencyData"
+      class="hide"
+      data-shop-currency="{{ shop.currency }}"
+      data-default-currency="{{ settings.default_currency | default: shop.currency }}"
+      data-format="{{ settings.currency_format | default: 'money_with_currency_format' }}"
+      data-money-format="{{ shop.money_format | strip_html }}"
+      data-money-currency-format="{{ shop.money_with_currency_format | strip_html }}">
+    </span>
+  {% endif %}
+
+  {% include 'video-modal' %}
+  {% include 'photoswipe-template' %}
+  {% if template contains 'product' %}
+    {% include 'recently-viewed-product-template' %}
+  {% endif %}
+{% include 'nosto-tagging' %}
+{% include 'back-in-stock-helper' %}
+{% include 'footer-scripts' %}
+{% include 'swymSnippet' %}
+
+<script>
+  var klevu_key = "",
+      i = 0,
+      doc = document,
+      scripts = doc.getElementsByTagName('script'),
+      searchBoxId = doc.querySelector("input[name='q']") ?
+                    (doc.querySelector("input[name='q']").id ?
+                    doc.querySelector("input[name='q']").id : "searchq") : "searchq";
+      
+  klevu_apiKey = "klevu-156891080715310737";
+  searchTextBoxName = searchBoxId;
+  klevu_lang = "en";
+  klevu_result_top_margin = '';
+  klevu_result_left_margin = '';
+  klevu_process();
+  
+  var allInputs = doc.getElementsByTagName('input'),
+      i = 0,
+      len = 0,
+      searchBoxes = new Array();
+  
+  for (i = 0, len = allInputs.length; i < len; i++) {
+    if (allInputs[i].type === "text" || allInputs[i].type === "search") {
+      if (allInputs[i].name === "q" || allInputs[i].id === searchBoxId) {
+        allInputs[i].form.action = "/pages/search-results";
+      }
+    }
+  }
+  
+  function setKuViewGrid() {
+    setKuView('grid');
+  }
+
+  function setKuViewList() {
+    setKuView('list');
+  }
+  ;
+  if (document.getElementById('searchedKeyword')) {
+    document.getElementById('searchedKeyword').value = klevu_getParamValue('q');
+  }
+  
+  var klevu_current_version = '1.2.1';
+  var klevu_shopifyStore = true;
+  var urlProtocol = ("https:" === document.location.protocol ? "https://" : "http://");
+  var klevu_storeLandingPageUrl = urlProtocol + window.location.hostname + "/pages/search-results";
+  
+  if('undefined' === typeof klevu_pageCategory ) {
+    if(document.getElementById('searchedKeyword') ) {
+      document.getElementById('searchedKeyword').value = klevu_getParamValue( 'q' );
+    }
+  } else {
+    document.getElementById('searchedKeyword').value = '*';
+  }
+  
+  function klevu_process() {
+    try {
+      var ws = document.createElement('script'),
+          kl_protocol = ("https:" === document.location.protocol ? "https://" : "http://");
+      ws.type = 'text/javascript'; ws.async = true; ws.src = kl_protocol + 'js.klevu.com/klevu-js-v1/js/klevu-webstore.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ws, s);
+    }
+    catch (err) {}
+  }
+
+  function klevu_addtocart(id, url, qty) {
+    if ('undefined' !== typeof klevu_customAddToCart) {
+      klevu_customAddToCart(id, url, 1);
+    } else {
+      var urlProtocol = ("https:" === document.location.protocol ? "https://" : "http://");
+      var url = urlProtocol + window.location.hostname + '/cart/add?id=' + id + '&quantity=1';
+      window.location.assign(url);
+    }
+  }
+
+  //Nosto Widget
+  $("#kuMainContainer").append( '<div class="nosto_element" id="searchpage-nosto-1"></div>' );
+</script>
+
+{{ 'klevu-user-customization.js' | asset_url | script_tag }}
+
+<!-- Attentive Script -->
+<script src="https://cdn.attn.tv/vietri/dtag.js"></script>
+
+<!-- Secoquickview -->
+<script>
+    function sca_get_yotpo_star($, product, settings){
+      $(".yotpo-review-start-container").html($('.sca-yotpo-review-' + product.id).html());
+    }
+  </script>  
+{% include 'mw_GP_objects' %}{% include 'sca-quick-view-templatestandard' %} 
+
+<script>window.KlarnaThemeGlobals={};{%case template.name%} {%when"product"%} window.KlarnaThemeGlobals.data_purchase_amount={{product.first_available_variant.price}};window.KlarnaThemeGlobals.productVariants={{product.variants|json}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%when"cart"%} window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%endcase%}</script>
+{% unless template == 'cart' %}
+    <script>
+        window.hulkapps.cart = {{ cart | json }};
+        if (typeof window.hulkapps.cart.items == "object") {
+            for (var i=0; i<window.hulkapps.cart.items.length; i++) {
+                ["sku", "grams", "vendor", "url", "image", "handle", "requires_shipping", "product_type", "product_description"].map(function(a) {
+                    delete window.hulkapps.cart.items[i][a];
+                })
+            }
+        }
+        window.hulkapps.cart_collections = {};
+        {% for item in cart.items %}
+            window.hulkapps.cart_collections["{{item.variant_id}}"] = [];
+            {% for c in item.product.collections %}
+                window.hulkapps.cart_collections["{{item.variant_id}}"].push({{c.id}});
+            {% endfor %}
+        {% endfor %}
+    </script>
+    <div class="edit_popup" style="display: none;">
+      <form method="post" action="/cart/add" id="edit_cart_popup" class="edit_form" enctype="multipart/form-data">
+      </form>
+    </div>
+  {% endunless %}
+  {% include 'CML_snippet' %}
+  
+<!-- GSSTART Show variants BODY. Do not change -->{% if collection.products %}
+<div class="gsdatacontb" style="display: none !important;">
+  {% paginate collection.products by 50 %}{% for product in collection.products %}{% assign imagescount = product.images | size %}{% if imagescount > 1 %}
+  <div style="display: none !important;" class="gsProductVariants" gsProductHandler="{{ product.handle }}" >{% assign variantImgsUsedStr = "" %} {% assign variantBySizeUsedStr = "" %}{% assign sizeoptionnr = 0 %}
+{% for option in product.options %}{% capture optioncaseins %}{{option | downcase}}{% endcapture %}{% if optioncaseins contains "size" or optioncaseins contains "rösse" or optioncaseins contains "المقاس" or optioncaseins contains "oko" or optioncaseins contains "eden" or optioncaseins contains "größe" or optioncaseins contains "éret" or optioncaseins contains "ozmiar" or optioncaseins contains "torlek" or optioncaseins contains "aille" or optioncaseins contains "aglia" or optioncaseins contains "alla" or optioncaseins contains "amaño" or optioncaseins contains "גודל" or optioncaseins contains "サイズ" or optioncaseins contains "taille" or optioncaseins contains "eggiseno" or optioncaseins contains "aat" or optioncaseins contains "tamanho" or optioncaseins contains "rrelse" or optioncaseins contains "siza" %}{% assign sizeoptionnr = forloop.index %}{% if product.options.size == 1 %}{% endif %}{% if optioncaseins contains "color" or optioncaseins contains "colour" or optioncaseins contains "farge"  %}{% assign sizeoptionnr = 0 %}{% endif %}{% endif %}{% endfor %}
+    {% for variant in product.variants %}{% assign featuredImageSize = variant.featured_image | size %}{% if featuredImageSize > 0  %}{% if variantImgsUsedStr contains "IGNOREGS" %}{% else %}{% assign variantImgsUsedStr = variantImgsUsedStr | append: variant.featured_image %}{% assign canAddVariant = true %}{% if sizeoptionnr == 1 %}{% assign optionCheckVal = ";" | append: variant.option2 | append: variant.option3 | append: ";" %}{% if variantBySizeUsedStr contains optionCheckVal %}{% assign canAddVariant = false %}{% else %}{% assign variantBySizeUsedStr = variantBySizeUsedStr | append: ";" | append: variant.option2 | append: variant.option3 | append: ";" %}{% endif %}{% endif %}
+    {% if sizeoptionnr == 2 %}{% assign optionCheckVal = ";" | append: variant.option1 | append: variant.option3 | append: ";" %}{% if variantBySizeUsedStr contains optionCheckVal %}
+                {% assign canAddVariant = false %}{% else %}{% assign variantBySizeUsedStr = variantBySizeUsedStr | append: ";" | append: variant.option1 | append: variant.option3 | append: ";" %}{% endif %}{% endif %} {% if sizeoptionnr == 3 %}{% assign optionCheckVal = ";" | append: variant.option1 | append: variant.option2 | append: ";" %}{% if variantBySizeUsedStr contains optionCheckVal %}
+                {% assign canAddVariant = false %}{% else %}{% assign variantBySizeUsedStr = variantBySizeUsedStr | append: ";" | append: variant.option1 | append: variant.option2 | append: ";" %}{% endif %}{% endif %} {% if canAddVariant == true %}
+    <p vcontinue="{{ variant.inventory_policy }}" vquantity="{{ variant.inventory_quantity }}" vavailable="{{ variant.available }}" variantpriceid="{{ variant.id }}" originalcompprice='{{ product.compare_at_price_min | money_without_trailing_zeros | escape }}' originalprice='{{ product.price | money_without_trailing_zeros | escape }}' minprice='{{ product.price_min | money_without_trailing_zeros | escape }}' comparePrice='{{ variant.compare_at_price | money_without_trailing_zeros | escape }}' variantPrice='{{ variant.price | money_without_trailing_zeros | escape }}'></p>
+    <p varianttitleid="{{ variant.id }}"  sizeoptionnr="{{ sizeoptionnr }}" optionuidtwo="{{ product.id }}{{ variant.option2 | escape }}" optiontwo="{{ variant.option2 | escape }}" originaltitle="{{ product.title | escape }}" variantTitle="{{ variant.title | escape }}" optionuid="{{ product.id }}{{ variant.option1 | escape }}"></p>
+       <span variantid="{{ variant.id }}" imgwidth="{{ variant.featured_image.width }}" imgheight="{{ variant.featured_image.height }}" gsvariantimage="{{ variant.featured_image | img_url: '256x' }}"></span>
+    {% endif %}{% endif %}{% endif %}{% endfor %}
+  </div>{% endif %}{% endfor %}{% endpaginate %}{% endif %}
+  {% if collection.products %}
+        <div style="display: none !important;" class="gsProductImages" >
+        {% paginate collection.products by 50 %}{% for product in collection.products %} {% assign imagescount = product.images | size %}{% if imagescount > 1 %}{% for image in product.images  limit:1 %}
+                                        <span gsProductHandle="{{ product.handle }}" firstImage="{{ image | img_url: '256x' }}"></span>
+                                {% endfor %}{% endif %}{% endfor %}{% endpaginate %}
+  </div>
+  </div>
+    {% endif %} <!-- Show variants code end BODY. Do not change GSEND --></body>
+</html>

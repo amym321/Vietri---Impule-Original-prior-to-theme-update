@@ -1,0 +1,170 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-555932024966.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1628863557990" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1628863557990" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1628863557984" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1628863557984"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b>LUCCA</b>: THE WALLED CITY</p></div></div><div data-label="Text Block" data-key="text-block" id="e-1628863557993" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1628863557993"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p>Lucca is a hidden gem that's often overlooked during an initial trip to discover Italy.</p><p><br></p><p>It is a beautiful Tuscan town that is rarely crowded. I once heard it referred to as "a small city with a big heart" and I couldn't agree more. The walls that encircle the village are wonderful to walk on for a beautiful view of the classic architecture and an opportunity to breathe in the Italian culture. When you enter the historic village, the streets are narrow and windy and most of them take you directly to the main piazza with the 11th century Duomo. The church is worth a visit for a small fee.</p></div></div><div data-label="Image" data-key="image" id="e-1628863557915" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1628863557915" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/551ed168-7b9a-48b8-adf5-7504736b99d1/-/format/auto/-/preview/3000x3000/-/quality/lighter/Lucca-1.jpg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="2000" natural-height="1333" width="2000" height="1333"></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row" id="r-1628863709041" data-icon="gpicon-row" data-id="1628863709041"><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620181804878" data-id="1620181804878"><div data-label="Text Block" data-key="text-block" id="e-1628863708910" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1628863708910"><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><strong>"The other piazza, a small oval, is always filled with a lively market as well as a selection of small shops."</strong></p></div></div><div data-label="Text Block" data-key="text-block" id="e-1628863708996" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1628863708996"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p>It is called Piazza dell'Anfiteatro, and I love eating at this piazza, having a glass of prosecco or Campari, and watching the people graze by as I observe and imagine their lives.&nbsp;</p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_equal-height gf_row-gap-0" id="r-1628863805850" data-icon="gpicon-row" data-id="1628863805850" data-extraclass="" data-row-gap="0px" style="display: flex; flex-wrap: wrap; visibility: visible;"><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428165" data-id="1620143428165" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Text Block" data-key="text-block" id="e-1628863805915" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1628863805915"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><span style="font-size: inherit; color: rgb(255, 255, 255); font-family: inherit; text-align: inherit; letter-spacing: 0px;">As in every village, you can find adverts for a tour guide, cooking classes, sometimes painting classes, and scenic bike rides. I attended Borgo Bernardini Cooking School and absolutely loved it!</span><br></p><p><font color="#ffffff"><br></font></p><p><font color="#ffffff">Lucca is also the home of Giacomo Puccini, the composer, so if the opera is playing, go to the theater for a look and a listen. You won't regret it! Italians love opera, it is a part of their DNA and it's no surprise.</font></p></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428179" data-id="1620143428179" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Image" data-key="image" id="e-1628863805811" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1628863805811" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/4992afd4-4793-4610-91d9-fb9335bd01ae/-/format/auto/-/preview/3000x3000/-/quality/lighter/Lucca%202.jpeg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="2374" natural-height="3000" width="2374" height="3000"></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_equal-height gf_row-gap-0" id="r-1628863921293" data-icon="gpicon-row" data-id="1628863921293" data-extraclass="" data-row-gap="0px" style="display: flex; flex-wrap: wrap; visibility: visible;"><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428165" data-id="1620143428165" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Image" data-key="image" id="e-1628863921276" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1628863921276" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/903626af-044a-49ea-9957-71c00d68f8a4/-/format/auto/-/preview/3000x3000/-/quality/lighter/Lucca%203.jpeg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="2000" natural-height="3000" width="2000" height="3000"></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428179" data-id="1620143428179" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Text Block" data-key="text-block" id="e-1628863921326" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1628863921326"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><span style="color: rgb(255, 255, 255); font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;">Air BnBs are plentiful and so easy to find online. The last time I visited, we stayed a bit out of town at Albergo Villa Marta. It is a lovely home. Momma was with us, and if she liked it, you know it was perfect!</span><br></p><p><font color="#ffffff"><br></font></p><p><font color="#ffffff">I have heard that Albergo alla Corte degli Angeli is friendly and quite nice. It is located right inside the old town and includes part of the ancient walls in its structure.</font></p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_equal-height gf_row-gap-0" id="r-1628864031194" data-icon="gpicon-row" data-id="1628864031194" data-extraclass="" data-row-gap="0px" style="display: flex; flex-wrap: wrap; visibility: visible;"><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428165" data-id="1620143428165" style="display: flex; flex-direction: column; justify-content: center; min-height: 0px;"><div data-label="Text Block" data-key="text-block" id="e-1628864031253" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1628864031253"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><span style="color: rgb(255, 255, 255); font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;">Air BnBs are plentiful and so easy to find online. The last time I visited, we stayed a bit out of town at Albergo Villa Marta. It is a lovely home. Momma was with us, and if she liked it, you know it was perfect!</span><br></p><p><font color="#ffffff"><br></font></p><p><font color="#ffffff">I have heard that Albergo alla Corte degli Angeli is friendly and quite nice. It is located right inside the old town and includes part of the ancient walls in its structure.</font></p></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428179" data-id="1620143428179" style="display: flex; flex-direction: column; justify-content: center; min-height: 0px;"><div data-label="Image" data-key="image" id="e-1628864031271" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1628864031271" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/903626af-044a-49ea-9957-71c00d68f8a4/-/format/auto/-/preview/3000x3000/-/quality/lighter/Lucca%203.jpeg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="2000" natural-height="3000" width="2000" height="3000"></div></div></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;window.__gemStoreData.gemKeyValid.clickAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-555932024966.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

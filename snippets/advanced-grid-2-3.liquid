@@ -1,0 +1,154 @@
+<div class="index-section">
+  <div>
+    <div class="flex-grid">
+    {% if block.settings.one_third_first %}
+      <div class="flex-grid__item flex-grid__item--33 flex-grid_">
+          <a href="{{ block.settings.url }}">
+          <div class="gift-wrapper">
+            <div class="promo-grid__bg">
+
+                    {% if block.settings.image != blank %}
+                      {% style %}
+                        .promo-grid__bg-image--{{ block.id }} {
+                          object-position: {{ block.settings.focal_point }};
+                          font-family: "object-fit: cover; object-position: {{ block.settings.focal_point }};";
+                        }
+                      {% endstyle %}
+
+                      {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                      <img
+                        class="image-fit promo-grid__bg-image promo-grid__bg-image--{{ block.id }} lazyload"
+                        src="{{ block.settings.image | img_url: '300x' }}"
+                        data-src="{{ img_url }}"
+                        data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                        data-sizes="auto"
+                        data-parent-fit="cover"
+                        alt="{{ block.settings.image.alt | escape }}">
+                      <noscript>
+                        <img
+                          class="image-fit promo-grid__bg-image promo-grid__bg-image--{{ block.id }} lazyloaded"
+                          src="{{ block.settings.image | img_url: '1800x' }}"
+                          alt="{{ block.settings.image.alt }}">
+                      </noscript>
+                    {% else %}
+                      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {% endif %}
+                </div></div>
+                   <h3>{{ block.settings.heading }}</h3> 
+            </div>
+          </a>
+      <div class="flex-grid__item flex-grid__item--66 flex-grid_">
+        <a href="{{ block.settings.url_two }}">
+        <div class="gift-wrapper">
+          <div class="promo-grid__bg">
+
+                  {% if block.settings.image_two != blank %}
+                    {% style %}
+                      .promo-grid__bg-image--{{ block.id }} {
+                        object-position: {{ block.settings.focal_point }};
+                        font-family: "object-fit: cover; object-position: {{ block.settings.focal_point }};";
+                      }
+                    {% endstyle %}
+
+                    {%- assign img_url = block.settings.image_two| img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                    <img
+                      class="image-fit promo-grid__bg-image promo-grid__bg-image--{{ block.id }} lazyload"
+                      src="{{ block.settings.image_two | img_url: '300x' }}"
+                      data-src="{{ img_url }}"
+                      data-aspectratio="{{ block.settings.image_two.aspect_ratio }}"
+                      data-sizes="auto"
+                      data-parent-fit="cover"
+                      alt="{{ block.settings.image_two.alt | escape }}">
+                    <noscript>
+                      <img
+                        class="image-fit promo-grid__bg-image promo-grid__bg-image--{{ block.id }} lazyloaded"
+                        src="{{ block.settings.image_two | img_url: '1800x' }}"
+                        alt="{{ block.settings.image_two.alt }}">
+                    </noscript>
+                  {% else %}
+                    {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {% endif %}
+              </div></div>
+            <h3>{{ block.settings.heading_two }}</h3> 
+          </div>
+        </a>
+      {% else %}
+      <div class="flex-grid__item flex-grid__item--66 flex-grid_">
+        <a href="{{ block.settings.url_two }}">
+          <div class="gift-wrapper">
+           <div class="promo-grid__bg">
+
+                  {% if block.settings.image_two != blank %}
+                    {% style %}
+                      .promo-grid__bg-image--{{ block.id }} {
+                        object-position: {{ block.settings.focal_point }};
+                        font-family: "object-fit: cover; object-position: {{ block.settings.focal_point }};";
+                      }
+                    {% endstyle %}
+
+                    {%- assign img_url = block.settings.image_two | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                    <img
+                      class="image-fit promo-grid__bg-image promo-grid__bg-image--{{ block.id }} lazyload"
+                      src="{{ block.settings.image_two | img_url: '300x' }}"
+                      data-src="{{ img_url }}"
+                      data-aspectratio="{{ block.settings.image2.aspect_ratio }}"
+                      data-sizes="auto"
+                      data-parent-fit="cover"
+                      alt="{{ block.settings.image_two.alt | escape }}">
+                    <noscript>
+                      <img
+                        class="image-fit promo-grid__bg-image promo-grid__bg-image--{{ block.id }} lazyloaded"
+                        src="{{ block.settings.image_two | img_url: '1800x' }}"
+                        alt="{{ block.settings.image_two.alt }}">
+                    </noscript>
+                  {% else %}
+                    {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {% endif %}
+              </div></div>
+            <h3>{{ block.settings.heading_two }}</h3> 
+           </div>
+        </a>
+      <div class="flex-grid__item flex-grid__item--33 flex-grid_">
+        <a href="{{ block.settings.url }}">
+        <div class="gift-wrapper">
+           <div class="promo-grid__bg">
+
+                  {% if block.settings.image != blank %}
+                    {% style %}
+                      .promo-grid__bg-image--{{ block.id }} {
+                        object-position: {{ block.settings.focal_point }};
+                        font-family: "object-fit: cover; object-position: {{ block.settings.focal_point }};";
+                      }
+                    {% endstyle %}
+
+                    {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                    <img
+                      class="image-fit promo-grid__bg-image promo-grid__bg-image--{{ block.id }} lazyload"
+                      src="{{ block.settings.image | img_url: '300x' }}"
+                      data-src="{{ img_url }}"
+                      data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                      data-sizes="auto"
+                      data-parent-fit="cover"
+                      alt="{{ block.settings.image.alt | escape }}">
+                    <noscript>
+                      <img
+                        class="image-fit promo-grid__bg-image promo-grid__bg-image--{{ block.id }} lazyloaded"
+                        src="{{ block.settings.image | img_url: '1800x' }}"
+                        alt="{{ block.settings.image.alt }}">
+                    </noscript>
+                  {% else %}
+                    {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {% endif %}
+              </div>
+              </div>
+              <h3>{{ block.settings.heading }}</h3> 
+           </div>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>

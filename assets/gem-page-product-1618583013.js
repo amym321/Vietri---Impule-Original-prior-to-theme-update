@@ -1,0 +1,346 @@
+
+
+        jQuery(function() {
+            var $module = jQuery('#m-1570092283913').children('.module');
+            $module.gfV3Product();
+        }); 
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1570092283913-0').children('.module');
+            var effect = $module.attr('data-effect');
+            $module.gfV3ProductImage({
+                'effect': effect
+            })
+        }); 
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1570092283913-1').children('.module');
+        }); 
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1570092283891').children('.module');
+            var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+
+            var blankOption = $module.attr('data-blankoption');
+            var blankOptionText = $module.attr('data-blankoptiontext');
+            var style = $module.attr('data-style');
+
+            $module.gfV3ProductVariants({
+                mode: mode,
+                blankOption: blankOption,
+                blankOptionText: blankOptionText,
+                style: style,
+                onVariantSelected: function(variant, $select) {}
+            });
+        }); 
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1570092283885').children('.module');
+            var style = $module.attr('data-style');
+            var updatePrice = $module.attr('data-updateprice');
+
+            $module.gfV3ProductQuantity({
+                'style': style,
+                'updatePrice': updatePrice
+            });
+        }); 
+    
+(function(jQuery) {
+    var $module = jQuery('#m-1617609731036').children('.module');
+    $module.gfV3ProductPrice({
+        displayCurrency: true
+    });
+})(window.GemQuery || jQuery);
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1570092283913-3').children('.module');
+            $module.gfV3ProductCartButton({ onItemAdded: function() {}});
+        }); 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    jQuery(function() {
+  var $module = jQuery('#m-1587982839341').children('.module');
+  var activeTab = parseInt($module.attr('data-activeTab')) - 1;
+  var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+
+  $module.gfV3ResTabs({
+      'activeTab': activeTab,
+      'mode': mode,
+      tabSelected: function(index) {
+        var tabInactiveBgColor = $module.attr('data-inactiveTabBgColor');
+        var tabInactiveColor = $module.attr('data-inactiveTabColor');
+        var tabBgColor = $module.attr('data-tabBgColor');
+        var tabColor = $module.attr('data-tabColor');
+        var borderColor = $module.attr('data-borderColor');
+        var borderSize = $module.attr('data-borderSize');
+
+        var $gfTabs = $module.find('>ul>li.gf_tab');
+        var $gfTabActive = $module.find('>ul>li.gf_tab-active');
+        var $gfTabPanels = $module.find('>.gf_tab-panel');
+
+        if($module.hasClass('style1')) {
+          $gfTabs
+            .css('margin-left', '-' + borderSize)
+            .css('border', borderSize + ' solid ' + borderColor)
+            .css('border-bottom', borderSize + ' solid ' + borderColor);
+
+          $module.find('>ul>li.gf_tab:first').css('margin-left', '0px');
+
+        } else if($module.hasClass('style3')) {
+          $gfTabs.css('border-bottom', borderSize + ' solid ' + tabBgColor);
+        }
+
+        if(!$module.hasClass('style3')) {
+          $gfTabs.css('background-color', tabInactiveBgColor);
+          $gfTabActive.css('background-color', tabBgColor);
+        }
+
+        $gfTabs.css('color', tabInactiveColor);
+        $gfTabActive.css('color', tabColor);
+
+        if($module.hasClass('style1')) {
+          $gfTabActive.children('.gf_tab-bottom')
+          .css('backgroundColor', tabBgColor)
+          .css('height', borderSize)
+          .css('bottom', '-' + borderSize);
+        } else if($module.hasClass('style3')) {
+          $gfTabActive.children('.gf_tab-bottom')
+          .css('backgroundColor', borderColor)
+          .css('height', borderSize)
+          .css('bottom', '-' + borderSize);
+        }
+        $gfTabPanels
+        .css('top', '-' + borderSize)
+        .css('background-color', tabBgColor)
+        .css('border', '1px solid ' + borderColor);
+
+        if($module.hasClass('style1')) {
+          $gfTabPanels.css('border', borderSize + ' solid ' + borderColor);
+        } else {
+          $gfTabPanels.css('border', 'none');
+        }
+        // Fix (P) Desc read more bug	
+        $module.find('.module-wrap[data-label="(P) Description"]').each(function(index, el) {	
+            if (jQuery(el).children('.module').data('gfv3productdesc') != undefined) {	
+                jQuery(el).children(".module").data("gfv3productdesc").initReadMore();	
+            }	
+        });
+      }
+  });
+  if(mode == 'dev') {
+    var moduleId = "1587982839341";
+    var moduleIdSlug = moduleId.toString().replace(/-/g, '');
+    if (moduleIdSlug == "1587982839341") {
+      window.getTab1587982839341 = function() {
+        return $module.data('gfv3restabs');
+      }
+    }
+  }
+});
+  
+        jQuery(function() {
+            var $hero = jQuery('#m-1570092283840');
+            var $module = jQuery('#m-1570092283840').children('.module');
+
+            var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+            if(mode == 'dev') {
+                $hero.children('.hero-link').hide();
+            }
+
+            var height = jQuery.trim($module.attr('data-height'));
+            if(height == undefined || height == '') {
+                $hero.attr('style', 'height: auto!important');
+                jQuery(window).resize(function(){
+                    $hero.attr('style', 'height: auto!important');
+                });
+            } else {
+                $hero.removeAttr('style');
+            }
+
+            var effect = $module.attr('data-effect');
+            var transition = $module.attr('data-transition');
+
+            if(effect == 'effect-zoom') {   
+                $module.parent().addClass(effect);  
+
+                setTimeout(function() {
+                    var backgroundImage = $module.parent().css('background-image');
+                    var backgroundSize = $module.parent().css('background-size');
+                    var backgroundPosition = $module.parent().css('background-position');
+                    $module.siblings('.gf_hero-bg-wrap').css({
+                        'background-image'      : 'inherit',
+                        'background-size'       : 'inherit',
+                        'background-position'   : 'inherit',
+                        '-webkit-transition'    : 'transform ' + transition + 's ease-in-out',
+                        '-moz-transition'       : 'transform ' + transition + 's ease-in-out',
+                        '-ms-transition'        : 'transform ' + transition + 's ease-in-out',
+                        '-o-transition'         : 'transform ' + transition + 's ease-in-out',
+                        'transition'            : 'transform ' + transition + 's ease-in-out'
+                    })
+                    $module.siblings('.gf_hero-bg-wrap').children('.gf_hero-bg').css({
+                        'background-image'      : 'inherit',
+                        'background-size'       : 'inherit',
+                        'background-position'   : 'inherit',
+                        '-webkit-transition'    : 'transform ' + transition + 's ease-in-out',
+                        '-moz-transition'       : 'transform ' + transition + 's ease-in-out',
+                        '-ms-transition'        : 'transform ' + transition + 's ease-in-out',
+                        '-o-transition'         : 'transform ' + transition + 's ease-in-out',
+                        'transition'            : 'transform ' + transition + 's ease-in-out'
+                    });
+                }, 300);
+            }
+
+            if($module.attr('data-fixedMode') == '1'){
+                $module.parent().attr('style', 'padding-top: 0px!important; padding-bottom: 0px!important; height: auto!important; background-image: none!important;max-width: 100%!important;');
+
+                jQuery(window).resize(function(){
+                    var backgroundImage =  $module.parent().css('background-image');
+                    $module.parent().attr('style', 'padding-top: 0px!important; padding-bottom: 0px!important; height: auto!important; background-image: none!important;max-width: 100%!important;');
+                });
+            } else {
+                $module.parent().removeAttr('style');
+            }
+        });
+    
+    
+        jQuery(function() {
+            var $hero = jQuery('#m-1570092283869');
+            var $module = jQuery('#m-1570092283869').children('.module');
+
+            var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+            if(mode == 'dev') {
+                $hero.children('.hero-link').hide();
+            }
+
+            var height = jQuery.trim($module.attr('data-height'));
+            if(height == undefined || height == '') {
+                $hero.attr('style', 'height: auto!important');
+                jQuery(window).resize(function(){
+                    $hero.attr('style', 'height: auto!important');
+                });
+            } else {
+                $hero.removeAttr('style');
+            }
+
+            var effect = $module.attr('data-effect');
+            var transition = $module.attr('data-transition');
+
+            if(effect == 'effect-zoom') {   
+                $module.parent().addClass(effect);  
+
+                setTimeout(function() {
+                    var backgroundImage = $module.parent().css('background-image');
+                    var backgroundSize = $module.parent().css('background-size');
+                    var backgroundPosition = $module.parent().css('background-position');
+                    $module.siblings('.gf_hero-bg-wrap').css({
+                        'background-image'      : 'inherit',
+                        'background-size'       : 'inherit',
+                        'background-position'   : 'inherit',
+                        '-webkit-transition'    : 'transform ' + transition + 's ease-in-out',
+                        '-moz-transition'       : 'transform ' + transition + 's ease-in-out',
+                        '-ms-transition'        : 'transform ' + transition + 's ease-in-out',
+                        '-o-transition'         : 'transform ' + transition + 's ease-in-out',
+                        'transition'            : 'transform ' + transition + 's ease-in-out'
+                    })
+                    $module.siblings('.gf_hero-bg-wrap').children('.gf_hero-bg').css({
+                        'background-image'      : 'inherit',
+                        'background-size'       : 'inherit',
+                        'background-position'   : 'inherit',
+                        '-webkit-transition'    : 'transform ' + transition + 's ease-in-out',
+                        '-moz-transition'       : 'transform ' + transition + 's ease-in-out',
+                        '-ms-transition'        : 'transform ' + transition + 's ease-in-out',
+                        '-o-transition'         : 'transform ' + transition + 's ease-in-out',
+                        'transition'            : 'transform ' + transition + 's ease-in-out'
+                    });
+                }, 300);
+            }
+
+            if($module.attr('data-fixedMode') == '1'){
+                $module.parent().attr('style', 'padding-top: 0px!important; padding-bottom: 0px!important; height: auto!important; background-image: none!important;max-width: 100%!important;');
+
+                jQuery(window).resize(function(){
+                    var backgroundImage =  $module.parent().css('background-image');
+                    $module.parent().attr('style', 'padding-top: 0px!important; padding-bottom: 0px!important; height: auto!important; background-image: none!important;max-width: 100%!important;');
+                });
+            } else {
+                $module.parent().removeAttr('style');
+            }
+        });
+    
+    
+        jQuery(function() {
+            var $hero = jQuery('#m-1570092283821');
+            var $module = jQuery('#m-1570092283821').children('.module');
+
+            var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+            if(mode == 'dev') {
+                $hero.children('.hero-link').hide();
+            }
+
+            var height = jQuery.trim($module.attr('data-height'));
+            if(height == undefined || height == '') {
+                $hero.attr('style', 'height: auto!important');
+                jQuery(window).resize(function(){
+                    $hero.attr('style', 'height: auto!important');
+                });
+            } else {
+                $hero.removeAttr('style');
+            }
+
+            var effect = $module.attr('data-effect');
+            var transition = $module.attr('data-transition');
+
+            if(effect == 'effect-zoom') {   
+                $module.parent().addClass(effect);  
+
+                setTimeout(function() {
+                    var backgroundImage = $module.parent().css('background-image');
+                    var backgroundSize = $module.parent().css('background-size');
+                    var backgroundPosition = $module.parent().css('background-position');
+                    $module.siblings('.gf_hero-bg-wrap').css({
+                        'background-image'      : 'inherit',
+                        'background-size'       : 'inherit',
+                        'background-position'   : 'inherit',
+                        '-webkit-transition'    : 'transform ' + transition + 's ease-in-out',
+                        '-moz-transition'       : 'transform ' + transition + 's ease-in-out',
+                        '-ms-transition'        : 'transform ' + transition + 's ease-in-out',
+                        '-o-transition'         : 'transform ' + transition + 's ease-in-out',
+                        'transition'            : 'transform ' + transition + 's ease-in-out'
+                    })
+                    $module.siblings('.gf_hero-bg-wrap').children('.gf_hero-bg').css({
+                        'background-image'      : 'inherit',
+                        'background-size'       : 'inherit',
+                        'background-position'   : 'inherit',
+                        '-webkit-transition'    : 'transform ' + transition + 's ease-in-out',
+                        '-moz-transition'       : 'transform ' + transition + 's ease-in-out',
+                        '-ms-transition'        : 'transform ' + transition + 's ease-in-out',
+                        '-o-transition'         : 'transform ' + transition + 's ease-in-out',
+                        'transition'            : 'transform ' + transition + 's ease-in-out'
+                    });
+                }, 300);
+            }
+
+            if($module.attr('data-fixedMode') == '1'){
+                $module.parent().attr('style', 'padding-top: 0px!important; padding-bottom: 0px!important; height: auto!important; background-image: none!important;max-width: 100%!important;');
+
+                jQuery(window).resize(function(){
+                    var backgroundImage =  $module.parent().css('background-image');
+                    $module.parent().attr('style', 'padding-top: 0px!important; padding-bottom: 0px!important; height: auto!important; background-image: none!important;max-width: 100%!important;');
+                });
+            } else {
+                $module.parent().removeAttr('style');
+            }
+        });
+    
+    
+    
+    
+    

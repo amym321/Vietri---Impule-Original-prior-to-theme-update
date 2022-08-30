@@ -1,0 +1,82 @@
+{%- assign blockId = block.id -%}
+{% if product %}
+  {%- assign blockId = block.id | append: product.id -%}
+{% endif %}
+
+<div class="index-section">
+  <div class="page-width">
+
+    <div class="flex-grid">
+      <div class="flex-auto">
+        {% if block.settings.title != blank %}
+          <div class="section-header">
+            <h2 class="section-header__title">
+              {{ block.settings.title }}
+            </h2>
+          </div>
+        {% endif %}
+
+        <div class="form-vertical wholesale-inquiry-form">
+          {% form 'contact' %}
+
+            {% if form.posted_successfully? %}
+              <p class="note note--success">
+                {{ 'contact.form.post_success' | t }}
+              </p>
+            {% else %}
+              {{ form.errors | default_errors }}
+            {% endif %}
+
+            <label for="ContactFormCompany-{{ blockId }}">{{ 'contact.form.company' | t }}</label>
+            <input type="text" id="ContactFormCompany-{{ blockId }}" class="input-full" name="contact[company]" autocapitalize="words" value="{% if form.company %}{{ form.company }}{% elsif customer %}{{ customer.company }}{% endif %}">
+
+            <div class="grid grid--small">
+              <div class="grid__item medium-up--one-half">
+                <label for="ContactFormName-{{ blockId }}">{{ 'contact.form.name' | t }}<span class="required">*</span></label>
+                <input type="text" id="ContactFormName-{{ blockId }}" class="input-full" name="contact[name]" autocapitalize="words" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" required>
+              </div>
+
+              <div class="grid__item medium-up--one-half">
+                <label for="ContactFormEmail-{{ blockId }}">{{ 'contact.form.email' | t }}<span class="required">*</span></label>
+                <input type="email" id="ContactFormEmail-{{ blockId }}" class="input-full" name="contact[email]" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" required>
+              </div>
+            </div>
+
+            {% if block.settings.show_phone %}
+              <label for="ContactFormPhone-{{ blockId }}">{{ 'contact.form.phone' | t }}<span class="required">*</span></label>
+              <input type="tel" id="ContactFormPhone-{{ blockId }}" class="input-full" name="contact[phone]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" required>
+            {% endif %}
+
+            <label for="ContactFormAddress-{{ blockId }}">{{ 'contact.form.address' | t }}<span class="required">*</span></label>
+            <input type="text" id="ContactFormAddress-{{ blockId }}" class="input-full" name="contact[address]" autocapitalize="words" value="{% if form.address %}{{ form.address }}{% elsif customer %}{{ customer.address }}{% endif %}" required>
+
+            <label for="ContactFormCity-{{ blockId }}">{{ 'contact.form.city' | t }}<span class="required">*</span></label>
+            <input type="text" id="ContactFormCity-{{ blockId }}" class="input-full" name="contact[city]" autocapitalize="words" value="{% if form.city %}{{ form.city }}{% elsif customer %}{{ customer.city }}{% endif %}" required>
+
+            <label for="ContactFormProvince-{{ blockId }}">{{ 'contact.form.province' | t }}<span class="required">*</span></label>
+            <input type="text" id="ContactFormProvince-{{ blockId }}" class="input-full" name="contact[province]" autocapitalize="words" value="{% if form.province %}{{ form.province }}{% elsif customer %}{{ customer.province }}{% endif %}" required>
+
+            <label for="ContactFormZip-{{ blockId }}">{{ 'contact.form.zip' | t }}<span class="required">*</span></label>
+            <input type="text" id="ContactFormZip-{{ blockId }}" class="input-full" name="contact[zip]" autocapitalize="words" value="{% if form.zip %}{{ form.zip }}{% elsif customer %}{{ customer.zip }}{% endif %}" required>
+
+            <label for="ContactFormCountry-{{ blockId }}">{{ 'contact.form.country' | t }}<span class="required">*</span></label>
+            <input type="text" id="ContactFormCountry-{{ blockId }}" class="input-full" name="contact[country]" autocapitalize="words" value="{% if form.country %}{{ form.country }}{% elsif customer %}{{ customer.country }}{% endif %}" required>
+
+            <label for="ContactFormMessage-{{ blockId }}">{{ 'contact.form.message' | t }}<span class="required">*</span></label>
+            <textarea rows="5" id="ContactFormMessage-{{ blockId }}" class="input-full" name="contact[body]" required>{% if form.body %}{{ form.body }}{% endif %}</textarea>
+
+            <div class="indicate"><span class="required">*</span> {{ 'contact.form.indicate_required_label' | t }}</div>
+
+            <button type="submit" class="btn">
+              {{ 'contact.form.send' | t }}
+            </button>
+
+          {% endform %}
+        </div>
+      </div>
+      <div style="padding:0 3rem">
+        {{ section.settings.sidebar}}
+      </div>
+    </div>
+  </div>
+</div>

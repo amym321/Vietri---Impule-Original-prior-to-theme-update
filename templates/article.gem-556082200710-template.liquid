@@ -1,0 +1,170 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-556082200710.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1632319872103" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1632319872103" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1632319872150" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1632319872150"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b>RAVENNA: A MOSAIC CITY</b></p></div></div><div data-label="Text Block" data-key="text-block" id="e-1632319872153" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1632319872153"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p>Just south of Venice, in the region of Emilia-Romagna, Ravenna is one of my favorite cities because I love mosaics. Many of the buildings in the center adorn these colorful chards of ceramic. Every church is filled with mosaics from one of the three phases of mosaics: Romans, Bavarian, Byzantine.</p><p><br></p><p>The Roman bricks outside of the churches were poor material and fell apart, so they then began to use Istria stones from Croatia, similar to marble, just like Venice.</p></div></div><div data-label="Image" data-key="image" id="e-1632319872083" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1632319872083" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/e0cf24c3-40dc-42e8-8fd3-617c7244facd/-/format/auto/-/preview/3000x3000/-/quality/lighter/Ravenna-1.jpg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="190" natural-height="183" width="190" height="183"></div></div><div data-label="Text Block" data-key="text-block" id="e-1632319925554" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1632319925554"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b>My favorite churches are:</b></p><p><br></p><p><i>Nuovo Basilica</i>, the oldest church in Ravenna dating from 493AD (Dante's tomb is housed here).&nbsp;</p><p><br></p><p><i>Basilica di S. Apponare Nuovo</i> has the oldest tower from the 6th century.</p><p><br></p><p><i>Basilica di San Vitale</i> is octagonal shaped and similar to Hydro Sofia in Istanbul which connected it to the eastern world. The magnificent jewel-toned green color of many mosaics is mesmerizing!</p><p><br></p><p><i>Basilica di San Maggiore,&nbsp;</i>the Romanesque structure is magnificent.</p></div></div><div data-label="Image" data-key="image" id="e-1632320004188" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1632320004188" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/6b2f6ff6-0913-4d9c-9e4e-e8b49a00fe33/-/format/auto/-/preview/3000x3000/-/quality/lighter/Ravenna-2.jpg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="2500" natural-height="1875" width="2500" height="1875"></div></div><div data-label="Text Block" data-key="text-block" id="e-1632320057488" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1632320057488"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p>If I remember correctly, there was a family with the name Polenta who were famous from Ravenna. I often wonder if the food is named for them.</p><p><br></p><p><strong>Restaurants</strong></p><p><br></p><p><i>L'Acciuga</i> has delicious seafood - fresh and out of this world. This is a Michelin-star restaurant and well deserved!</p><p><br></p><p><i>Antica Trattoria Al Gallo 1909</i> – buonissimo. Along with a beautiful interior garden, the décor features antique venetian furniture complemented by rich, vibrant colors. The food is mouthwatering! Try the truffles and asparagus.</p><p><i><br></i></p><p><i>Pizzeria dal Gladiatore </i>has some of the best pizza around! Perfect for a quick, simple meal.</p><p><br></p><p><i>Ostello Palazzo Galletti Abbiosi</i> is a 2-star restaurant, but I love how it is in an old 18th century home. I stayed there and loved it.</p><p><br></p><p><strong>Shopping</strong></p><p><br></p><p>Studio CaCO3 - a great gallery to browse.</p><p><br></p><p>Lilith Studio Gallery - has fun specialty gifts.</p><p><br></p><p>Libreria Scattisparsi - a wonderful small bookstore if you love bookstores like I do.</p></div></div></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-556082200710.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

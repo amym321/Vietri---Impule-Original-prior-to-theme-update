@@ -1,0 +1,190 @@
+<script src="{{ 'vietri.js' | asset_url }}" defer="defer"></script>
+{%- if template contains 'our-story' or 'our-mission' or 'our-craft' or 'our-artisans' -%}
+  <script src="{{ 'our-story.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+<script>
+(function() {
+  var items = document.querySelectorAll(".lazy-image");
+  if (window.IntersectionObserver) {
+    function onEntry(entries, index) {
+      entries.forEach(function(entry, index) {
+        if (entry.isIntersecting === true) {
+          if (entry.target.dataset.bg_src) {
+            entry.target.classList.add("is-showing");
+            entry.target.style = `background-image: url(${
+              entry.target.dataset.bg_src
+            }); background-size: cover; background-position: 100% 80%;`;
+            observer.unobserve(entry.target);
+          }
+          if (entry.target.dataset.src) {
+            entry.target.classList.add("is-showing");
+            entry.target.src = `${entry.target.dataset["src"]}`;
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }
+
+    var options = { threshold: [0.5] };
+    var observer = new IntersectionObserver(onEntry, options);
+
+    items.forEach(function(item, index) {
+      observer.observe(item);
+    });
+  } else {
+    items.forEach(function(item, index) {
+      if (item.dataset.bg_src) {
+        item.classList.add("is-showing");
+        item.style = `background-image: url(${
+          item.dataset.bg_src
+        }); background-size: cover; background-position: 100% 80%;`;
+      }
+
+      if (item.dataset.src) {
+        item.classList.add("is-showing");
+        item.src = `${item.dataset["src"]}`;
+      }
+    });
+  }
+})();
+</script>
+<!--Gorgias Chat Widget Start-->
+<div id="gorgias-chat">{% if customer %}<script>window.gorgiasChatParameters = {"smooch": {"givenName": "{{ customer.name }}","email": "{{ customer.email }}","properties": {"shopify__cart__total_price": "{{ cart.total_price | money | strip_html | default: null }}","shopify__cart__nb_of_items": {{ cart.items | size | default: 0 }},{% for item in cart.items %}"shopify__cart__items-{{ forloop.index }}-[]":"{\"line_price\":\"{{item.line_price|money|strip_html|default:null}}\",\"price\":\"{{item.price|money|strip_html|default:null}}\",\"product_id\":\"{{item.product_id|default:null}}\",\"quantity\":{{item.quantity|default:null}},\"sku\":\"{{item.sku|default:null}}\",\"title\":\"{{item.title}}\",\"variant_id\":{{item.variant_id|default:null}},\"vendor\":\"{{item.vendor|default:null}}\",\"id\":{{item.id|default:null}}}"{% if forloop.last != true %},{% endif %}{% endfor %}}}}</script>{% else %}<script>window.gorgiasChatParameters = {"smooch": {"properties": {"shopify__cart__total_price": "{{ cart.total_price | money | strip_html | default: null }}","shopify__cart__nb_of_items": {{ cart.items | size | default: 0 }},{% for item in cart.items %}"shopify__cart__items-{{ forloop.index }}-[]":"{\"line_price\":\"{{item.line_price|money|strip_html|default:null}}\",\"price\":\"{{item.price|money|strip_html|default:null}}\",\"product_id\":\"{{item.product_id|default:null}}\",\"quantity\":{{item.quantity|default:null}},\"sku\":\"{{item.sku|default:null}}\",\"title\":\"{{item.title}}\",\"variant_id\":{{item.variant_id|default:null}},\"vendor\":\"{{item.vendor|default:null}}\",\"id\":{{item.id|default:null}}}"{% if forloop.last != true %},{% endif %}{% endfor %}}}}</script>{% endif %}<script src="https://config.gorgias.io/production/g5KDM28Pep29aByw/chat/ZPB9rx1eEExWVa3O.js" defer></script>
+</div>
+
+  <!-- Please add your Google Ads Audience Source Tag ID -->
+
+    {% if template contains 'product' %}
+        <script type="text/javascript">
+            var json_product = {{ product | json }};
+        </script>
+        <script>
+            var ecomm_prodid=[];
+            for(var i=0;i<json_product.variants.length;i++)
+                ecomm_prodid.push('shopify_US_{{product.id}}_'+json_product.variants[i].id);
+        </script>
+        <script type="text/javascript">
+            var google_tag_params = {
+                ecomm_prodid: ecomm_prodid,
+                ecomm_pagetype: 'product',
+                ecomm_totalvalue: parseFloat('{{ product.price | money_without_currency | remove: ","}}')
+            };
+        </script>
+    {% elsif template contains 'collection' %}
+        <script type="text/javascript">
+            var google_tag_params = {
+                ecomm_prodid: '',
+                ecomm_pagetype: 'category',
+                ecomm_totalvalue: 0
+            };
+        </script>
+    {% elsif template contains 'cart' %}
+        <script type="text/javascript">
+        var id = new Array();
+        {% for item in cart.items %}
+        id.push('shopify_US_{{item.product.id}}_{{item.variant.id}}');
+        {% endfor %}
+        
+            var google_tag_params = {
+                ecomm_prodid: id,
+                ecomm_pagetype: 'cart',
+                ecomm_totalvalue: parseFloat('{{ cart.total_price | money_without_currency | remove: ","}}')
+            };
+        </script>
+    {% elsif template contains 'search' %}
+        <script type="text/javascript">
+            var google_tag_params = {
+                ecomm_prodid: '',
+                ecomm_pagetype: 'searchresults',
+                ecomm_totalvalue: 0
+        };
+        </script>
+    {% elsif template contains 'index' %}
+        <script type="text/javascript">
+            var google_tag_params = {
+                ecomm_prodid: '',
+                ecomm_pagetype: 'home',
+                ecomm_totalvalue: 0
+            };
+        </script>
+    {% else %}
+        <script type="text/javascript">
+            var google_tag_params = {
+                ecomm_prodid: '',
+                ecomm_pagetype: 'other',
+                ecomm_totalvalue: 0
+            };
+        </script>
+    {% endif %}
+
+<script>
+    gtag('event', 'page_view', {'send_to': 'AW-1019764137',
+                                'ecomm_prodid':window.google_tag_params.ecomm_prodid,
+                                'ecomm_pagetype': window.google_tag_params.ecomm_pagetype,
+                                'ecomm_totalvalue':window.google_tag_params.ecomm_totalvalue
+                               });
+  </script>
+
+<script>
+setTimeout(function(){
+var api = new Yotpo.API(yotpo);
+api.refreshWidgets();
+}, 1000);
+</script>
+
+<!-- Pinterest Tag -->
+<script>
+!function(e){if(!window.pintrk){window.pintrk = function () {
+window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+  n=window.pintrk;n.queue=[],n.version="3.0";var
+  t=document.createElement("script");t.async=!0,t.src=e;var
+  r=document.getElementsByTagName("script")[0];
+  r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+pintrk('load', '2612824254818', {em: '<user_email_address>'});
+pintrk('page');
+</script>
+
+{% if template contains 'collection' %}
+  <script>
+    pintrk('track', 'ViewCategory');
+  </script>
+{% endif %}
+{% if template contains 'product' %}
+  <script>
+        pintrk('track', 'pagevisit', {
+          currency: '{{ shop.currency }}',
+          line_items: [
+            { 
+              product_id: '{{product.id}}', 
+              product_category: '{{collection.title}}',
+              product_price: '{{ product.price | money_without_currency }}',
+              product_variant_id: '{% for variant in product.variants %}{{ variant.id }}{% endfor %}',
+              product_name: '{{ product.title }}'
+            }
+          ]
+        });
+  </script>
+<script>
+$('body').on('click', '.add-to-cart', function(e) {
+        pintrk('track', 'addtocart', {
+          value: '{{ product.price | money_without_currency }}',
+          currency: '{{ shop.currency }}',
+          line_items: [
+            { 
+              product_id: '{{product.id}}', 
+              product_category: '{{collection.title}}',
+              product_price: '{{ product.price | money_without_currency }}',
+              product_variant_id: '{% for variant in product.variants %}{{ variant.id }}{% endfor %}',
+              product_name: '{{ product.title }}'
+            }
+          ]
+        });
+    });
+</script>
+{% else %}
+    <script>
+        pintrk('track', 'pagevisit');
+    </script>
+{% endif %}
+
+<!-- end Pinterest Tag -->

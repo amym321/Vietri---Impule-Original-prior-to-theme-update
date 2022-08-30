@@ -1,0 +1,169 @@
+{%- assign show_back_in_stock = true -%}
+{% if product.tags contains 'bis-hidden' %}
+  {%- assign show_back_in_stock = false -%}
+{% endif %}
+
+{% capture form_id %}AddToCartForm-{{ section_id }}{% endcapture %}
+{% form 'product', product, id: form_id, class: 'product-single__form', data-gift-min: product.metafields.gifts.minimum, data-gift-variant: product.metafields.gifts.variant %}
+  {%- assign is_default_variant = false -%}
+  {% if product.variants[0].title == 'Default Title' or product.variants[0].title == 'Default' %}
+    {%- assign is_default_variant = true -%}
+  {% endif %}
+  {% unless product.options.size == 1 and is_default_variant %}
+    {% for option in product.options_with_values %}
+      {% if settings.variant_type == 'button' %}
+        {% include 'variant-button', section_id: section_id, option_drop: option %}
+      {% else %}
+        {% include 'variant-dropdown', section_id: section_id %}
+      {% endif %}
+    {% endfor %}
+  {% endunless %}
+
+  <select name="id" id="ProductSelect-{{ section_id }}" class="product-single__variants no-js">
+    {% for variant in product.variants %}
+      {% if variant.available %}
+        <option {% if variant == product.selected_or_first_available_variant %}
+          selected="selected" {% endif %}
+          value="{{ variant.id }}">
+          {{ variant.title }} - {{ variant.price | money_with_currency }}
+        </option>
+      {% else %}
+        <option disabled="disabled">
+          {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+        </option>
+      {% endif %}
+    {% endfor %}
+  </select>
+{% render 'combowise' %}
+  {% if settings.quantity_enable %}
+    <div class="product__quantity product__quantity--{{ settings.variant_type }}">
+      <label for="Quantity-{{ section_id }}">{{ 'products.product.quantity' | t }}</label>
+      {% include 'quantity-input', id: section_id, qty: 1, min: 1 %}
+    </div>
+  {% endif %}
+
+
+
+
+  {% if product.tags contains 'Gallo' %}
+
+  <div class="product__note">
+    <span style="font-size: 3.3em; color: #00594C;"> 
+    <i class="fa-duotone fa-hand-holding-heart"></i></span><br>
+         <p>After a tragic bombing in Ukraine, one of the last surviving artifacts was a ceramic rooster in the kitchen window of a home in the village of Borodyanka. Today, the rooster has become a symbol of hope worldwide. In 2022, VIETRI pledges to donate 10% of all Gallo proceeds to UNICEF in support of Ukrainian relief efforts.</p>
+
+  
+     </div>
+  {% endif %}  
+
+  
+  
+
+<div id="infiniteoptions-container"></div>
+
+
+
+  <div id="ProductInventory-{{ section_id }}"
+       class="product__inventory {% unless inventory_visible %}hide{% endunless %}"
+  >
+    <span class="stock-qty">{{ 'products.product.stock_label' | t: count: current_variant.inventory_quantity }}</span> in stock
+  </div>
+
+
+
+
+
+
+  {%- assign enable_dynamic_buttons = false -%}
+  {% if settings.enable_payment_button and template != 'product.preorder' %}
+    {%- assign enable_dynamic_buttons = true -%}
+  {% endif %}
+
+  {% if product.type == 'Gift Card' %}
+    <div id="isGiftCard" data-id="{{ section_id }}"></div>
+  {% endif %}
+
+  {% if enable_dynamic_buttons %}
+    <div class="payment-buttons">
+  {% endif %}
+
+  <button {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+          name="add"
+          id="AddToCart-{{ section_id }}"
+          class="btn btn--full add-to-cart{% if enable_dynamic_buttons %} btn--secondary{% endif %}"
+          {% unless current_variant.available %}disabled="disabled"{% endunless %}
+          data-variant-inventory-policy="{{ current_variant.inventory_policy }}"
+  >
+    
+    {% if template contains 'bundle' %}
+    <span id="AddToCartText-{{ section_id }}">
+      {% if current_variant.inventory_quantity <= 0 %}
+        {% if template contains 'bundle' and current_variant.inventory_policy == 'continue' %}
+        {{ 'products.product.add_to_cart' | t }}
+      {% endif %}
+      {% endif %}
+      {% else %}
+    </span>
+    
+    
+    <span id="AddToCartText-{{ section_id }}">
+      {% if current_variant.inventory_quantity <= 0 %}
+        {% if template contains 'preorder' and current_variant.inventory_policy == 'continue' %}
+          {{ 'products.product.preorder' | t }}
+        {% else %}
+          {{ 'products.product.sold_out' | t }}
+        {% endif %}
+      {% else %}
+        {{ 'products.product.add_to_cart' | t }}
+      {% endif %}
+      {% endif %}
+    </span>
+  </button>
+      
+
+  {% if product.available %}
+    {% if template contains 'preorder' %}
+     
+        
+         <p class="pre-order">
+        {% if current_variant.inventory_quantity <= 0 and current_variant.inventory_policy == 'continue' %}
+            {{ product.metafields.custom_fields.preorder_text }}
+        {% endif %}
+      </p>
+
+      {% endif %}
+  {% endif %}
+
+  {% if show_back_in_stock %}
+    {% if product.available %}
+      <button id="BIS_trigger" data-variant-id="{{ current_variant.id }}" class="btn return-link {% if current_variant.inventory_quantity > 0 %}hide{% endif %}">{{ 'products.product.notify_when_back_in_stock' | t }}</button>
+    {% else %}
+      <div class="BIS_trigger btn return-link" data-variant-id="{{ current_variant.id }}">
+        {{ 'products.product.notify_when_available' | t }}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  {% if enable_dynamic_buttons %}
+      {{ form | payment_button }}
+    </div>
+  {% endif %}
+
+  <div id="VariantsJson-{{ section_id }}" class="hide" aria-hidden="true">
+    {{ product.variants | json }}
+  </div>
+  {% if product.options.size > 1 %}
+    <div id="CurrentVariantJson-{{ section_id }}" class="hide" aria-hidden="true">
+      {{ current_variant | json }}
+    </div>
+  {% endif %}
+
+  {%comment%} display hidden inventory_policy values for each variant to be used in theme.js {%endcomment%}
+  {% for variant in product.variants %}
+    <div id="VariantInventoryPolicy-{{ section_id }}-{{ variant.id }}" class="hide" aria-hidden="true">
+      {{ variant.inventory_policy }}
+    </div>
+  {% endfor %}
+{% endform %}
+
+

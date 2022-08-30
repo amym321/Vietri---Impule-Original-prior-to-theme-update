@@ -1,0 +1,308 @@
+
+<style>
+  .combowise-box {
+    width: 100%;
+    transition: 0.5ms;
+    padding: 5px;
+  }
+  .combowise-row {
+    margin-bottom: 15px;
+  }
+  .combowise-thumbnail {
+    display: flex;
+  }
+  .combowise-thumbnail-img {
+    width: 35%;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    max-height: 180px;
+  }
+  .combowise-thumbnail-img img {
+  	max-height: 100%;
+    width: 100%;
+  }
+  .combowise-variants {
+    display: flex;
+    width: 65%;
+    padding-left: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  
+  .combowise-variants-item {
+    padding: 10px 5px;
+  }
+  .combowise-variants-item span {
+    padding: 5px 10px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .combowise-variants-item span:hover {
+    background-color: rgb(227 227 227 / 50%);
+    box-shadow: 1px 1px 6px #eee;
+    border: 2px solid #fff;
+  }
+  
+  .combowise-selected {
+    border: 2px solid black !important;
+  }
+  
+  .combowise-heading {
+  	margin-bottom: 10px !important;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .combowise-product-title {
+  	margin-bottom: 5px !important;
+    font-weight: 600;
+  }
+  
+  .combowise-error {
+  	color: red;
+  }
+  
+  .combowise-hide {
+  	display: none;
+  }
+  
+  .combowise-soldout {
+  	opacity: 0.6;
+    cursor: not-allowed !important;
+  }
+  
+  .combowise-overlaped-img {
+  	position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .combowise-overlaped-img img {
+  	max-width: 50%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .combowise-box {
+    	text-align: center;
+    }
+    .combowise-thumbnail {
+      flex-direction: column;
+    }
+    .combowise-thumbnail-img {
+      max-width: 100%;
+      max-height: initial;
+      align-self: center;
+    }
+    
+    .combowise-variants {
+    	width: 100%;
+    }
+    .combowise-variants {
+      padding-left: 0px;
+      justify-content: center;
+    }
+  }
+</style>
+
+<div class="combowise-box">
+  <div class="combowise-box-body">
+    <div class="combowise-col">
+      {% for meta in cp_metas %}
+      {% assign index1 = forloop.index %}
+
+      {% assign pHandlev = meta | last | split: ":" %}
+
+      {% assign p = all_products[pHandlev[0]] %}
+      <div class="combowise-row">
+        <p class="combowise-product-title">{{ p.title }}</p>
+        <div class="combowise-thumbnail">
+          <div class="combowise-thumbnail-img">
+          	<img alt="{{ p.title }}" src="{{ p.featured_image | img_url: '200x' }}">
+            <div class="combowise-overlaped-img"></div>
+          </div>
+          <div class="combowise-variants">
+            {% if p.has_only_default_variant %}
+            {% assign v = p.variants[0] %}
+            
+            <div class="combowise-variants-item">
+              <span 
+                    id="combowise_{{ index1 }}_1" 
+                    data-image="" 
+                    onclick="{% if p.available == true %}combowiseSelectionChanged({{ index1 }}, 1, {{ p.id }}, {{ v.id }}, `{{ title|strip }}`, `{{ v.sku }}`){% endif %}" 
+                    class="{% if p.available == false %}combowise-soldout{% endif %}"
+                    >{{ p.title | escape }}{% if p.available == false %} (Sold out){% endif %}</span>
+            </div>
+            {% else %}
+          	{% for v in p.variants %}
+            
+            {% capture title %}
+            {{ p.title | escape }} {{ v.title | escape| replace: 'Default Title', '' }}
+            {% endcapture %}
+            
+            {% assign index2 = forloop.index %}
+            <div class="combowise-variants-item">
+              <span 
+                    id="combowise_{{ index1 }}_{{ index2 }}" 
+                    data-image="{{ v.image.src | img_url: '80x' }}" 
+                    onclick="{% if v.available == true %}combowiseSelectionChanged({{ index1 }}, {{ index2 }}, {{ p.id }}, {{ v.id }}, `{{ title|strip }}`, `{{ v.sku }}`){% endif %}" 
+                    class="{% if v.available == false %}combowise-soldout{% endif %}"
+                    >{{ v.title }}{% if v.available == false %} (Sold out){% endif %}</span>
+            </div>
+            {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <div class="combowise-box-header">
+  	<p class="combowise-heading combowise-hide">Please select any %count% products</p>
+  </div>
+</div>
+<script>  
+  const combowiseConfig = JSON.parse('{{ config }}');
+
+  let combowiseSelectedItems = [];
+  function combowiseSelectionChanged(index1, index2, productId, variantId, title, sku) {
+    for(let i = 0; i < combowiseSelectedItems.length; i++) {
+      if (combowiseSelectedItems[i].index1 == index1 && combowiseSelectedItems[i].index2 != index2) {
+      	return;
+      }
+    }
+    
+    const id = `${productId}-${variantId}`;
+    
+    const ele = document.getElementById(`combowise_${index1}_${index2}`);
+   
+    if (ele.classList.contains('combowise-selected')) {
+      combowiseSelectedItems = combowiseSelectedItems.filter(e => (e.index1 == index1 && e.index2 == index2) ? false : true );
+      ele.classList.remove('combowise-selected');
+      const thumbnailDivImgEle = ele.parentNode.parentNode.parentNode.querySelector('.combowise-overlaped-img').querySelector(`#combowise_img_${index1}_${index2}`);
+      if (thumbnailDivImgEle) {
+        thumbnailDivImgEle.parentNode.removeChild(thumbnailDivImgEle);
+      }
+    } else {
+      const image = ele.getAttribute('data-image');
+      
+      if (image && image.indexOf('no-image') === -1) {
+      	const thumbnailDivEle = ele.parentNode.parentNode.parentNode.querySelector('.combowise-overlaped-img');
+        
+        const x = document.createElement("img");
+        x.setAttribute("src", image);
+        x.setAttribute("alt", title);
+        x.setAttribute("id", `combowise_img_${index1}_${index2}`);
+        x.addEventListener('click', function() {
+          window.open(image, '_blank');
+        });
+        
+        thumbnailDivEle.appendChild(x);
+      }
+      
+      ele.classList.add('combowise-selected');
+      combowiseSelectedItems.push({
+      	index1,
+        index2,
+        title,
+        sku,
+        id
+      });
+    }
+    
+    if(combowiseSelectedItems.length == combowiseConfig.boxLock) {
+      combowiseToggleBtns(false);
+    } else {
+      combowiseToggleBtns(true);
+    }
+    
+    updateCombowiseInput();
+  }
+  
+  function combowiseToggleBtns(bool) {
+    const combowiseAllBtns = document.querySelectorAll('button');
+    for (let i = 0; i < combowiseAllBtns.length; i++) {
+      combowiseAllBtns[i].disabled = bool;
+    }
+    
+    if (bool) {
+      const errorEle = document.querySelector('.combowise-heading');
+      errorEle.classList.add('combowise-error');
+      errorEle.focus();
+      
+    } else {
+      document.querySelector('.combowise-heading').classList.remove('combowise-error');
+    }
+  }
+  
+  function updateCombowiseInput() {
+    
+    const existingEleold = document.querySelectorAll('.combowise-box-input');
+    console.log(existingEleold);
+    
+    for (let i = 0; i < existingEleold.length; i++) {
+      existingEleold[i].parentNode.removeChild(existingEleold[i]);
+    }
+    
+    const existingEleRemoved = document.querySelectorAll('.combowise-box-input');
+    console.log(existingEleRemoved);
+    
+    // adding childs
+    
+    for (let i = 0; i < combowiseSelectedItems.length; i++) {
+      
+      let value = `Title: ${combowiseSelectedItems[i].title}`;
+      if (combowiseSelectedItems[i].sku) {
+        value += `, SKU: ${combowiseSelectedItems[i].sku}`;
+      }
+
+      value += `, id: ${combowiseSelectedItems[i].id}`;
+
+      const x = document.createElement("input");
+      x.setAttribute("type", "hidden");
+      x.setAttribute("name", `properties[Box item ${i + 1}]`);
+      x.setAttribute("value", value);
+      x.setAttribute("class", "combowise-box-input");
+      
+      
+      document.querySelector('.combowise-box').append(x);
+    }
+    
+    const existingEleNew = document.querySelectorAll('.combowise-box-input');
+    console.log(existingEleNew);
+  }
+  
+ (function() {
+
+    const state = document.readyState;
+
+    if (state === "interactive" || state === "complete") {
+
+      console.info('Combowise: dom is ready');
+      
+      if(combowiseSelectedItems.length != combowiseConfig.boxLock) {
+      	combowiseToggleBtns(true);
+      }
+      
+      let headingEle = document.querySelector('.combowise-heading');
+      headingEle.innerHTML = headingEle.innerHTML.replace('%count%', combowiseConfig.boxLock);
+      headingEle.classList.remove('combowise-hide');
+
+      const paymentBtnEle = document.querySelector('.shopify-payment-button');
+
+      if (paymentBtnEle) {
+        paymentBtnEle.style.display = "none";
+      }
+      
+
+    } else setTimeout(arguments.callee, 100)
+
+ })();
+</script>

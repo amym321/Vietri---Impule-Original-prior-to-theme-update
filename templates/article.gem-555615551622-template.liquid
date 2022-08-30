@@ -1,0 +1,172 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-555615551622.css' | asset_url }}" class="gf_page_style">
+<link data-instant-track rel="stylesheet" type="text/css" href= "https://d1um8515vdn9kb.cloudfront.net/libs/css/owl.carousel.min.css" class="gf_libs">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1614760291880" class="gf_row" data-icon="gpicon-row" data-id="1614760291880" data-extraclass=""><div class="gf_column gf_col-md-3 gf_col-sm-3 gf_col-xs-12 gf_col-lg-2" id="c-1614760291866" data-id="1614760291866"><div data-label="Row" data-key="row" id="r-1614760857078" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1614760857078" data-row-gap="0px" data-extraclass=""><div class="gf_col-lg-12 gf_column" id="c-1614760857017" data-id="1614760857017"><div data-label="Image" data-key="image" id="e-1614760299886" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1614760299886" data-resolution="480x480"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/6b762fe8-a3c1-4549-8f33-b3811a524606/-/format/auto/-/preview/480x480/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" natural-width="349" natural-height="349"></div></div><div data-label="Text Block" data-key="text-block" id="e-1614760340256" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1614760340256"><div class="elm text-edit gf-elm-left gf-elm-center-md gf-elm-center-sm gf-elm-left-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><p><strong>NICK CAGE</strong></p></div></div><div data-label="Text Block" data-key="text-block" id="e-1614760434279" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1614760434279"><div class="elm text-edit gf-elm-left gf-elm-center-md gf-elm-center-sm gf-elm-left-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><p>April 29,2020</p></div></div></div></div></div><div class="gf_column gf_col-md-9 gf_col-sm-9 gf_col-xs-12 gf_col-lg-10" id="c-1614760295764" data-id="1614760295764"><div data-label="Row" data-key="row" id="r-1615178530044" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1615178530044" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1614760475679" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1614760475679"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><strong>POSITANO</strong>, THE VERTICAL CITY</p></div></div><div data-label="Text Block" data-key="text-block" id="e-1614760762148" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1614760762148"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>I remember my first time driving through the hills from Naples toward Positano with Momma and Frances, and the breathtaking clearing in the trees as we approached a small winding road overlooking the Mediterranean Sea. We all agreed we must have died and gone to heaven because we had never seen anything so beautiful. Our driver, a local fisherman, gave us a scenic tour allowing us to take in the vast beauty of our surroundings, and thus, begin our love affair with the famed Amalfi Coast, Positano in particular, and the creation of our beloved Campagna, VIETRI’s flagship dinnerware.</p></div></div></div></div></div></div><!--gfsplit--><div data-label="Row" data-key="row" id="r-1614761078631" class="gf_row gf_row-fluid gf_row-no-padding gf_row-gap-0" data-icon="gpicon-row" data-id="1614761078631" data-extraclass="" data-row-gap="0px" style="display: block; flex-wrap: unset; visibility: visible;"><div class="gf_col-lg-12 gf_column" id="c-1614761078620" data-id="1614761078620" style="display: block; flex-direction: unset; justify-content: unset; min-height: auto;"><div data-label="Image" data-key="image" id="e-1614761088092" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1614761088092" data-resolution="800x800"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/4a64e8e5-16ab-4fe2-a5b0-9aa12ede511b/-/format/auto/-/preview/800x800/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" natural-width="800" natural-height="279"></div></div><div data-label="Image" data-key="image" id="e-1619719929821" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1619719929821" data-resolution="960x960"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-lg gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/4880c4db-f005-4113-b70c-13267e7e6010/-/format/auto/-/preview/960x960/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" natural-width="960" natural-height="476"></div></div></div></div><!--gfsplit--><div data-label="Row" data-key="row" id="r-1614761139866" class="gf_row" data-icon="gpicon-row" data-id="1614761139866" data-extraclass=""><div class="gf_column gf_col-md-3 gf_col-xs-12 gf_col-lg-3 gf_col-sm-12" id="c-1614760291866" data-id="1614760291866"><div data-label="Row" data-key="row" id="r-1614761139886" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1614761139886" data-row-gap="0px" data-extraclass=""><div class="gf_col-lg-12 gf_column" id="c-1614760857017" data-id="1614760857017"><div data-label="Image" data-key="image" id="e-1614761273058" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1614761273058" data-resolution="960x960"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-right-lg gf-elm-right-md gf-elm-left-sm gf-elm-left-xs" data-exc=""><img src="https://ucarecdn.com/86fb0746-6c38-4b4d-acbd-8cbba01252a7/-/format/auto/-/preview/960x960/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="40" natural-height="28"></div></div><div data-label="Text Block" data-key="text-block" id="e-1614761139842" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1614761139842"><div class="elm text-edit gf-elm-left gf-elm-right-lg gf-elm-right-md gf-elm-left-xs gf-elm-left-sm" data-gemlang="en" data-exc=""><p><i>"<span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">We arrived at the first piazza which opened to a narrow cobblestone walkway that took us to a tiny stone and sand beach."</span></i></p></div></div><div data-label="Separator" data-key="separator" id="e-1614761971106" class="element-wrap" data-icon="gpicon-separator" data-ver="1.0" data-id="1614761971106"><div class="elm gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-xs gf-elm-center-sm" data-align="left" data-exc=""><hr class="gf_separator"></div></div></div></div></div><div class="gf_column gf_col-md-9 gf_col-xs-12 gf_col-lg-9 gf_col-sm-12" id="c-1614760295764" data-id="1614760295764"><div data-label="Text Block" data-key="text-block" id="e-1614761139875" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1614761139875"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-left-lg" data-gemlang="en" data-exc=""><p>Positano is a small, hillside village nestled along the Amalfi Coast.</p></div></div><div data-label="Text Block" data-key="text-block" id="e-1614761139843" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1614761139843"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>A notorious destination for a respite and socializing for the elite, private islands and villas hanging from the rocks were owned by Italian magnates, movie producers, and choreographers. Mega yachts dotted the waters, but Positano remained colorfully simple. The offshoot road into Positano is one way. It winds down the hill lined with whitewashed hotels, markets, and local ceramic shops on both sides. Ingrained in my memory are visions of locals and tourists sauntering, shopping, or eating all while being mesmerized by the smells of bougainvillea draped over every edge and the sounds of children laughing. We were in paradise.</p><p><br></p><p>We arrived at the first piazza which opened to a narrow cobblestone walkway that took us to a tiny stone and sand beach. Along the way, we stopped into typical linen shops filled with dresses and men’s shirts and trousers. We sipped limoncello and tried on leather Positano loafers. We stopped at the extraordinary whitewashed church, filled with religious icons, and prayed for continued serenity and safety and love. At the bottom of the hill, we dined at Chez Black, one of the handful of small outside “ristoranti”, having a pizza or frutte di mare fritte and a crisp vino bianco!</p></div></div></div></div><!--gfsplit--><div data-label="Carousel" data-key="carousel" id="m-1619722956198" class="module-wrap" data-icon="gpicon-carousel" data-ver="1.0" data-id="1619722956198"><div class="module main-slider owl-carousel owl-theme " data-collg="2" data-colmd="3" data-colsm="3" data-colxs="1" data-marginlg="5px" data-marginmd="5px" data-marginsm="5px" data-marginxs="5px" data-dotslg="1" data-dotsmd="1" data-dotssm="1" data-dotsxs="1" data-navlg="1" data-navmd="1" data-navsm="0" data-navxs="0" data-navspeed="1200" data-autoplay="0" data-autoplaytimeout="5000" data-autoplayhoverpause="1" data-loop="0"><div class="item"><div data-index="1" class="item-content"><div data-label="Image" data-key="image" id="e-1619723035930" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1619723035930" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/5831547b-8b79-48ae-b08e-b45aaaaf1c3b/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="1200" natural-height="1400"></div></div></div></div><div class="item"><div data-index="2" class="item-content"><div data-label="Image" data-key="image" id="e-1619723049466" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1619723049466" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/8828b98c-2f29-49d1-825e-5fb130dcee80/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="1200" natural-height="1400"></div></div></div></div><div class="item"><div data-index="3" class="item-content"><div data-label="Image" data-key="image" id="e-1619723053593" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1619723053593" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/eb3b3b88-6755-4176-a854-7c52bc8d9edc/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="1200" natural-height="1400"></div></div></div></div></div><div class="gf-carousel-loading"><div class="gf-caousel-ripple"><div></div><div></div></div></div></div><!--gfsplit--><div data-label="Text Block" data-key="text-block" id="e-1619723204850" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1619723204850"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-left-lg" data-gemlang="en" data-exc=""><p>Positano is a village of color, of smiles and relaxation, a place to dream and have dreams come true.</p></div></div><!--gfsplit--><div data-label="Text Block" data-key="text-block" id="e-1619722859007" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1619722859007"><div class="elm text-edit gf-elm-left" data-gemlang="en"><p>Secret trysts are kept secret and new lovers are oblivious to others. It is where all people greet you with warmth and courtesy - because it is a fascination come true - a place of peace and accord.&nbsp;</p><p><br></p><p>Throughout the years I have made close friends who live in Positano year-round - a world-famous interior designer, two shopkeepers, and an elite hotel owner - all quietly placed in this world of beauty. The serenity in how they carry themselves and the delight they take in their surroundings are always an inspiration. This beautiful village (and its people) will forever hold a special place in my heart and be somewhere I call home.</p></div></div><!--gfsplit--><div data-label="Image" data-key="image" id="e-1619723263667" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1619723263667" data-resolution="240x240"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-exc=""><img src="https://ucarecdn.com/5b88b13c-c5ad-4125-a318-6bf8aad9f03f/-/format/auto/-/preview/240x240/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="240" natural-height="102"></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		"https://d1um8515vdn9kb.cloudfront.net/libs/js/owl.carousel.min.js",
+		'{{ 'gem-article-555615551622.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

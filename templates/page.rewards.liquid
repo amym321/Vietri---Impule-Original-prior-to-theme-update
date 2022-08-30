@@ -1,0 +1,107 @@
+<div class="swell-reward-vietri">
+<!-- Banner Section Code Start -->
+<div class="vietri-banner {%if customer%}logged-in{%endif%}">
+  <img src="{{ 'swell-banner-mobile.png' | asset_url }}" alt="caption_img" class="swell-mobile">
+  <div class="banner-holder">
+    <div class="banner-caption">
+      <h1 class="caption-title">Vietri rewards</h1>
+      <p class="caption-detail"><span>As a rewards member you'll get closer</span> to earning exclusive rewards every time you shop.</p>
+      {% unless customer %}
+      <ul class="swell-link-list">
+        <li class="swell-link">
+          <a href="/account/register" class="sign-up-btn btn">JOIN NOW</a>
+        </li>
+        <li class="banner-link">
+          <p class="banner-detail">Earn 50 points when you join!</p>
+          <div class="swell-border"></div>
+          <p class="banner-detail">Already have an account?
+            <a href="/account/login" class="log-in">Log In</a>
+          </p>
+        </li>
+        <li class="swell-login sign-up-btn"><a href="/account/login">LOGIN</a></li>
+      </ul>
+      {% endunless %}
+    </div>
+  </div>
+</div>
+{% if customer %}
+<div class="swell-login-section">
+  <h3 class="swell-login-user">Hi, {{ customer.first_name }}! <br> You Have <span class="swell-point-balance">x</span> Points.</h3>
+  <ul class="swell-link-list">
+    <li class="swell-link">
+      <a class="swell-link-redeem btn" href="/checkout">REDEEM NOW</a>
+    </li>
+    <li class="swell-link">
+      <div class="swell-link-history swell-history-link btn">REWARDS HISTORY</div>
+    </li>
+  </ul>
+</div>
+
+{% include 'swell_tiers_redemption' %}
+
+{% endif %}
+<!-- Banner Section Code End -->
+<div class="swell-container">
+  {% unless customer %}
+  <!-- Work Section Code Start -->
+  <div class="how-it-work">
+    <div class="swell-heading-section">
+      <h2 class="swell-heading">HOW IT WORKS</h2>
+    </div>
+    <ul class="hiw-list">
+      <li class="list-items">
+        <div class="list-holder">
+          <div class="list-count one">1</div>
+          <h3 class="list-title">Sign Up</h3>
+          <p class="list-detail">Join the rewards program<br> and start earning.</p>
+        </div>
+      </li>
+      <li class="list-items">
+        <div class="list-holder">
+          <div class="list-count two">2</div>
+          <h3 class="list-title">Earn Points</h3>
+          <p class="list-detail">Earn points every time<br> you shop.</p>
+        </div>
+      </li>
+      <li class="list-items">
+        <div class="list-holder">
+          <div class="list-count three">3</div>
+          <h3 class="list-title">Redeem Points</h3>
+          <p class="list-detail">Redeem points for<br> exclusive discounts.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- Work Section Code End -->
+  {% endunless %}
+  <!-- Campaign Section Code Start -->
+  <div class="campaign-section">
+    <div class="swell-heading-section">
+      <h2 class="swell-heading">WAYS TO EARN POINTS</h2>
+    </div>
+    <div class="swell-referral-loader">
+      <img src="{{ 'swell-loader.svg' | asset_url }}"/>
+    </div>
+    <ul class="swell-campaign-list {% if customer %}logged-in{% endif %}">
+    </ul>
+  </div>
+  <div class="swell-refer-friend">
+    <div class="swell-refer-friend-holder">
+      <div class="swell-refer-image">
+        <img src="{{ 'swell-refer-image-desktop.jpg' | asset_url }}" alt="caption_img" class="swell-refer-img">         
+      </div>
+      <div class="refer-friend">
+        <h3>REFER A FRIEND</h3>
+        <h2>Give $20, Get $20</h2>
+        <p>Give your friends $20 off on their first order of $125+ and get $20 for each successful referral.</p>
+        <a href="/pages/refer" class="swell-start-referring btn">START REFERRING NOW</a>
+      </div>
+    </div>
+  </div>
+  <!-- Campaign Section Code End -->
+  
+  {% unless customer %}
+  {% include 'swell_tiers_redemption' %}
+  {% endunless %}
+  
+</div>

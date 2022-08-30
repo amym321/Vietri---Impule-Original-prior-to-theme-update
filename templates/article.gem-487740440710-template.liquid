@@ -1,0 +1,170 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-487740440710.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1620172431261" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1620172431261" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1620172431332" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620172431332"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><strong>UNDER THE TUSCAN SUN, </strong>FRANCES MAYES</p></div></div><div data-label="Text Block" data-key="text-block" id="e-1620172431260" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620172431260"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>As I am sure for many of you, reading Under The Tuscan Sun and then seeing the movie, only accelerated my love for Italy. I wanted to meet Frances Mayes. She was southern, grew up in a small town, and went to a southern college. I knew we would have things in common.</p><p><br></p><p>Then, Frances and Ed moved to Hillsborough, NC and became quickly ensconced with a wonderfully erudite and creative group of friends – including my sister Frances. They held book club meetings, lively dinners, and enjoyed long walks. When they weren’t in North Carolina, they’d meet in Cortona for Italian adventures while drinking wonderful wines.&nbsp;</p><p><br></p><p>In the early 2000s, Frances and I met when we were both working on exclusive designs for a furniture manufacturer. Frances, just like she is today, was warm, inclusively interested in everyone, and open to trying anything!</p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_equal-height gf_row-gap-0" id="r-1620172652848" data-icon="gpicon-row" data-id="1620172652848" data-extraclass="" data-row-gap="0px" style="display: flex; flex-wrap: wrap; visibility: visible;" data-layout-lg="12" data-layout-md="12" data-layout-sm="12" data-layout-xs="12"><div class="gf_column gf_col-lg-12 gf_col-md-12 gf_col-sm-12 gf_col-xs-12" id="c-1620143428165" data-id="1620143428165" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Image" data-key="image" id="e-1620172652781" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1620172652781" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/498a86b4-44ec-475a-bdf6-a6ababea127e/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="1500" natural-height="1500"></div></div></div></div><!--gfsplit--><div data-label="Row" data-key="row" id="r-1620175226453" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1620175226453" data-extraclass="" data-layout-lg="12" data-layout-md="12" data-layout-sm="12" data-layout-xs="12" data-row-gap="0px"><div class="gf_column gf_col-lg-12 gf_col-md-12 gf_col-sm-12 gf_col-xs-12" id="c-1614760291866" data-id="1614760291866"><div data-label="Text Block" data-key="text-block" id="e-1620175226577" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620175226577"><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><strong>We partnered together to design dinnerware for her Cortona villa, Bramasole. We love seeing VIETRI in her cookbooks, and I have been in awe of Ed and Frances’ gardens and their cooking! Their wine choices are always spot on!</strong></p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_equal-height gf_row-gap-0" id="r-1620175354609" data-icon="gpicon-row" data-id="1620175354609" data-extraclass="" data-row-gap="0px" style="display: flex; flex-wrap: wrap; visibility: visible;"><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428165" data-id="1620143428165" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Image" data-key="image" id="e-1620175354611" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1620175354611" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/acb4b106-3a7e-4f61-9602-aea394f63d1f/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="1200" natural-height="1195"></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428179" data-id="1620143428179" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Text Block" data-key="text-block" id="e-1620175354568" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620175354568"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><font color="#ffffff">In 2020, during our Happy Hours, we partnered with Frances and Ed on various occasions. The first was in their fragrant garden in Hillsborough, an expansive 30-acre plot in the country with an extraordinary southern home. We sat outside, enjoyed antipasti, and indulged in the nutty oil from Ed’s olive groves direct from Tuscany.</font></p></div></div></div></div><!--gfsplit--><div data-label="Row" data-key="row" id="r-1620175587770" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1620175587770" data-extraclass="" data-layout-lg="12" data-layout-md="12" data-layout-sm="12" data-layout-xs="12" data-row-gap="0px"><div class="gf_column gf_col-lg-12 gf_col-md-12 gf_col-sm-12 gf_col-xs-12" id="c-1614760291866" data-id="1614760291866"><div data-label="Text Block" data-key="text-block" id="e-1620175587838" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620175587838"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-left-lg" data-gemlang="en" data-exc=""><p>We ended last year celebrating the Christmas season at their home in Cortona.&nbsp;</p></div></div><div data-label="Text Block" data-key="text-block" id="e-1620175587829" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620175587829"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Nestled beside their wood burning stove, Frances and Ed charmed us with their Italian stories and memories. You can enjoy these at these links:&nbsp;</p><p><br></p><p>Happy Hour (Bramasole Olive Oil): <a href="http://bit.ly/FrancesMayes_Aug20" class="">http://bit.ly/FrancesMayes_Aug20</a></p><p><br></p><p>Happy Hour (Christmas in Cortona): <a href="http://bit.ly/FrancesMayes_Dec20 " class="">http://bit.ly/FrancesMayes_Dec20&nbsp;</a></p></div></div><div data-label="Image" data-key="image" id="e-1620175765861" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1620175765861" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/f043db3c-bcc8-4c50-b4c5-e5027e2d92c5/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" natural-width="750" natural-height="500"></div></div><div data-label="Text Block" data-key="text-block" id="e-1620175893401" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620175893401"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Frances will be my guest on Il Ritrovo in our Piazza on Wednesday, February 24 at 12:00PM EST on VIETRI’s Instagram Live. Join us as we honor Frances as a female entrepreneur for the upcoming International Women’s Day and share her background and the events that shaped her into the incredible woman she is today.&nbsp;</p><p><br></p><p>Ci vediamo,</p></div></div><div data-label="Image" data-key="image" id="e-1620175587864" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1620175587864" data-resolution="240x240"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-exc=""><img src="https://ucarecdn.com/5b88b13c-c5ad-4125-a318-6bf8aad9f03f/-/format/auto/-/preview/240x240/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="240" natural-height="102"></div></div></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-487740440710.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

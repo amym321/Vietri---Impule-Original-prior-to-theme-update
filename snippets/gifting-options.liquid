@@ -1,0 +1,32 @@
+<div id="cart-modal-mobile">
+            <a href="#" class="btn js-modal-open" id="giftwrap-btn">   
+                add gifting options  
+            </a>
+
+            <div id="cart-modal" class="modal modal--square modal--quick-shop" data-product-id="{{ product.id }}">
+              <div class="modal__inner">
+                <div class="modal__centered">
+                  <div class="modal__centered-content">
+                  <h4>choose your gift box</h4>
+                  <div id="gsAppContainer" style="position: relative;" class="gs__app-container">
+                  <div style="position: relative;float:right;min-height:50px;">
+                  <div class="gs__loader">
+                  {% assign collection = collections.gift-wrap %}
+                        {% for product in collection.products %}
+                        {% assign collection = collections.gift-wrap %}
+            
+                        {% endfor %} 
+                        </div>
+                  </div>
+                  </div>
+                  
+                  </div>
+
+                  <button type="button" class="modal__close js-modal-close text-link" id="cart-modal-close">
+                    {% include 'icon-close' %}
+                    <span class="icon__fallback-text">{{ 'general.accessibility.close_modal' | t | json }}</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+         </div>

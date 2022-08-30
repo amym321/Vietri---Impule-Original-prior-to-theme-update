@@ -1,0 +1,27 @@
+<div class="page-width rich-text">
+  <div class="grid">
+    <div class="grid__item">
+      {% if collection.description != blank %}
+        {{ collection.description }}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div id="CollectionAjaxResult" class="collection-content">
+  <div id="CollectionAjaxContent">
+    <div class="page-width">
+      <div class="grid">
+        <div class="grid__item medium-up--one-fifth grid__item--sidebar">
+          {% section 'collection-sidebar' %}
+        </div>
+        <div class="grid__item medium-up--four-fifths grid__item--content">
+          {% section 'collection-promotions' %}
+          {% section 'collection-template' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'nosto-element' with 'categorypage-nosto-1' %}
+{% include 'nosto-element' with 'categorypage-nosto-2' %}

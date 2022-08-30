@@ -1,0 +1,170 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-555527274630.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div class="element-wrap" data-label="Text Block" id="e-1621007072140" data-icon="gpicon-textblock" data-ver="1" data-id="1621007072140"><div class="elm text-edit"></div></div><!--gfsplit--><div data-label="Row" data-key="row" id="r-1621007099476" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1621007099476" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1621007099453" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1621007099453"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><strong>SUMMER </strong>IN SICILY</p></div></div><div data-label="Text Block" data-key="text-block" id="e-1621007099469" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1621007099469"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Frances, Momma, and I had decided to begin this wonderful endeavor called VIETRI in September 1983 after our return trip to Vietri sul Mare and the harrowing negotiations of prices and first deliveries of our ceramic patterns to North Carolina. Frances and I had hardly understood a word, but we had a signed agreement with the prices, and we trusted our new friend, Fabio Puccinelli, who agreed to be our “agent.”&nbsp;</p><p><br></p><p>We returned home, displayed our wares at our first trade shows, and were excited about the orders that would be shipped the next March when the container arrived! We spent the next nine months learning everything we could from everyone we knew who would lend an ear. We set meetings and filled our notebooks with everything from customs broker information, shipping lines, and to how to read a profit and loss statement.&nbsp;</p></div></div><div data-label="Image" data-key="image" id="e-1621007099533" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1621007099533" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/f01b50f9-1fd2-43dc-8a56-5d9ef3ab6223/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="1049" natural-height="701"></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1621014654209" data-icon="gpicon-row" data-id="1621014654209" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620181804878" data-id="1620181804878"><div data-label="Text Block" data-key="text-block" id="e-1621014654216" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1621014654216"><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><strong>"By the end of 1983, I knew I had to learn Italian."</strong></p></div></div><div data-label="Text Block" data-key="text-block" id="e-1621014654265" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1621014654265"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>I enjoyed relying on Fabio for information from Italy, but I had to rely on him for EVERYTHING until product landed at our US ports. What if Fabio got tired of working? What if something happened to him? What if?</p><p><br></p><p>We happened upon a village called Santo Stefano di Camastra, which was on a windy road halfway between Palermo and Taormina. There were virtually no trees. The ground was dry and a light-colored clay. The village was almost complete on the main street and one parallel street on either side. Ceramic shops lined every street I could see, and I was in heaven! Many classic Sicilian designs were painted with leaded red and green paints. I learned quickly about FDA regulations as well as the California Prop 65 requirements.&nbsp;</p><p><br></p><p>One of our first stops was below the road, on the pebbled seaside where flawed or broken ceramic pieces were tossed into the water. Each piece became more and more round with wonderful green and blue and yellow and orange and red designs worn at the edges. I remember picking up a handful and taking them around with me. They were so beautiful, so worn, and all clearly works of art (to me). The factory was in what looked like a metal airplane hangar with doors. The large openings let the sea breeze in which kept the building cool and comfortable. The gentleman who greeted me was Signor Lipari, a slim man with a smoke stain between his fingers, and a crackled smile. Their provincial designs included fish and more fish swimming in the center of the plates between algae. The borders were sponged marine blue.  Yes, this was a wonderful pattern. We christened it Al Mare (to the Sea).&nbsp;</p><p><br></p><p>We then saw some wonderful fruits, so I sat with the painters and began creating a new border with center fruits – apples, pears, lemons, oranges, and pomegranates. We tested a few bananas, and by the end, named this pattern Buon Giorno (Good Morning). What FUN this was!</p></div></div></div></div><!--gfsplit--><div data-label="Image" data-key="image" id="e-1621014718113" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1621014718113" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/2dfe4db5-f2eb-4a7a-9f72-7c3be75ec0ef/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="1073" natural-height="695"></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1621015013479" data-icon="gpicon-row" data-id="1621015013479" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620181804878" data-id="1620181804878"><div data-label="Text Block" data-key="text-block" id="e-1621015013488" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1621015013488"><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><strong>"Through the three weeks that Fabio stayed, we met Lipari’s children and wife, and their friends, the Fratantonis."</strong></p></div></div><div data-label="Text Block" data-key="text-block" id="e-1621015013530" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1621015013530"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>The Fratantoni family were true artists and continue to be known for their fabulous floor and wall tiles, first stones, and accessories. I returned for more than 20 years to Santo Stefano and grew the business so much, that they teasingly called the road Via Susanna, because when I came, everyone knew!&nbsp;</p><p><br></p><p>Fabio left when I had another week of lessons. It was a wonderful week. I maxed out my studies, continued to console our teacher, watched the crazy students drink too much, walk on roof tiles and break them, and be audaciously rude. That did make me sad. I walked the viale daily, looking into the stores. I visited every church and every hotel lobby and grounds. I explored above and below the village. It was all so, so magical.</p><p><br></p><p>My plan was to drive from Taormina to Palermo and then get on the overnight boat when I arrived at the boot of Italy. From there, I would drive ten hours to Fabio’s family seaside home in Castiglione della Pescaia. I would return his car, vacation with his family for a few days and then get back to North Carolina. I had much to do!</p><p><br></p><p>Well, that plan was a bit bumpy.</p></div></div></div></div><!--gfsplit--><div data-label="Image" data-key="image" id="e-1621015395777" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1621015395777" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/27f205d9-edf6-4a74-98b4-583c9d5473e0/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="967" natural-height="725"></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1621015417789" data-icon="gpicon-row" data-id="1621015417789" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620181804878" data-id="1620181804878"><div data-label="Text Block" data-key="text-block" id="e-1621015417722" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1621015417722"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>I filled Fabio’s beat up, old red Fiat 500 with my treasures, and off I began in plenty of time.  Right before I got to Santo Stefano, I was rounding a bend and heading down the hill when the brakes went out. I raised the emergency brake and held on for dear life! All I could see was another sharp turn to the right and a white, pristine car heading into the curve going the other way. BAM! I was able to only side swipe the car, but it was a mighty crash, and it is what stopped my red bomb. After a few seconds of silence, all I could hear was screaming. The man from the white car was furious. Around me were arriving lots and lots of people from the fields. They took sides and EVERYONE was yelling at each other, looking at the two cars, and making Sicilian hand motions like I had never seen before. Every bit of Italian I’d spent all summer learning left my mind!</p><p><br></p><p>Finally, an older lady put her arm in mine and led me 500 feet down the road to her home. She gave me a glass of water and I think I finally stopped crying my silent tears. I pointed to her telephone and asked in my best sign language if I could call someone. She nodded yes, so I called Fabio and cried through the explanation. He then spoke with the lady. She returned the phone to me, and Fabio said to just relax, he would call our new friends, the Fratantoni boys. Within the hour that felt like an eternity, they arrived and discussed the situation with the raging men. They fiddled with the car. It started working so I got into the car with one brother and the other brother drove my wreck. I have no idea who paid for the repairs of the white car. I was in such shock, I never asked!&nbsp;&nbsp;</p><p><br></p><p>After we got to the Fratantoni workshop, they took my car to get checked, and after another hour, returned to wave me off to Palermo. I had a boat to catch!</p><p><br></p><p>I arrived in the nick of time. After following many more hand motions, I got the car situated and went to find my little stall. I opened the door, and believe it or not, I found myself in a two-bunk bedroom with none other than THREE NUNS! I could not even make this up.</p><p><br></p><p>They were my saviors. We said nothing. I got on my top bunk and did not remember a thing until the bells of Reggio Calabria rang from the boot of the mainland. I quickly washed my face, smiled at the sisters, and found my scrappy little car.</p><p><br></p><p>Off I started up the boot, through Naples and finally to Castiglione della Pescaia where Fabio was eagerly awaiting. Filthy, smelly, and still exhausted, I took a long shower, ate a nice bowl of pasta al olio e aglio, and got into a clean bed to sleep for eleven hours. Thank goodness I had planned a few days to rest. I needed it!</p></div></div></div></div><!--gfsplit--><div data-label="Row" data-key="row" id="r-1621017581846" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1621017581846" data-extraclass="" data-layout-lg="12" data-layout-md="12" data-layout-sm="12" data-layout-xs="12" data-row-gap="0px"><div class="gf_column gf_col-lg-12 gf_col-md-12 gf_col-sm-12 gf_col-xs-12" id="c-1614760291866" data-id="1614760291866"><div data-label="Image" data-key="image" id="e-1621017581933" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1621017581933" data-resolution="240x240"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-exc=""><img src="https://ucarecdn.com/5b88b13c-c5ad-4125-a318-6bf8aad9f03f/-/format/auto/-/preview/240x240/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="240" natural-height="102"></div></div></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;window.__gemStoreData.gemKeyValid.hotfixImageListClickMobile = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-555527274630.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

@@ -1,0 +1,170 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-556082102406.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1633106404636" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1633106404636" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1633106404692" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1633106404692"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b>ON AN EVENING IN ROMA</b></p></div></div><div data-label="Text Block" data-key="text-block" id="e-1633106404665" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1633106404665"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p>I think Rome is the perfect starting point for any trip to Italy. You get a sense of a city and its bustling Italians. You walk with the history and through the city from the Forum to the Vatican, and you understand the continued pull of the Catholic Church - whether as devout believers or devout Italians.</p></div></div><div data-label="Image" data-key="image" id="e-1633106404647" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1633106404647" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/11d99a28-8e3a-4390-997d-02c3203872e8/-/format/auto/-/preview/3000x3000/-/quality/lighter/Rome-3.jpg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="1500" natural-height="2250" width="1500" height="2250"></div></div><div data-label="Text Block" data-key="text-block" id="e-1633106408193" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1633106408193"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p>The best first thing to do is to partake in one or two half day tours. This is enough so that you are able to indulge in the history and not become distracted.&nbsp;</p><p><br></p><p>We love Roman Travels with Cristiano Pellegrini (romantravels@gmail.com).</p><p><br></p><p>Bill and I met Cristiano’s father who ran the agency while sharing a box in Milan at La Scala (the opera). Sandro hummed and swayed with the opera. His eyes danced with the shining light of a true opera lover. We called Sandro every time we were in Rome for yet, another tour.</p></div></div><div data-label="Image" data-key="image" id="e-1633461505697" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1633461505697" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/874b6783-a5e3-4afa-9f0e-246606ff7ef9/-/format/auto/-/preview/3000x3000/-/quality/lighter/Rome-1.jpg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="2500" natural-height="1667" width="2500" height="1667"></div></div><div data-label="Text Block" data-key="text-block" id="e-1633106882405" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1633106882405" style="display: block;"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b>Things to not miss:</b></p><p><b><br></b></p><p>A tour of St. Peters including the square and Vatican City and Sistine Chapel.</p><p><br></p><p>The Scavi Tour under the catacombs of St. Peters. You must have a letter from your minister. The Forum - yes, the forum and its ruins, a true history of Rome and Italy. It is incredible.</p><p><br></p><p>The Villa Borghese and its gardens are breathtaking. I recommend making reservations for the museum in advance as its usually booked, but the gardens are free.</p><p><br></p><p>La Mura di Buona Fortuna – Wall of Good Fortune</p><p><br></p><p>Piazza Verdi</p><p><br></p><p>A special keyhole in a door of a garden overlooking the city centers the Vatican. Any concierge or taxi driver will know. It’s incredible!</p><p><br></p><p>Mussolini’s Balcony close to the (wedding cake looking) Supreme Court, made with white travertine.</p></div></div><div data-label="Image" data-key="image" id="e-1633107025915" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1633107025915" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/68116ad6-f7ed-4809-99bf-4271d1162514/-/format/auto/-/preview/3000x3000/-/quality/lighter/Rome-4.jpg" alt="" class="gf_image" data-gemlang="en" width="2000" height="1500" data-width="100%" data-height="auto" title="" natural-width="2000" natural-height="1500"></div></div><div data-label="Text Block" data-key="text-block" id="e-1633107081471" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1633107081471" style="display: block;"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b>Hotels</b></p><p><br></p><p>The Hassler Hotel&nbsp; &nbsp; &nbsp; &nbsp;</p><p>World famous, it is above the Spanish Steps. Just sitting in the lobby, I am sure you will either see someone famous or someone who wants to be famous. It is not a favorite because it is so grandiose, but it is worth seeing and enjoying.</p><p><br></p><p>Hotel Eden</p><p>This is where my father stayed during his travels when I was a girl, so I grew up hearing stories of the people he met and the moments they shared here. The restaurant and bar on the top exposes a breathtaking view of Rome. It is quite special. Momma, Frances, and I stayed here several times and toasted him each time.</p><p><br></p><p>Hotel Condotti</p><p>A small, charming hotel also above the Spanish Steps. The rooms are petite but so chic, and the sitting areas are wonderful.</p><p><br></p><p>Hotel Gregoriano</p><p>Simple and probably less expensive. The people are so nice, and again it is very central and close to the Spanish steps.&nbsp;</p><p><br></p><p>Hotel d’Inghilterra</p><p>I am partial to this all-Italian hotel because I know the woman who did the design work. The colors are in purples and greens, a little satiny for American taste, but it has some very special small rooms that I loved.</p></div></div><div data-label="Image" data-key="image" id="e-1633461643050" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1633461643050" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/0eca0844-c674-4146-b0f3-56e072fdf8d3/-/format/auto/-/preview/3000x3000/-/quality/lighter/Rome-5.jpg" alt="" class="gf_image" data-gemlang="en" width="2400" height="3000" data-width="100%" data-height="auto" title="" natural-width="2400" natural-height="3000"></div></div><div data-label="Text Block" data-key="text-block" id="e-1633461655688" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1633461655688" style="display: block;"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b>Restaurants</b></p><p><br></p><p>Mirabelle Restaurant</p><p>On top of the Splendide Hotel. This will be your most romantic night in Italy. As for seats outside on the terrace (la terrazza) overlooking the city lights and the Vatican. You will not be disappointed.&nbsp;&nbsp;</p><p><br></p><p>Trattoria da Luigi</p><p>This is fun place that can be deceiving from the outside. It is walking distance from the Spanish Steps (as are most things). It has such an interesting interior and delicious pastas and pizzas. This is for a night you are craving a crisp, refreshing beer.</p><p><br></p><p>Osteria alla Romana</p><p>A true trattoria! It is the famous "mangi bene e spendi poco” (eat well and spend little). Romana has a classic atmosphere of a Roman trattoria with extras. The bruschetta is divine - with prosciutto or eggplant or the classic tomato.  Walk or take a taxi because there is no parking.</p><p><br></p><p>Agatha e Romeo</p><p>One of the best and most expensive restaurants in Rome. It is fine dining from three generations. Eclectic wines from a vaulted cellar and very high-end, creative cooking!</p></div></div></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-556082102406.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

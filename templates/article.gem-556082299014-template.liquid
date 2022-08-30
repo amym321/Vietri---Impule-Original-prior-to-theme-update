@@ -1,0 +1,172 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-556082299014.css' | asset_url }}" class="gf_page_style">
+<link data-instant-track rel="stylesheet" type="text/css" href= "https://d1um8515vdn9kb.cloudfront.net/libs/css/owl.carousel.min.css" class="gf_libs">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1631548661062" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1631548661062" data-extraclass="" data-row-gap="0px" style="display: block; flex-wrap: unset; visibility: visible;"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067" style="display: block; flex-direction: unset; justify-content: unset; min-height: auto;"><div data-label="Text Block" data-key="text-block" id="e-1631548661042" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1631548661042"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b>SUSAN'S ENTERTAINING TIPS</b></p></div></div><div data-label="Text Block" data-key="text-block" id="e-1631548661082" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1631548661082"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p>Susan Gravely grew up in the South, where porches wrapped around the house, lightning bugs illuminated the night sky, dinner parties filled the calendar, and visitors were always welcome. Susan and her sister, Frances, remember well the careful preparation behind a special evening, and they were often asked to help set the table. Little did Susan know that very chore would turn into her life's passion.&nbsp;</p></div></div><div data-label="Image" data-key="image" id="e-1631548661043" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1631548661043" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/e1b22c52-405b-4210-a27b-653b992a2ac0/-/format/auto/-/preview/3000x3000/-/quality/lighter/Vietri_Feb-2021_Food-Seen_0253.jpg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="3000" natural-height="2000" width="3000" height="2000"></div></div><div data-label="Text Block" data-key="text-block" id="e-1631632517537" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1631632517537"><div class="elm text-edit gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center gf-elm-center-xs" data-gemlang="en" data-exc=""><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);"><span style="text-align: inherit; letter-spacing: 0px;">1. I love hosting spontaneous gatherings. I’ve found that people love to be together, enjoying each other’s company. Whether it’s a robust glass of wine or a fun, creative cocktail, guests tend to revel in the simple joys of entertaining and conversation.</span><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);">2. Remember to relax. Your guests don't know how well you have or have not prepped for the occasion and your anxious feelings will inevitably rub off on them. Enjoy yourself and your guests will enjoy themselves, too.&nbsp;</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);">3. For me, the most important thing to remember about being a hostess is to relax and enjoy the moment. I have so much fun chatting with my friends in the kitchen while I finish preparing a dish or asking them to help me set the table. It’s nice for visitors to feel included and know that they are welcome and appreciated.</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);">4. Always add a sparkle of melody. A favorite record or playlist drifting in the background enhances the environment in the simplest way.&nbsp;</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);">5. One of my favorite things to do is bring the outside indoors. I usually cut greenery from the garden, and pair it with seasonal flowers to add a touch of color and freshness to the table. It’s especially nice in chillier months where we tend to spend more time indoors around the fire.</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);">6. When entertaining large groups, have guests make themselves a nametag when they come in. I encourage guests to write a fun fact or how they know the host so that it's easier for them to meet others.&nbsp;</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: center; color: rgb(94, 94, 94);">7. Make your table a conversation piece. Of course, I entertain on VIETRI, and I enjoy incorporating family heirlooms with my newest dinnerware. I love that our beautiful collections inspire discussions about craftsmanship, Italy, and good living.</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: center; color: rgb(94, 94, 94);"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: center; color: rgb(94, 94, 94);">8. Serve delicious yet simple food. For an appetizer, I pair prosciutto with delectable Italian or French cheeses and bread from the local farmer's market. Sometimes, I add a bit of pear preserves to spread with the cheeses as a special touch.&nbsp;</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: center; color: rgb(94, 94, 94);"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: center; color: rgb(94, 94, 94);">9. For dinner, a chili or vegetable soup and salad is comforting and easy. A cold soup and bread with a fresh spinach or garden salad is refreshing for summer. I like to serve things that are colorful and in season.</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: center; color: rgb(94, 94, 94);"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: center; color: rgb(94, 94, 94);">10. I typically conclude the meal with a fruit-based dessert. They cleanse the palate, and I appreciate that they don’t need much sugar since they’re already sweet. Helps me feel less guilty when I indulge!</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: center; color: rgb(94, 94, 94);"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: center; color: rgb(94, 94, 94);">11. After eating, my husband and I often suggest a walk around the neighborhood or another activity. We always have a great time on the bocce court in our garden, especially when the competition gets fierce.&nbsp;</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: center; color: rgb(94, 94, 94);"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: center; color: rgb(94, 94, 94);">12. The most important thing is to relax. Entertaining should not be a daunting or nerve-racking experience. Enjoy spending time with your family and friends!</p></div></div><div data-label="Carousel" data-key="carousel" id="m-1631632773733" class="module-wrap" data-icon="gpicon-carousel" data-ver="1.0" data-id="1631632773733"><div class="module main-slider owl-carousel owl-theme " data-collg="2" data-colmd="3" data-colsm="3" data-colxs="1" data-marginlg="4px" data-marginmd="5px" data-marginsm="5px" data-marginxs="5px" data-dotslg="0" data-dotsmd="1" data-dotssm="1" data-dotsxs="1" data-navlg="1" data-navmd="1" data-navsm="0" data-navxs="0" data-navspeed="1200" data-autoplay="1" data-autoplaytimeout="5000" data-autoplayhoverpause="1" data-loop="1"><div class="item"><div data-index="1" class="item-content"><div data-label="Image" data-key="image" id="e-1631632787289" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1631632787289" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/78779992-32a6-4706-8feb-194450114969/-/format/auto/-/preview/3000x3000/-/quality/lighter/Vietri_Feb%202021_Food%20Seen_0264.jpg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" width="2000" height="3000" natural-width="2000" natural-height="3000"></div></div></div></div><div class="item"><div data-index="2" class="item-content"><div data-label="Image" data-key="image" id="e-1631634108025" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1631634108025" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/b4456fdc-35ab-4c5f-9176-f6c897273866/-/format/auto/-/preview/3000x3000/-/quality/lighter/Vietri_Feb%202021_Food%20Seen_0258.jpg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" width="190" height="183" natural-width="190" natural-height="183"></div></div></div></div><div class="item"><div data-index="3" class="item-content"><div data-label="Image" data-key="image" id="e-1631632793441" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1631632793441" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/23f7ea51-1b81-480a-b964-46b574df9e35/-/format/auto/-/preview/3000x3000/-/quality/lighter/NEW253.jpg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" width="2000" height="3000" natural-width="2000" natural-height="3000"></div></div></div></div></div><div class="gf-carousel-loading"><div class="gf-caousel-ripple"><div></div><div></div></div></div></div></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		"https://d1um8515vdn9kb.cloudfront.net/libs/js/owl.carousel.min.js",
+		'{{ 'gem-article-556082299014.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

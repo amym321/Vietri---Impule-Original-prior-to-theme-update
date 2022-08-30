@@ -1,0 +1,170 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-555707302022.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1622115717347" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1622115717347" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1622115717249" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1622115717249"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><p><b>SUMMER IN POSITANO</b></p></div></div><div data-label="Text Block" data-key="text-block" id="e-1623442507057" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1623442507057" style="display: block;"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><p>It is the light. The morning light scattering bright flashes on the water's movement. It is the sound of fishermen - their quiet engines, or their oars gently knocking the water, or their voices of admiration for the fish they will catch. It is the voice of a local man walking down the street, greeting a friend with a laugh of delight. It is the smell of salt air and espresso and freshly baked brioche. It is my heart, beating more quickly out of the sheer delight of my return.</p><p><br></p><p></p><p>Discovered to have been settled in prehistoric times, Positano became a wealthy market port from the 15th to the 17th century. Other towns along the coast had luxurious Roman villas as early as 1C BC. Positano was the home of sailors and fishermen.</p></div></div><div data-label="Image" data-key="image" id="e-1622115717299" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1622115717299" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/73ed38a9-6e72-440f-a41a-0f6cea8f3848/-/format/auto/-/preview/3000x3000/-/quality/lighter/photo-1.jpg" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" natural-width="3000" natural-height="2250"></div></div><div data-label="Text Block" data-key="text-block" id="e-1622115717306" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1622115717306" style="display: block;"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><p>Relatively poor and rarely visited until the mid 1950s when John Steinbeck wrote in Harper's Bazaar in mid 1953, "Positano bites deep. It is a dream place that isn't quite real when you are there and becomes beckoningly real after you are gone."</p><p><br></p><p>There are beautiful highlights of architecture as you stroll the cobblestone walking path to the base of the town.&nbsp;<span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">Chiesa Santa Maria Assunta's dome is magnificently made of majolica tiles. The inside of the church is expansive, ornate and prayerful.&nbsp;</span><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">The cobblestones are worn and rounded from horse drawn carts carrying goods to the harbor for centuries. When it rains, they glisten and want to tell us all of the tales of years past.</span></p><p><br></p><p>The Marina Grande beach is at the bottom of the worn walking path and is dotted with sunbathers, artists, and outdoor restaurants. The colorful awnings, the blue and white boats, and the local children playing gives joy and laughter to all.</p><p><br></p><p>Some of my favorite hotels include Le Sirenuse and Il San Pietro di Positano.</p></div></div></div></div><!--gfsplit--><div data-label="Row" data-key="row" id="r-1623442414105" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1623442414105" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Image" data-key="image" id="e-1623442414112" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1623442414112" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/79e90710-f1c1-417d-9f05-b8cf396d9df5/-/format/auto/-/preview/3000x3000/-/quality/lighter/foto%205-23-21,%205%2025%2024%20am.jpeg" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" natural-width="2008" natural-height="3000"></div></div><div data-label="Text Block" data-key="text-block" id="e-1623442414136" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1623442414136" style="display: block;"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><p>The Tre Sorrelle (Three Sisters) restaurant is at the base of the town, on the sea. A fresh margherita pizza with my waiter grinding a new piece of parmesan. A glass of vino bianco secco and maybe an insalata verde con olio d'oliva. Ending with limoncello: so cold, so perfect. From the grapefruit-size lemons on their trellised hills. Watching the day cool, the locals out strolling and children playing.</p><p><br></p><p>Lunch at La Sponda: a Michelin star restaurant in Hotel Le Sirenuse, on the patio overlooking the village and the sea. Euphoric! A former villa filled with antiques, linen and silk fabrics, and oh, so casually elegant. It also has one of the most chic shops inside the main reception as well as across the street!</p><p><br></p><p>Trattoria La Tagliata: a family style environment off the beaten path, in the hills of Positano Alto. Run by a family of happy, inquisitive third generation Positaneans. It is ALWAYS one of my favorite experiences. There is no menu. The farm-to-table long tables greet strangers who become friends. There is music above the lights of the village if you decide to linger after dinner! A MUST!</p></div></div></div></div><!--gfsplit--><div data-label="Row" data-key="row" id="r-1623442423693" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1623442423693" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Image" data-key="image" id="e-1623442423669" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1623442423669" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/b9a1230d-f3b8-4992-83cd-e522ad1f11cb/-/format/auto/-/preview/3000x3000/-/quality/lighter/foto%205-23-21,%205%2034%2033%20am.jpeg" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" natural-width="2250" natural-height="3000"></div></div><div data-label="Text Block" data-key="text-block" id="e-1623442423697" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1623442423697" style="display: block;"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><p>And the piece de resistance: Hotel Il San Pietro. Only open for lunch guests for maybe 15 years, this extraordinary hotel was built by Carlo Cinque, a straw hatted, linen suited, lovely gentleman who first built the villa for himself, and then turned it into a magnificent piece of architectural wonder. On our fateful trip, Momma, Frances, and I stayed at Il San Pietro, and we also stayed in Carlo's original room. Imagine bougainvillea on the white washed ceiling with glass doors overlooking the Tyrrhenian Sea and lights of the village!</p><p><br></p><p>And please do not miss, Palazzo Murat and its bar as you stroll down the cobblestone path to the marina. I painted my home's front doors in honor of their ochre doors! The bar is so peaceful, and the outside garden offers a perfect place to have a caffè or prosecco or limoncello.</p></div></div></div></div><!--gfsplit--><div data-label="Row" data-key="row" id="r-1623442427526" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1623442427526" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Image" data-key="image" id="e-1623442427551" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1623442427551" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/a8d28f84-e033-4e23-8f6b-847886c069e0/-/format/auto/-/preview/3000x3000/-/quality/lighter/IMG_3872.jpeg" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" natural-width="2250" natural-height="3000"></div></div><div data-label="Text Block" data-key="text-block" id="e-1623442427619" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1623442427619" style="display: block;"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><p><b>Favorite Stores</b></p><p><br></p><p>Casa e Bottega - Being a dish nut, this precious shop sells wonderful white clay ceramics designed for them. All of the food is organic and fresh and their motto is "Let the food be your medecine." I want to buy everything there each time I enter!</p><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;"></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;"><br></span></p><p>IDILLIO- Linen, Linen, Linen - the BEST SHIRTS I have ever had for men and for women. And the dresses are so fun!</p><p><br></p><p>La Bottega di Brunelli on Via Pasitea has fabulous chic dressy clothes! I purchased a favorite teal color trouser and top in tiny pleats!</p><p><br></p><p>Antica Sortoria is also fabulous for linen! Check out their children's clothes as well!</p><p><br></p><p>My FAVORITE shoe store is Tre Denari for leather or suede loafers and sandles. Ask for Maurizio, and he will give you a small discount AND he will send you the colors you did not buy there when you call from America! It is located at the bottom of the central steps from the church.</p><p><br></p><p></p><p>Ceramica Assunta - I cannot resist! Giovanni Assunta is absolutely one of my favorite people in the world. I call him Il Sindaco, the mayor! Giovanni's family has been part of Positanto for hundreds of years. He now runs the shop after his uncle retired. Giovanni's beautiful wife, Benedetta, greets you in the store beside Tre Denari, and Giovanni greets you in the shop across from Le Sirenuse. They ship all over the world and can custom design anything your heart desires!</p><p>&nbsp;</p><p>And do not miss tasting and buying some of the lemon chocolates! There is a beautiful shop, Sapori di Positano, (tastes of Positano) walking down Via dei Molini to the sea that has only lemon products. Limoncello made fresh, and again, the chocolates...</p></div></div></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;window.__gemStoreData.gemKeyValid.hotfixImageListClickMobile = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-555707302022.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

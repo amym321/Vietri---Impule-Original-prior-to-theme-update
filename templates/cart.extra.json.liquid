@@ -1,0 +1,24 @@
+{% layout none %}
+{
+    "items": [
+        {% for item in cart.items %}
+            {% assign coll_ids = "" %}
+            {
+                "id": {{ item.id | json }},
+                "key": {{ item.key | json }},
+                "variant_id": {{ item.variant_id | json }},
+                "cart_collections": { "{{ item.variant_id }}": [
+                    {% for c in item.product.collections %}
+                        {% unless forloop.last == true %}
+                            {% assign coll_ids =  category_title | append: c.id | append: ',' %}
+                        {% else %}
+                            {% assign coll_ids =  category_title | append: c.id %}
+                        {% endunless %}
+                        {{ coll_ids }}
+                    {% endfor %}
+                ]}
+            }
+            {% unless forloop.last == true %},{% endunless %}
+        {% endfor %}
+    ]
+}

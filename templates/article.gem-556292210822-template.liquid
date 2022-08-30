@@ -1,0 +1,170 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-556292210822.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1638297928966" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1638297928966" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1638297929025" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1638297929025"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p>The Adventures of<strong> Old St. Nick</strong></p></div></div><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1638298165476" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1638298165476" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/96d5b30b-b41a-4029-b6e0-2be3df33a85c/-/format/auto/-/preview/3000x3000/-/quality/lighter/OSN-BLOG.jpg" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" width="190" height="183" natural-width="190" natural-height="183"></div></div><div data-label="Text Block" data-key="text-block" id="e-1638297928947" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1638297928947"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p>I grew up in eastern North Carolina where writing verse was a family tradition when exchanging gifts. My earliest memories were when my parents, brothers, and sister were together, giggling on Christmas morning on our parents' bed, as we listened to the rhyme that accompanied each gift in each stocking and tried to figure out what was inside. My mother Lee, and my sister Frances, and I started VIETRI in 1983. My father's career in international tobacco and our family's love for travel and entertaining at home made starting VIETRI a natural!&nbsp;</p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_equal-height gf_row-gap-0" id="r-1638298011139" data-icon="gpicon-row" data-id="1638298011139" data-extraclass="" data-row-gap="0px" style="display: flex; flex-wrap: wrap; visibility: visible;"><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428165" data-id="1620143428165" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Text Block" data-key="text-block" id="e-1638298011093" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1638298011093"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><font color="#ffffff">I first met Alessandro Taddei fifteen years ago and we became instant friends. We collaborated to create our classic holiday dinnerware pattern, Old St. Nick, who has become a beloved figure to both Alessandro and our VIETRI family as well as many tables and homes around the world. And so began our wonderful heirloom collection and the essence of our Old St. Nick Children's Book series.</font></p></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428179" data-id="1620143428179" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1638298019091" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1638298019091" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/277745e7-0360-46b2-8518-6350083b4887/-/format/auto/-/preview/3000x3000/-/quality/lighter/IMG_3319.jpeg" alt="" class="gf_image" data-gemlang="en" width="3000" height="2149" data-width="100%" data-height="auto" title="" natural-width="3000" natural-height="2149"></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1638298029234" data-icon="gpicon-row" data-id="1638298029234" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620181804878" data-id="1620181804878"><div data-label="Text Block" data-key="text-block" id="e-1638298029215" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1638298029215"><div class="elm text-edit gf-elm-left-md gf-elm-left-sm gf-elm-center-xs gf-elm-center gf-elm-left-lg" data-gemlang="en" data-exc=""><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);">Alessandro is truly one of the greatest maestros in Italy. His ability to imagine stories and paint scenes surpasses all others in the industry. He began sketching as a little boy, so studying art and design was only natural. He continues a 30-year career in design – originally in painting ceramics, how he and I met 20 years ago. We are kindred spirits regarding the joy of life and laughter and have dreamed of this book series for years.</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(94, 94, 94);">It is my hope that you enjoy Babbo Natale as much as we do and revel in the magic of his daily adventures leading up to the holiday season.&nbsp;</p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-5" id="r-1638301705964" data-icon="gpicon-row" data-id="1638301705964" data-row-gap="5px" data-extraclass="" data-layout-xs="12+12"><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1638301705961" data-id="1638301705961"><div data-label="Row" class="gf_row gf_equal-height gf_row-gap-5" id="r-1638301709110" data-icon="gpicon-row" data-id="1638301709110" style="display: flex; flex-wrap: wrap; visibility: visible;" data-extraclass="" data-row-gap="5px" data-layout-lg="6+6" data-layout-md="6+6" data-layout-sm="6+6" data-layout-xs="12+12"><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1638301709138" data-id="1638301709138" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1638301760218" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1638301760218" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/a976b4a5-c827-467b-8096-809954059168/-/format/auto/-/preview/3000x3000/-/quality/lighter/OSN_0003_Layer-5.png" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" width="1262" height="1464" natural-width="1262" natural-height="1464"></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1638301709086" data-id="1638301709086" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Text Block" data-key="text-block" data-atomgroup="element" id="e-1638302008282" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1638302008282"><div class="elm text-edit gf-elm-left gf-elm-center-xs gf-elm-left-lg gf-elm-left-md gf-elm-left-sm" data-gemlang="en" data-exc=""><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; color: rgb(94, 94, 94);"><span style="font-weight: 700;">The Magic of Old St. Nick: The Adventure Begins</span></p></div></div><div data-label="Button" data-key="button" data-atomgroup="element" id="e-1638304448568" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1638304448568"><div class="elm gf-elm-center gf-elm-center-xs gf-elm-left-lg gf-elm-left-md gf-elm-left-sm" data-stretch-lg="0" data-stretch-xs="0"><a class="button btn gf_button" href="https://www.vietri.com/products/old-st-nick-the-magic-of-old-st-nick-the-adventure-begins-book" target="" data-scroll-speed="2000" data-exc="" data-scroll-speed-xs="2000"><span>VIEW BOOK</span></a></div></div></div></div><div data-label="Text Block" data-key="text-block" data-atomgroup="element" id="e-1638303187477" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1638303187477"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; color: rgb(94, 94, 94);"><span style="letter-spacing: 0.43px;">The Magic of Old St. Nick: The Adventure Begins depicts a charming tale of Babbo Natale, Italy's Santa Claus, and his beloved son, Nick. Enjoy as father and son share life lessons and pay tribute to a special red bird throughout the Old St. Nick The Magic of Old St. Nick: The Adventure Begins Book.</span><br></p></div></div><div data-label="Row" class="gf_row gf_equal-height gf_row-gap-5" id="r-1638304722867" data-icon="gpicon-row" data-id="1638304722867" style="display: flex; flex-wrap: wrap; visibility: visible;" data-extraclass="" data-row-gap="5px" data-layout-lg="6+6" data-layout-md="6+6" data-layout-sm="6+6" data-layout-xs="12+12"><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1638301709138" data-id="1638301709138" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1638304722846" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1638304722846" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/6fd0ee41-ef86-43e1-b494-6fa40bcbe8c4/-/format/auto/-/preview/3000x3000/-/quality/lighter/OSN_0001_Layer-2.png" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" width="190" height="183" natural-width="190" natural-height="183"></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1638301709086" data-id="1638301709086" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Text Block" data-key="text-block" data-atomgroup="element" id="e-1638304722958" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1638304722958"><div class="elm text-edit gf-elm-left gf-elm-center-xs gf-elm-left-lg gf-elm-left-md gf-elm-left-sm" data-gemlang="en" data-exc=""><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; color: rgb(94, 94, 94);"><span style="font-weight: 700;">The Magic of Old St. Nick: Good Friends, Good Earth</span></p></div></div><div data-label="Button" data-key="button" data-atomgroup="element" id="e-1638304722959" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1638304722959"><div class="elm gf-elm-center gf-elm-center-xs gf-elm-left-lg gf-elm-left-md gf-elm-left-sm" data-stretch-lg="0" data-stretch-xs="0"><a class="button btn gf_button" href="https://www.vietri.com/products/old-st-nick-the-magic-of-old-st-nick-good-friends-good-earth-childrens-book" target="" data-scroll-speed="2000" data-exc="" data-scroll-speed-xs="2000"><span>VIEW BOOK</span></a></div></div></div></div><div data-label="Text Block" data-key="text-block" data-atomgroup="element" id="e-1638304730681" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1638304730681"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: left; color: rgb(94, 94, 94); letter-spacing: 0.43px;">This Christmas Day tale involves Old St. Nick and his forest friends, their love for each other and children around the world, and their appreciation of the earth. As always, the story is based in Italy and centered around Old St. Nick and his red bird friend.</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: left; color: rgb(94, 94, 94); letter-spacing: 0.43px;"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: left; color: rgb(94, 94, 94); letter-spacing: 0.43px;">Upon returning from his annual trip around the world, bringing joy to those near and far, Nick is delighted to find his forest friends waiting for him eager to hear about his travels and exchange gifts.</p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: left; color: rgb(94, 94, 94); letter-spacing: 0.43px;"><br></p><p style="font-size: 16px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: left; color: rgb(94, 94, 94); letter-spacing: 0.43px;">The charm of this second book in the Old St. Nick series lies in the passion that both Susan Gravely and Alessandro Taddei feel for protecting and preserving nature for generations to come, and to honor the spirit of joy, magic, and generosity personified in Babbo Natale. Gravely’s prose and Taddei’s charming illustrations were inspired by the creation of VIETRI’s Old St. Nick dinnerware collection, a beloved classic that continues to be enjoyed at family gatherings worldwide.&nbsp;</p></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1638301706043" data-id="1638301706043"><div data-label="Row" class="gf_row gf_equal-height gf_row-gap-5" id="r-1638304483788" data-icon="gpicon-row" data-id="1638304483788" style="display: flex; flex-wrap: wrap; visibility: visible;" data-extraclass="" data-row-gap="5px" data-layout-lg="6+6" data-layout-md="6+6" data-layout-sm="6+6" data-layout-xs="12+12"><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1638301709138" data-id="1638301709138" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1638304483808" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1638304483808" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm" data-exc=""><img src="https://ucarecdn.com/4ba41495-3d14-438f-9c76-2fa302338296/-/format/auto/-/preview/3000x3000/-/quality/lighter/BUON.png" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" width="1267" height="1462" natural-width="1267" natural-height="1462"></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1638301709086" data-id="1638301709086" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Text Block" data-key="text-block" data-atomgroup="element" id="e-1638304483757" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1638304483757"><div class="elm text-edit gf-elm-left gf-elm-center-xs gf-elm-left-lg gf-elm-left-md gf-elm-left-sm" data-gemlang="en" data-exc=""><p><span style="font-weight: 700; color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0.43px;">The Magic of Old St. Nick: Buon Appetito!</span></p></div></div><div data-label="Button" data-key="button" data-atomgroup="element" id="e-1638304483817" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1638304483817"><div class="elm gf-elm-center gf-elm-center-xs gf-elm-left-lg gf-elm-left-md gf-elm-left-sm" data-stretch-lg="0" data-stretch-xs="0"><a class="button btn gf_button" href="https://www.vietri.com/products/old-st-nick-the-magic-of-old-st-nick-around-the-table-buon-appetito-childrens-book" target="" data-scroll-speed="2000" data-exc="" data-scroll-speed-xs="2000"><span>VIEW BOOK</span></a></div></div></div></div><div data-label="Text Block" data-key="text-block" data-atomgroup="element" id="e-1638304508441" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1638304508441"><div class="elm text-edit gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-center-xs gf-elm-left" data-gemlang="en" data-exc=""><p style="font-size: 14px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(0, 0, 0); letter-spacing: 0.43px;"><span style="letter-spacing: 0.43px; text-align: inherit;">After taking their traditional hike on New Year’s Day, Nick and his friends are hungry. They decide to cook and then enjoy a meal together – a way to celebrate their friendship. The theme of the Old St. Nick The Magic of Old St. Nick: Buon Appetito! Children's Book is the importance of “spending time around a table” – enjoying one another’s company and sharing fun memories and life experiences. With extra cookies, they end the story packing up individual boxes to deliver to their grandparents’ because sharing is one of the best loves in life!</span></p></div></div><div data-label="Row" class="gf_row gf_equal-height gf_row-gap-5" id="r-1638304745942" data-icon="gpicon-row" data-id="1638304745942" style="display: flex; flex-wrap: wrap; visibility: visible;" data-extraclass="" data-row-gap="5px" data-layout-lg="6+6" data-layout-md="6+6" data-layout-sm="6+6" data-layout-xs="12+12"><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1638301709138" data-id="1638301709138" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1638304745917" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1638304745917" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/49a37b3b-f677-49c3-8e18-8a2a1ef3dcc4/-/format/auto/-/preview/3000x3000/-/quality/lighter/OSN_0000_Layer-4.png" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" width="1107" height="1462" natural-width="1107" natural-height="1462"></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1638301709086" data-id="1638301709086" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Text Block" data-key="text-block" data-atomgroup="element" id="e-1638304745984" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1638304745984"><div class="elm text-edit gf-elm-left gf-elm-center-xs gf-elm-left-lg gf-elm-left-md gf-elm-left-sm" data-gemlang="en" data-exc=""><p><b>The Magic of Old St. Nick: Sempre Amore</b></p></div></div><div data-label="Button" data-key="button" data-atomgroup="element" id="e-1638304745878" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1638304745878"><div class="elm gf-elm-center gf-elm-center-xs gf-elm-left-lg gf-elm-left-md gf-elm-left-sm" data-stretch-lg="0" data-stretch-xs="0"><a class="button btn gf_button" href="https://www.vietri.com/products/old-st-nick-the-magic-of-old-st-nick-sempre-amore-childrens-book" target="" data-scroll-speed="2000" data-exc="" data-scroll-speed-xs="2000"><span>VIEW BOOK</span></a></div></div></div></div><div data-label="Text Block" data-key="text-block" data-atomgroup="element" id="e-1638304738142" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1638304738142"><div class="elm text-edit gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-center-xs gf-elm-left" data-gemlang="en" data-exc=""><p style="font-size: 14px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(0, 0, 0); letter-spacing: 0.43px;"><span style="letter-spacing: 0.43px; text-align: inherit;">Nick's animal friends travel to visit special loved ones and return home, sharing heartwarming stories about their adventures and who they visited. The red bird is ever-present as a reminder that they are loved, and that someone special is always thinking of them. The theme of the fourth book shows how sharing love between older and younger generations benefits everyone. Unconditional love, emotional guidance, and life experiences are learned from each other and is at the heart of these friendships. Time passes too quickly, yet taking the time to&nbsp;</span><span style="letter-spacing: 0.43px; text-align: inherit;">share joy and love is clearly shown by these young animal friends.</span><br></p><p style="font-size: 14px; font-family: &quot;Avenir Next&quot;, sans-serif; text-align: inherit!important; color: rgb(0, 0, 0); letter-spacing: 0.43px;"><br></p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-5" id="r-1638306548934" data-icon="gpicon-row" data-id="1638306548934" data-row-gap="5px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1638306548986" data-id="1638306548986"><div data-label="Button" data-key="button" data-atomgroup="element" id="e-1638306553008" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1638306553008"><div class="elm gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-stretch-lg="1" data-stretch-xs="1"><a class="button btn gf_button" href="/collections/old-st-nick-le" target="" data-scroll-speed="2000" data-exc="" data-scroll-speed-xs="2000"><span>SHOP OLD ST. NICK</span></a></div></div></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;window.__gemStoreData.gemKeyValid.pImageListSliderVimeo = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-556292210822.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

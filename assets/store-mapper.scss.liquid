@@ -1,0 +1,403 @@
+div {
+    &#storemapper {
+      svg {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+      &.hide_filter .storemapper-categories {
+        display: none;
+      }
+      #storemapper-filter-drop-down a > input[type=checkbox] {
+        pointer-events: none;
+      }
+      #storemapper-list {
+        li {
+          list-style: none;
+        }
+      }
+      #storemapper-right {
+        min-height: 250px;
+      }
+      @media (min-width: 670px) {
+        #storemapper-left {
+          overflow-y: scroll;
+        }
+        #storemapper-left,
+        #storemapper-right {
+          height: 500px;
+        }
+      }
+      .storemapper-scroll-top {
+        /*display: none;*/
+        opacity: 0;
+        -webkit-transition: .3s ease-in;
+                transition: .3s ease-in;
+      }
+      .storemapper-error,
+      .help-block {
+        color: #B94A48;
+        display: block;
+      }
+      #storemapper-filter .caret,
+      .storemapper-dropdown .caret {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 5px;
+        vertical-align: middle;
+        border-top: 4px dashed;
+        border-top: 4px solid;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+      }
+      /*
+        We calculate the placement of the reset button relatively to #storemapper-left.
+      */
+      @media only screen and (min-width : 768px) {
+        &.search_reset_enabled #storemapper-left {
+          position: relative;
+        }
+      }
+      .storemapper-reset {
+        display: none;
+        min-width: 25px;
+        position: absolute;
+        cursor: pointer;
+        overflow: hidden;
+      }
+      #storemapper-zip {
+        border: 1px solid #a9a9a9;
+      }
+      .storemapper-reset svg {
+        fill: #666;
+        display: inline-block;
+        height: 70%;
+        max-width: 12px;
+        max-height: 12px;
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        -webkit-transform: translateY(-50%); 
+                transform: translateY(-50%);
+        vertical-align: middle;
+        pointer-events: none;
+      }
+      .storemapper-reset-gradient {
+        background: linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,1));
+        width: 25px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        vertical-align: middle;
+        pointer-events: none;
+      }
+      .storemapper-address svg {
+        width: 17px;
+        height: 17px;
+        margin-top: -9px;
+        left: -1px;
+      }
+      .storemapper-phone svg {
+        width: 15px;
+        height: 15px;
+        margin-top: -7px;
+      }
+      .storemapper-email svg {
+        width: 13px;
+        height: 13px;
+        margin-top: -6px;
+      }
+      .storemapper-url svg {
+        width: 13px;
+        height: 13px;
+        margin-top: -7px;
+      }
+      .storemapper-phone,
+      .storemapper-email,
+      .storemapper-url {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      &.show_icons {
+        svg {
+          display: block;
+        }
+        .storemapper-address,
+        .storemapper-phone,
+        .storemapper-email,
+        .storemapper-url {
+          padding-left: 20px;
+          position: relative;
+        }
+      }
+      &.mapbox .storemapper-marker {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+      }
+      .storemapper-description,
+      p[class^='storemapper-custom-'] {
+        word-wrap: break-word;
+      }
+      .pac-container {
+        min-width: 300px !important;
+        z-index:999999 !important;
+      }
+      #storemapper-right p {
+        max-width:200px;
+        margin:0;
+      }
+      .storemapper-logo img {
+        max-width: 100%;
+        height: auto;
+      }
+      .storemapper-powered-by,
+      .storemapper-powered-by[style] {
+        display: block !important;
+        clear: both;
+        color: #666;
+        font-size: 11px;
+        line-height: 16px;
+  
+         > a {
+          color: #09c;
+        }
+      }
+      &.white_label .storemapper-powered-by {
+        display: none !important;
+      }
+      .storemapper-back-btn {
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+        color: #666;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 5px 10px 3px 6px;
+        position: absolute;
+        z-index: 9;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+  
+        &:hover {
+          color: #333;
+          text-decoration: none;
+  
+          svg {
+            fill: #333;
+          }
+        }
+  
+        svg {
+          fill: #666;
+          width: 20px;
+          height: 20px;
+          margin-right: 2px;
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          top: -1px;
+        }
+      }
+      #locate {
+        display: inline;
+      }
+      .storemapper-popup-custom {
+        display: none;
+      }
+      #storemapper-autocomplete {
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        border-top: 1px solid #d9d9d9;
+        font-family: Arial,sans-serif;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        z-index: 50;
+  
+        &:empty {
+          display: none;
+        }
+  
+        li {
+          font-size: 13px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          padding: 5px 10px;
+  
+          &:hover,
+          &.active {
+            background-color: #f6f6f6;
+            cursor: pointer;
+          }
+        }
+      }
+      .storemapper-popup-email {
+        display: none;
+      }
+      .storemapper-iw-wrapper {
+        -webkit-transition: .2s ease;
+        transition: .2s ease;
+      }
+      .storemapper-iw-layout {
+        .storemapper-iw-triangle-shadow {
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+          border-top: 24px solid rgba(0, 0, 0, 0.0980392);
+        }
+        .storemapper-iw-content-shadow {
+          background-color: rgba(0, 0, 0, 0.2);
+          border-radius: 2px;
+          -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+                  box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+        }
+        .storemapper-iw-content-bg {
+          border-radius: 2px;
+          background-color: rgb(255, 255, 255);
+          top: 1px;
+          left: 1px;
+        }
+        .storemapper-iw-triangle-lt,
+        .storemapper-iw-triangle-rt {
+          width: 16px;
+          height: 30px;
+          top: -1px;
+        }
+        .storemapper-iw-triangle-lt {
+          left: -6px;
+        }
+        .storemapper-iw-triangle-rt {
+          left: 10px;
+        }
+        .storemapper-iw-triangle-inner {
+          background-color: rgb(255, 255, 255);
+          -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 6px;
+                  box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 6px;
+        }
+      }
+      .storemapper-iw-close {
+        background-color: transparent !important;
+        background-image: url(https://storemapper.co/assets/gm-infowindow-close.png) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 10px 10px !important;
+        border: none !important;
+        width: 20px !important;
+        height: 20px !important;
+        top: 10px !important;
+        right: 10px !important;
+  
+         > img {
+          display: none !important;
+        }
+      }
+    }
+  }
+div {
+  &#storemapper {
+    *, *:before, *:after {
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+    &:after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+    p, h4, a, ul, li, span {
+      margin: 0;
+      padding: 0;
+      height: initial;
+      min-height: initial;
+      max-height: initial;
+      min-width: initial;
+      max-width: initial;
+      width: initial;
+      position: initial;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+    }
+    // 1. Workaround for the SVG overflow bug in IE 11 is still required.
+    //    See https://github.com/twbs/bootstrap/issues/26878
+    svg {
+      overflow: hidden; // 1
+      vertical-align: middle;
+    }
+    input, button, select {
+      font-family: inherit;
+      line-height: inherit;
+      margin: 0;
+    }
+    // Show the overflow in Edge
+    button, input {
+      overflow: visible;
+    }
+    // Remove the inheritance of text transform in Firefox
+    button, select {
+      text-transform: none;
+    }
+    // Remove the inheritance of word-wrap in Safari.
+    //
+    // Details at https://github.com/twbs/bootstrap/issues/24990
+    select {
+      word-wrap: normal;
+    }
+  }
+}
+#storemapper #storemapper-form #storemapper-go{
+  background: #00594c !important;
+}
+#storemapper.show_icons .storemapper-popup-address svg, #storemapper.show_icons .storemapper-popup-phone svg, #storemapper.show_icons .storemapper-popup-url svg, #storemapper.show_icons .storemapper-popup-email svg, #storemapper #storemapper-list li p svg{
+  fill: #00594c !important;
+}
+#storemapper #storemapper-list li.storemapper-selected{
+  background: #fff !important;
+  border: 2px solid #00594c !important;
+}
+
+#storemapper{
+  .storemapper-email, .storemapper-phone, .storemapper-email, .storemapper-url{
+    svg{
+      fill: #00594c !important;
+    }
+  }
+}
+#storemapper a{
+  color: #00594c !important;
+  text-decoration: none !important;
+}
+#storemapper #storemapper-list li .storemapper_view a, #storemapper #storemapper-list li .storemapper_directions a{
+  border: 1px solid #00594c !important;
+  text-transform:uppercase;
+}
+#storemapper #storemapper-list li.storemapper-selected p.storemapper_view a, #storemapper #storemapper-list li.storemapper-selected p.storemapper_directions a {
+    background-color: #fff !important;
+    border-color: #00594c !important;
+    color: #00594c !important;
+    text-transform:uppercase;
+}
+#storemapper #storemapper-list li.storemapper-selected h4, #storemapper #storemapper-list li.storemapper-selected p{
+  color: #00594c !important;
+}
+.rte a:not(.rte__image), .rte-setting a:not(.rte__image){
+  border-bottom: none !important;
+}
+.storemapper-popup a {
+    line-height: 19px;
+}

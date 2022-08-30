@@ -1,0 +1,170 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-555561156742.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1620222277731" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1620222277731" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1620222277792" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620222277792" style="display: block;"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><b>THE VIETRI WAREHOUSE SALE</b></p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1620222373214" data-icon="gpicon-row" data-id="1620222373214" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620222373116" data-id="1620222373116"><div data-label="Image" data-key="image" id="e-1620222375902" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1620222375902" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/d8a187ec-62ed-4a23-9ecf-000373a3332c/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="3000" natural-height="2000"></div></div></div></div><!--gfsplit--><div data-label="Row" data-key="row" id="r-1620222409768" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1620222409768" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1620222409770" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620222409770"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>It was the fall of 1985, one and a half years after our first order had been written to Ceramica Solimene to begin a company. We had started a business that combined all of our loves and passions for living a life of entertaining with friends and family, southern hospitality, and enjoying the world and its people.</p><p><br></p><p>We had been shipping to retail stores for a year and had accumulated either samples or some pieces we then considered seconds because of paint drips. Little did we know that we would later call this “nature of goods” because the more we learned about our craft, the more we understood that each piece would be distinct in its own unique way. We had also been asked for our story from some local magazines and papers, so more and more people were curious.&nbsp;&nbsp;</p><p><br></p><p>We wanted to share our good fortune and the excitement of what we were doing with everyone - with the world! We were having a great time!</p><p><br></p><p>Thus began our semi-annual warehouse sale.</p><p><br></p><p>With our offices still in Frances’ home, we wrote handwritten cards to friends and family members and invited them to our first sale. On the first day, we filled four tables in Frances’ front yard with every design we had  – a simple floral pattern, and four assorted animals on the borders of plates, bowls, mugs and serving pieces – a terra cotta red cow, a light blue horse, a cobalt fish, and a yellow ram. Would anyone come? Would they like what we did? We thought so. We certainly hoped so.</p><p><br></p><p>And did the friends and family come! The sale was four hours. We sold almost everything we had AND added a few orders from stock. These were our friends and family!&nbsp;</p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1620222445210" data-icon="gpicon-row" data-id="1620222445210" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620222445235" data-id="1620222445235"><div data-label="Image" data-key="image" id="e-1620222448619" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1620222448619" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/f3e7035d-be91-43e4-992c-a975b6c3e343/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="1500" natural-height="1500"></div></div></div></div><!--gfsplit--><div data-label="Text Block" data-key="text-block" id="e-1620222467532" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620222467532"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>We always gave 2 “first in line” tickets for local non-profit fundraisers. We had balloons on their chairs and a sign for their mission. A local Red Cross auctioned tickets and got over $1,000 in return – to be first at our sale! The tradition continues today.</p><p><br></p><p>We always supported local non-profit organizations – hospitals, hospice, children’s education and special needs, heart associations – with a percentage of sales from the event. We also allowed non-profits to invite their groups and with a coupon, get a discount that went to their charity. We were being given so much encouragement and support from our local community that giving back to our surrounding area became and continues to be an integral part of our VIETRI philosophy.</p><p><br></p><p>We had guests fly in from Oklahoma, Ohio, all of the southeastern states, and even ladies flying on their private plane from Texas to join the fun! We took pictures and asked for interviews and showed them first by email and then on our freshly created website. In those first twenty years, it was buy and take – no shipping from us – so at times, we say rented u-hauls even! At our peak of one day sales, we had over 2,000 guests!&nbsp;</p></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1620222518296" data-icon="gpicon-row" data-id="1620222518296" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620222518295" data-id="1620222518295"><div data-label="Image" data-key="image" id="e-1620222520392" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1620222520392" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/ea1b322c-c119-4f84-b246-b714ad4b7042/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="3000" natural-height="2000"></div></div></div></div><!--gfsplit--><div data-label="Text Block" data-key="text-block" id="e-1620222681326" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620222681326"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Our sale became more and more exciting and sought after, but it also began to take away from our core business. And it became dangerous. After several fights between guests over certain products, multiple broken ankles from running to get a special piece, and then having a drunk driver hit a garbage can close to where everyone was gathering, we knew it was time to change direction. Creating a fun day was important – but keeping people safe was our first priority.</p><p><br></p><p>Our warehouse staff included our employees AND their friends and family, which made it so much fun.  We would have a team meeting before the sale, and small group meetings related to responsibilities. We all knew that each buyer was our guest and was to be treated with the same respect and dignity as would be anyone in your home.&nbsp;&nbsp;</p><p><br></p><p>ALl employees wore warehouse sale t-shirts so we could be identified. Some of my proudest moments continue to be getting the compliments from our buyers about our staff. They ARE the best! VIETRI products and VIETRI activities are the work of many hands. We truly are all in this together.</p><p><br></p><p>By the end, we had moved into our final distribution center on Elizabeth Brady Road, and we had the perfect place to open our only VIETRI Outlet Store. In 2004, that is what we did. It is behind our distribution center and houses a location where quality seconds, samples, and discontinued items are on sale every day.</p><p><br></p><p>Our sale has continued but we tamed the lion by extending the sale to include a smaller Friends and Family sale day, and then opening the sale to the public for two more days. We went from giving out tickets to folks the day before to online tickets for line position. We also put out new items every morning, so that those who wanted to shop later, or liked to come daily would have new adventures!</p><p><br></p><p>For me, I was afraid it would lose the rush and the excitement of the search among the crowds, but for the safety of our guests, we had to make the change. The new approach was greeted with continued enthusiasm and large purchases. We serve water when it is hot, and spend our time before the sale thanking everyone for coming. Our staff lines up to clap and welcome everyone – so the energy, graciousness, and fun continue!</p><p><br></p><p>Customers at the sale tell us story after story about coming to the sale, what they bought, and how much joy VIETRI product has given them and their friends. They continue to savor their purchases and want to know more background and history about the artisans. We are now being introduced to daughters and granddaughters of the original warehouse sale goers.</p><p><br></p><p>In our world of rush and immediate gratification, it is the joy of every VIETRI staff member that we can stand behind the artisans who create beautiful works of art that are handcrafted, mouthblown, and handpainted. Truly, we are the work of many hands – from the earth to the factory – to the people who package and send our product by land and air – to our warehouse – to our retail partners – and to the end consumers who create their own unique and special ways to live a life enjoying their friends and family around a table.</p><p><br></p><p>We invite you to join us for this year’s Spring Warehouse Sale - online at vietrioutlet.com and in-store!</p></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-555561156742.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

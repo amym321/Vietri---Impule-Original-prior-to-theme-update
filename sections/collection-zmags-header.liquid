@@ -1,0 +1,37 @@
+{% if section.settings.enable %}
+    {% if section.settings.zmags_content_enable %}
+        <div id="CollectionHeaderSection" data-section-id="{{ section.id }}" data-section-type="collection-header">
+            <div class="collection-hero">
+                {% comment %} Zmags content will go here {% endcomment %}
+            </div>
+        </div>
+    {% else %}
+        <div class="page-width page-content page-content--top">
+            <header class="section-header section-header--flush">
+                <h1 class="section-header__title">
+                    {{ collection.title }}
+                </h1>
+            </header>
+        </div>
+    {% endif %}
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Collection header",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable",
+        "label": "Enable header",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "zmags_content_enable",
+        "label": "Show Zmags Content",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

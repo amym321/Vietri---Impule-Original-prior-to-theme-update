@@ -1,0 +1,207 @@
+{%- if section.settings.page_title_enable or section.settings.page_content_enable -%}
+  <div class="page-width page-content{% if section.blocks.size > 0 %} page-content--with-blocks{% endif %}">
+
+    <div class="grid">
+      <div class="grid__item medium-up--three-quarters medium-up--push-one-eighth">
+        {%- render 'breadcrumbs' -%}
+
+        {%- if section.settings.page_title_enable -%}
+          <header class="section-header">
+            <h1 class="section-header__title">{{ page.title }}</h1>
+          </header>
+        {%- endif -%}
+
+        {%- if section.settings.page_content_enable -%}
+          <div class="rte text-spacing">
+            {{ page.content }}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{%- if section.blocks.size > 0 -%}
+  <div class="page-width page-content">
+    <div class="grid">
+      <div class="grid__item medium-up--three-quarters medium-up--push-one-eighth">
+
+        <div class="page-blocks page-blocks--flush" itemscope itemtype="https://schema.org/FAQPage">
+          {%- for block in section.blocks -%}
+            <div {{ block.shopify_attributes }}>
+              {%- case block.type -%}
+                {%- when 'rich-text'-%}
+                  {%- render 'page-block-rich-text', section_class: 'index-section--faq', block: block -%}
+
+                {%- when 'question'-%}
+                  {%- render 'page-block-faq', block: block -%}
+
+              {%- endcase -%}
+            </div>
+          {%- endfor -%}
+          
+          
+          
+          <div class="page-width" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <button type="button" class="collapsible-trigger collapsible-trigger--inline collapsible--auto-height text-left" aria-controls="FAQ-content-OVEN">
+    {%- render 'collapsible-icons-alt', no_circle: true -%}
+    <span itemprop="name">Oven-to-Table Servers</span>
+  </button>
+  <div id="FAQ-content-OVEN" class="collapsible-content collapsible-content--all" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <div class="collapsible-content__inner collapsible-content__inner--faq rte" itemprop="text">
+<br><img src="{{ 'OVEN-ICON.png' | asset_img_url: '125x' }}"><br><br>
+      <p>VIETRI’s casserole and baking dishes can be used in most conventional ovens and dishwashers. They are handcrafted of very dense clays and fired at extremely high temperatures, making them heat resistant to 400° Fahrenheit (with the exception of Forma, which is heat resistant up to 500° Fahrenheit). It is important that baking and casserole pieces in our Old St. Nick collection be cured. Terra marrone collections such as Incanto, stoneware, and Italian stoneware collections do not require curing. To cure, fully submerge and soak piece in water for 15 minutes. This soaking prepares the dish, reduces cooking time, and prevents the food from sticking.<br><br>
+Hot casseroles and baking dishes should never be placed on cool, damp, or unprotected surfaces. VIETRI bakeware should never be taken directly from the refrigerator to the oven, and it should never be placed in the freezer unless otherwise noted. Please remove the bakeware from the oven by holding the body of the dish, supporting the base. The handles of these pieces are decorative and should not be used for support. Do not use casserole lids in the oven.</p>
+
+
+   </div>
+  </div>
+</div>
+          
+          
+          <div class="page-width" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <button type="button" class="collapsible-trigger collapsible-trigger--inline collapsible--auto-height text-left" aria-controls="FAQ-content-MICRO">
+    {%- render 'collapsible-icons-alt', no_circle: true -%}
+    <span itemprop="name">Microwave Use</span>
+  </button>
+  <div id="FAQ-content-MICRO" class="collapsible-content collapsible-content--all" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <div class="collapsible-content__inner collapsible-content__inner--faq rte" itemprop="text">
+<br><img src="{{ 'MICROWAVE-ICON.png' | asset_img_url: '125x' }}"><br><br>
+      <p>All Italian stoneware and stoneware collections and most earthenware collections are microwave safe when noted. The temperature of VIETRI pieces may vary after microwave use due to the handcrafted nature of quality, natural clays. Thus, as with all products used in a microwave, please use the following precautions:<br><br>
+Always use a pot holder or oven mitt when handling the product as item may get hot.<br><br>
+Do not permit children to handle any product that has been heated in a microwave.<br><br>
+Do not put any products into a microwave without food or liquid on or inside the piece.<br><br>
+Allow item to cool before taking it out of the microwave.<br><br>
+VIETRI product that may be used in a microwave will be marked as such on the bottom of each piece.</p>
+
+   </div>
+  </div>
+</div>
+          
+          
+          <div class="page-width" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <button type="button" class="collapsible-trigger collapsible-trigger--inline collapsible--auto-height text-left" aria-controls="FAQ-content-{{ block.id }}">
+    {%- render 'collapsible-icons-alt', no_circle: true -%}
+    <span itemprop="name">Icon Directory</span>
+  </button>
+  <div id="FAQ-content-{{ block.id }}" class="collapsible-content collapsible-content--all" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <div class="collapsible-content__inner collapsible-content__inner--faq rte" itemprop="text">
+   <img src="{{ 'VIETRI-ICONS.png' | asset_img_url: '750x' }}">
+    </div>
+  </div>
+</div>
+          
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Page.faq page",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "page_title_enable",
+        "label": "Show page title"
+      },
+      {
+        "type": "checkbox",
+        "id": "page_content_enable",
+        "label": "Show page content"
+      }
+    ],
+    "default": {
+      "blocks": [
+        {
+          "type": "rich-text",
+          "settings": {
+            "title": "Shipping policy"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "title": "Where do you ship to?"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "title": "How long will my order take?"
+          }
+        },
+        {
+          "type": "rich-text",
+          "settings": {
+            "title": "Returns and exchanges"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "title": "How do I ship my order back to you?"
+          }
+        }
+      ]
+    },
+    "blocks": [
+      {
+        "type": "rich-text",
+        "name": "Rich text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Rich text"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Use this section for any descriptive text you need to fill out your pages or to add introductory headings between other blocks.</p>"
+          },
+          {
+            "type": "select",
+            "id": "align_text",
+            "label": "Text alignment",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Centered"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "name": "Question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Question",
+            "default": "Frequently asked question"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+

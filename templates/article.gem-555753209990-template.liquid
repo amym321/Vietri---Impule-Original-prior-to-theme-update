@@ -1,0 +1,170 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-555753209990.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1625601335617" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1625601335617" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1625601335614" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1625601335614"><div class="elm text-edit gf-elm-left gf-elm-center-md gf-elm-center-sm gf-elm-left-xs gf-elm-left-lg" data-gemlang="en" data-exc=""><p><strong>IL RITROVO </strong>WITH ROBERTO &amp; RODOLFO GUARNIERI</p></div></div><div data-label="Text Block" data-key="text-block" id="e-1625601335603" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1625601335603"><div class="elm text-edit gf-elm-left gf-elm-center-md gf-elm-center-sm gf-elm-left-xs gf-elm-left-lg" data-gemlang="en" data-exc=""><p>The Guarnieri brothers are truly two of the most talented men I have come to know during my winters in Italy.</p><p><br></p><p>My husband, Bill, and I first discovered their gallery during a daily stroll while staying in Florence for a couple months. While residing in Florence two sometimes three months out of the year, Bill and I often take walks around Florence to sightsee and explore different areas. Always in search of hidden corners, undiscovered restaurants, and up and coming artists.</p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1625601543330" data-icon="gpicon-row" data-id="1625601543330" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620181804878" data-id="1620181804878"><div data-label="Image" data-key="image" id="e-1625601559532" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1625601559532" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/6460fdb0-16d6-4bbb-a295-8b541bdd4426/-/format/auto/-/preview/3000x3000/-/quality/lighter/IN%20BOTTEGA.jpeg" alt="" class="gf_image" data-gemlang="en" width="3000" height="2000" data-width="100%" data-height="auto" title="" natural-width="3000" natural-height="2000"></div></div><div data-label="Text Block" data-key="text-block" id="e-1625601543329" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1625601543329"><div class="elm text-edit gf-elm-left gf-elm-center-md gf-elm-center-sm gf-elm-left-lg gf-elm-left-xs" data-gemlang="en" data-exc=""><p>This walk in particular, we decided to meander to as many boutique hotels as possible. We arrived at a beautiful hotel, originally a villa, called Hotel Regency. We went to the garden to have a drink and there were several of the Guarnieri brothers' paintings. One was a series of wine and champagne glasses and one of beautiful poppies. We inquired with our waiter and left with their business card in hand. Soon after, we happened upon the Ferragamo hotel, and all along the outside wall to the entrance were more Guarnieri paintings. THIS is what we wanted to purchase to remember our winter in Florence.</p></div></div><div data-label="Text Block" data-key="text-block" id="e-1625601543442" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1625601543442"><div class="elm text-edit gf-elm-left gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-left-lg" data-gemlang="en" data-exc=""><p><strong>"The next week, we walked to their art gallery along the Arno River. Roberto was there, and that is when the love affair began!</strong><strong style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">"</strong></p></div></div><div data-label="Text Block" data-key="text-block" id="e-1625671278755" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1625671278755"><div class="elm text-edit gf-elm-left gf-elm-center-md gf-elm-center-sm gf-elm-left-lg gf-elm-left-xs" data-gemlang="en" data-exc=""><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;">I am so thrilled that we were able to visit with Roberto and Rodolfo and experience their creativity in person. They are truly magnificent and bring something magical to the world, both as individuals and together through their passion for art, creativity, and innovation.</span><br></p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1625601658073" data-icon="gpicon-row" data-id="1625601658073" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620181804878" data-id="1620181804878"><div data-label="Image" data-key="image" id="e-1625601658125" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1625601658125" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/aef68056-f92a-442d-81d2-5d6cbba79a7f/-/format/auto/-/preview/3000x3000/-/quality/lighter/2PHOTO.jpg" alt="" class="gf_image" data-gemlang="en" width="1200" height="800" data-width="100%" data-height="auto" title="" natural-width="1200" natural-height="800"></div></div><div data-label="Text Block" data-key="text-block" id="e-1625601658080" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1625601658080"><div class="elm text-edit gf-elm-left gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-left-lg" data-gemlang="en" data-exc=""><p><strong>"Roberto (architect) and Rodolfo (maestro d’arte) are first brothers and second co-founders of the Art Gallery Studio Iguarnieri in Florence, Italy."</strong></p></div></div><div data-label="Text Block" data-key="text-block" id="e-1625601658087" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1625601658087"><div class="elm text-edit gf-elm-left gf-elm-center-md gf-elm-center-sm gf-elm-left-lg gf-elm-left-xs" data-gemlang="en" data-exc=""><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;">Born in 1956 and 1963, the Guarnieri’s family workshop was established in 1944 in the Lungarno Benvenuto Cellini 39, San Niccolò neighborhood which has now transformed into their unique contemporary bottega. Their specific method of creating art utilizing the work of many hands (this is VIETRI’s motto as well) is inspired by the ideal of the Florentine workshop during the Renaissance.</span><br></p><p><br></p><p>The artists create contemporary paintings using fresco surfaces, traditional techniques with modern materials, and a Florentine design approach coupled with timely execution. Currently, Iguarnieri paintings can be found worldwide in both private and public collections in Europe, USA, Australia, and Asia. In 2005, Roberto and Rodolfo began making “on site” fresco paintings in Florence, the United States, Luxemburg, Moscow, and Dubai and for individual customers as well as public and private companies.</p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1625601874088" data-icon="gpicon-row" data-id="1625601874088" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620181804878" data-id="1620181804878"><div data-label="Image" data-key="image" id="e-1625601874236" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1625601874236" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/ddfa1efd-45e7-4bf7-9fda-b1db93016ddb/-/format/auto/-/preview/3000x3000/-/quality/lighter/Photo-3.jpg" alt="" class="gf_image" data-gemlang="en" width="1200" height="800" data-width="100%" data-height="auto" title="" natural-width="1200" natural-height="800"></div></div><div data-label="Text Block" data-key="text-block" id="e-1625601874108" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1625601874108"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>The Guarnieri brothers collaborate with various artists to create one-of-a-kind pieces utilizing ancient techniques with a modern approach. Appreciate Italian art and have high-quality standards.</p><p><br></p><p>They are often inspired by the great predecessors of the past: Giotto, Botticelli, Modigliani, Picasso, and Andy Warhol.</p><p><br></p><p>For over 21 years, they have worked in small and large operas all over Italy and abroad also by private patron commission, which have received favorable approval and confirmation. We have also participated in several painting and sculpture competitions, with our winning operas now permanently displayed in institutional places in Italy and abroad.</p></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_equal-height gf_row-gap-0" id="r-1625602060703" data-icon="gpicon-row" data-id="1625602060703" data-extraclass="" data-row-gap="0px" style="display: flex; flex-wrap: wrap; visibility: visible;"><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428165" data-id="1620143428165" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Text Block" data-key="text-block" id="e-1625602060746" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1625602060746"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><font color="#ffffff">“Our creative perception is to represent artistic themes in the humanity around us, with a Florentine influence. The old master’s work is the foundation always of our making art in painting as in sculpture.”</font></p><p><font color="#ffffff"><br></font></p><p><font color="#ffffff">Learn More: <a href="https://www.iguarnieri.it/about-artist-art-artworks-and-italy-exhibition/" class="">https://bit.ly/Iguarnieri</a></font></p><p><font color="#ffffff"><br></font></p><p><font color="#ffffff">IGTV: <a href="http://bit.ly/IlRitrovo_Iguarnieri%3c/p" class="">http://bit.ly/IlRitrovo_Iguarnieri</a></font></p></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428179" data-id="1620143428179" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Image" data-key="image" id="e-1625602060747" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1625602060747" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/aaf14186-9643-4836-a9fd-6505c24c3dbe/-/format/auto/-/preview/3000x3000/-/quality/lighter/PHOTO4.jpg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="2250" natural-height="3000" width="2250" height="3000"></div></div></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-555753209990.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

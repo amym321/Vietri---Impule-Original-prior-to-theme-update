@@ -1,0 +1,170 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-555932221574.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1629989782206" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1629989782206" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1629989782191" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1629989782191"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p><strong>BOLOGNA</strong></p></div></div><div data-label="Image" data-key="image" id="e-1629989782281" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1629989782281" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/f29a888e-d8ac-475f-819c-0a53667f4999/-/format/auto/-/preview/3000x3000/-/quality/lighter/Bologna-1.jpg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="1500" natural-height="1000" width="1500" height="1000"></div></div><div data-label="Row" class="gf_row" id="r-1629990147217" data-icon="gpicon-row" data-id="1629990147217"><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1620181804878" data-id="1620181804878"><div data-label="Text Block" data-key="text-block" id="e-1629990147192" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1629990147192"><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b>"Bologna is a city I could talk about for hours. I love the arches. I love the food. I love the shopping and I've always enjoyed the beautiful hotels. Forever a warm and welcoming city, it is easy to venture about."</b></p></div></div><div data-label="Text Block" data-key="text-block" id="e-1629990147169" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1629990147169"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;">Bologna is located north of Florence in the heart of Emilia Romagna.</span><br></p><p><br></p><p>The arched porticos along the streets are gorgeous and help identify the university section of the city. There are many young people, street singers, and lazy walkers.</p><p><br></p><p>The tallest leaning tower, the Asinelli Tower, is there paired with the Garisenda Tower. The 498 steps are narrow and not for the faint of heart, especially if you are claustrophobic, but the view is spectacular.&nbsp;</p><p><br></p><p>Like most cities in Italy, Bologna is a food town. Balsamic vinegar is highly regarded in this area and takes a minimum of seven years to age, but you can also purchase creamier tastes that have sat for over 40 years. I often drizzle balsamic on salads, fruits, and vanilla ice cream.&nbsp;</p><p><br></p><p>Parmesan cheese is made in Parma, but it is very close, so you can buy the freshest of cheeses as well as Prosciutto di Parma, which is cured ham.</p><p><br></p><p>Pastas, especially tortellini and tagliatelle al ragu are famous in Bologna! The delectable meat sauce melts in your mouth.</p><p><br></p><p>The fresh pork cut from the pig and paired with small biscuits as sandwiches is also incredible. Charcuteries are everywhere, and usually the best are when you are able eat it on the street.</p></div></div></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_equal-height gf_row-gap-0" id="r-1629990276301" data-icon="gpicon-row" data-id="1629990276301" data-extraclass="" data-row-gap="0px" style="display: flex; flex-wrap: wrap; visibility: visible;"><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428165" data-id="1620143428165" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Text Block" data-key="text-block" id="e-1629990276300" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1629990276300"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-xs gf-elm-left-lg" data-gemlang="en" data-exc=""><p><font color="#ffffff">We stayed at the Grand Hotel Baglioni on Via Independenza and loved it. It is quite elegant. We ate at Drogheria della Rosa and sampled many of the things I mentioned above if I had not already sampled them on the streets.</font></p></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1620143428179" data-id="1620143428179" style="display: flex; flex-direction: column; justify-content: center; min-height: auto;"><div data-label="Image" data-key="image" id="e-1629990276219" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1629990276219" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/470f59b6-492a-45f4-a81d-43bf2117f515/-/format/auto/-/preview/3000x3000/-/quality/lighter/Bologna-2.jpg" alt="" class="gf_image" data-gemlang="en" data-width="auto" data-height="auto" title="" natural-width="190" natural-height="183" width="190" height="183"></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1629990439798" data-icon="gpicon-row" data-id="1629990439798" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1629990439758" data-id="1629990439758"><div data-label="Text Block" data-key="text-block" id="e-1629990429746" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1629990429746"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b>There were some favorite shops include:</b></p><p><b><br></b></p><p>Daniel and Ancarani Shoes on Via Porta Nova 8</p><p><br></p><p>Stefani, an artigianali store on Via Clavature 7</p><p><br></p><p>Borgo della Tavaglie and Valentina Muggia on Via Farini, 10</p><p><br></p><p>There is the University of Gelato, and the gelato all over the city is incredible. The museum is about 30 miles outside of town and well worth the visit.</p><p><br></p><p>In the late afternoon, everyone will be having an aperitivo of either a spritz, a prosecco, or a Lambrusco which is a sweet sparking red wine. And small bites of pizza or cheese.</p><p><br></p><p>Via Drapperie is where all of the fruit and vegetable vendors are. Every vendor is friendly and smiling and happy to help you find what's on your shopping list.&nbsp;</p></div></div></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-555932221574.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

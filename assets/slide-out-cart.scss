@@ -1,0 +1,20 @@
+#CartDrawer {
+    .drawer__cart {
+        .additional_checkout_buttons {
+            justify-content: center;
+            margin: 0;
+
+            .shopify-cleanslate {
+                & > div {
+                    & > div {
+                        flex-direction: column !important;
+
+                        & > div {
+                            flex-basis: 60px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 

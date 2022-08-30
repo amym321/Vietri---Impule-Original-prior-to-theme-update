@@ -1,0 +1,22 @@
+{% include 'CML_discount' %}
+
+{% capture metafield %}{{customer_tag}}~{{product.selected_or_first_available_variant.id}}{% endcapture %}
+{% assign meta_value = product.metafields.customer_tags[metafield] | split: ',' %}
+
+{% assign discounted_amount = '' %}
+
+<!-- Product Price -->
+{% if meta_value == blank %}
+
+<!-- Original Price -->
+{% assign buddy_price = product.selected_or_first_available_variant.price %}
+
+{% else %}
+
+<!-- Discounted Price -->
+{% assign discounted_amount = meta_value[1] | times : 100 %}
+{% assign buddy_price = discounted_amount %}
+
+{% endif %}
+
+<!-- Variant Data -->

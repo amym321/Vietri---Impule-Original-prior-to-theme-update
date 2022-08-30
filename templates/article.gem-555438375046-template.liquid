@@ -1,0 +1,170 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-555438375046.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" data-key="row" id="r-1620219770146" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1620219770146" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1615178530067" data-id="1615178530067"><div data-label="Text Block" data-key="text-block" id="e-1620219770138" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620219770138"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-left-lg" data-gemlang="en" data-exc=""><p><b>INTERNATIONAL WOMEN'S DAY</b></p></div></div><div data-label="Text Block" data-key="text-block" id="e-1620219770150" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1620219770150"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm--lg gf-elm-left-lg" data-gemlang="en" data-exc=""><div class="ql-indent-8" style="margin-bottom: 15px; color: rgb(0, 0, 0); font-size: 17px; letter-spacing: 0.425px; text-align: center;"><div class="ql-indent-8" data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">Q&amp;A with Founder and CEO, Susan Gravely</div><div class="ql-indent-8" data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div class="ql-indent-8" data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><strong><em>What does International Women’s Day mean to you?</em></strong></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><strong><em><br></em></strong></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><em></em></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">It is a day when women can emotionally come together – to learn about each other, align ideas and concepts, dreams and missions. It is a day where we can celebrate the enormous strides women have made globally in leadership and business – shattering glass ceilings as well as creating a world without limits. It is a day when we must challenge gender bias and inequality and find ways to champion change – step by step, day by day.</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><strong><em>Why is it important to focus on women’s issues?</em></strong></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><strong><em><br></em></strong></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><em></em></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">Because it is 2021. During this current world pandemic, women have had to stop working, put on hold or end lifelong dreams and careers to be the main caregivers at home. In 2020, 46% of all working women left the workplace, and typically, women carry most family loads. Women and men must have the same rights as mothers, fathers, working adults, and individuals. There is still an extraordinarily large conservative strain that pays women less and does not provide equal rights to women globally. Men must work as hard for women as women work for men. The key is to not only think of these issues, but we must implement solutions and then evaluate results.</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><strong><em>What is it like being a female entrepreneur?</em></strong></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><strong><em><br></em></strong></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><em></em></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">It seems to be my mindset, my personality. I grew up dreaming and creating, whether it was a lemonade stand, a play area for very sick and/or handicapped children, or posters for officer campaigns. With my mother, I made my Christmas presents for my friends and adjusted them to each personality. I didn’t feel many barriers as a child, but I also accepted my role as a southern woman in many ways. I liked boys opening doors for girls and never imagined running my father’s business, but I also did not have a grave need for constant relationships, and I certainly did not want to marry in a way that would deter my ambitions, whatever they might be.&nbsp;&nbsp;</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">Today, I fight any barriers that are not fair for others, women or others. I am fortunate that I started a company so I was able to try to create the right environment for people to feel like I do: empowered, alive, excited about life and work, and surrounded by “inspired” or bright, interesting, and independent-thinking women and men.&nbsp;&nbsp;</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><strong><em>What hardships/experiences have you encountered as a woman throughout your years as a business owner?</em></strong></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><strong><em><br></em></strong></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><em></em></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">I can think of several experiences that were difficult. It could have been because I was a woman, or young, or both.</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">In my family, all of the women went to women’s colleges and not always by choice. During my senior year, I applied early to the Virginia college where my mother and sister went. It was probably not a perfect choice for me but it was the direction. When my parents learned in April that the college was having open visitation hours, my father announced I had to find another college. I ended up at what was considered the top girls college in North Carolina. The fit from the outside looked fine – I was Freshman Class President, on the Honor Board, etc., but I was miserable. Maybe it was too small. Maybe it was because it was forced on me, or maybe... it was a miserable time. I convinced my father that I could go to the University of North Carolina, and do well academically and socially, which I did. This is an example when young women were directed and not asked about what was best for them.</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">When VIETRI was in its early years, I remember times when there was an upset customer who would call the office and insist on speaking to the President, the “man” in charge. There was no changing their minds, and they were all women. They wanted to speak with a man not a woman. I would hand the phone to our Sales Manager at the time, a young man with a British accent, and problems would be resolved immediately. It was interesting to say the least.</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">Lastly, I was turned down only once for a bank loan. A key decision maker at the bank was a former childhood neighbor. We would invite him over for spelling bees because he was such a terrible speller.&nbsp; He laughed. We laughed. I did not see him much during our years after high school. He was not our banker but did he make his decisions based on our childhood friendship together more than the accomplishments of a company? I did not understand then, but now, it feels that maybe being a woman played into the decision making process more than I realized at the time.&nbsp;&nbsp;</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><strong><em>How does VIETRI position itself to support women in the best way possible?</em></strong></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><strong><em><br></em></strong></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><em></em></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">Women have always played an important role at VIETRI, and even more so today. I have learned through many experiences that gender bias had no redeeming value vs. someone’s passion and ability to communicate well. I want to be around people who are passionate and communicate often and effectively. I want to hire and work with learners who lean in and are excited to grow. I love working with women who say, “I’ve got it.” I enjoy the laughter, the comradery, the brainstorming.</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">We work hard to honor all childcare providers in whatever way we can. We encourage children in our offices and have a room where they can play or work. We give flextime when needed. We try to support all persons, all genders, all ages.</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><strong><em>What advice do you have for young, aspiring women trying to make their way in the world?</em></strong></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">1. Fear is a good thing. If you are not a little bit afraid, you are not totally committed.</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">2. Surround yourself with thinkers AND doers. Be the imitator or honor the initiator and begin. Sitting back helps no one, especially yourself.</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">3.&nbsp; If you do not know what you want to do, write down everything you loved to do as a child. There is something in it that will lead you. You can be a CEO, a CFO, a doctor, a poet, a priest, a writer, a broadcaster… Just begin where you are.</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">4.&nbsp; Communicate, communicate, communicate. When someone asks you what you are doing, tell them clearly what you are doing and what you want to do. You never know what ideas that person may have, or who they run into who wants to work with someone just like you! If you do not voice it, others will not know what to ask.&nbsp;</div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;"><br></div><div data-mce-style="text-align: left;" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: normal; text-align: left;">5.&nbsp; Speak up. Bring ideas. Read. Take notes. Take pictures. Be active. As a dear friend once said to me years ago, “If you feel life is really tough and you are in a dark place, make sure you keep your eyes on the light at the end of that dark tunnel and don’t sit down.”</div></div></div></div></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-555438375046.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

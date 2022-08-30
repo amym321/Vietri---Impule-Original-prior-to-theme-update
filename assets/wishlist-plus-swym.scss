@@ -1,0 +1,49 @@
+/*============================================================================
+  Wishlist Plus Swym Styles
+==============================================================================*/
+
+/*================ wishlist icon in header ================*/
+i.icon-swym-wishlist {
+    font-family: 'swym-icons';
+    font-style: normal;
+    vertical-align: middle;
+    position: relative;
+}
+i.icon-swym-wishlist:after {
+    content: '';
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    display: inline;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+.swym-ready i.icon-swym-wishlist:after {
+    content: '\f08a';
+    color: #00594c;
+}
+
+
+/*================ wishlist button PDP ================*/
+.payment-buttons {
+    .swym-button-bar {
+        width: calc(100% - 35px);
+        width: -webkit-calc(100% - 35px);
+        width: -moz-calc(100% - 35px);
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 10px;
+
+        .swym-btn-container[data-position=default] {
+            .swym-add-to-wishlist.swym-iconbtnlink {
+                font-size: 14px;
+
+                @media only screen and (min-width: 992px) {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,172 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-556236767366.css' | asset_url }}" class="gf_page_style">
+<link data-instant-track rel="stylesheet" type="text/css" href= "https://d1um8515vdn9kb.cloudfront.net/libs/css/owl.carousel.min.css" class="gf_libs">
+<!--GEM_HEADER_END-->
+<style>
+ div#announce {
+    display: none;
+ }
+  
+  .section-header__title {
+    display: none;
+  }
+</style>
+{%- assign number_of_comments = article.comments_count -%}{%- if comment -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- endif -%}{%- if article.metafields.custom_fields["collection_featured"] != blank -%}
+  <div class="collection-hero">    <img class="collection-hero__image image-fit lazyload"
+          {% render 'cf-image' with image: article.metafields.custom_fields["collection_featured"] %}      data-aspectratio="{{ article.image.aspect_ratio }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      alt="{{ article.image.alt | escape }}">
+    <noscript>
+      <img class="collection-hero__image image-fit"
+        src="{{ article.image | img_url: '1400x' }}"
+        alt="{{ article.image.alt | escape }}">
+    </noscript>  </div>
+{%- endif -%}<div class="page-width page-content">  <div class="grid">
+    <article class="grid__item widescreen--six-tenths widescreen--push-two-tenths medium-up--two-thirds medium-up--push-one-sixth article">        <header class="section-header">
+          {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
+            <div class="article__date">
+              {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
+                {%- for tag in article.tags -%}
+                  {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
+                <a href="#comments">
+                  {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+                </a> &middot;
+              {%- endif -%}
+              {%- if section.settings.blog_show_date -%}
+                {{ article.published_at | time_tag: format: 'month_day_year' }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.blog_show_author -%}
+            <div class="article__author">by {{ article.author }}</div>
+          {%- endif -%}
+        </header>      <div class="article__body rte">
+        <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" class="gf_row gf_row-gap-0" id="r-1636138425556" data-icon="gpicon-row" data-id="1636138425556" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1634734401589" data-id="1634734401589"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425557" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425557" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.vietri.com/collections/the-holiday-shop-by-vietri" target=""><img src="https://ucarecdn.com/7ce79dbd-0f2c-441f-a6ef-b6f828c5ffa8/-/format/auto/-/preview/3000x3000/-/quality/lighter/Layer%201.jpg" alt="" class="gf_image" data-gemlang="en" width="1560" height="524" data-width="100%" data-height="auto" title="" natural-width="1560" natural-height="524"></a></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1636138425563" data-icon="gpicon-row" data-id="1636138425563" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1634734401589" data-id="1634734401589"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425548" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425548" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.vietri.com/collections/drinkware" target=""><img src="https://ucarecdn.com/5da98ed4-c092-4cf7-bb3b-36b60bb35f6c/-/format/auto/-/preview/3000x3000/-/quality/lighter/Layer%202.jpg" alt="" class="gf_image" data-gemlang="en" width="2400" height="910" data-width="100%" data-height="auto" title="" natural-width="2400" natural-height="910"></a></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1636138425460" data-icon="gpicon-row" data-id="1636138425460" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1634734401589" data-id="1634734401589"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425561" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425561" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.vietri.com/collections/lastra-holiday" target=""><img src="https://ucarecdn.com/147be68f-d4f0-4994-8fbf-881a5b450bfb/-/format/auto/-/preview/3000x3000/-/quality/lighter/Layer%203.jpg" alt="" class="gf_image" data-gemlang="en" width="2400" height="1436" data-width="100%" data-height="auto" title="" natural-width="2400" natural-height="1436"></a></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1636138425528" data-icon="gpicon-row" data-id="1636138425528" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1634734401589" data-id="1634734401589"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425491" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425491" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.vietri.com/collections/home-garden" target=""><img src="https://ucarecdn.com/0bfaeb2c-b149-4889-9b94-b37faeae60d6/-/format/auto/-/preview/3000x3000/-/quality/lighter/Layer%204.jpg" alt="" class="gf_image" data-gemlang="en" width="2400" height="918" data-width="100%" data-height="auto" title="" natural-width="2400" natural-height="918"></a></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1636138425522" data-icon="gpicon-row" data-id="1636138425522" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1634734401589" data-id="1634734401589"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425470" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425470" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href=" https://www.vietri.com/collections/guaranteed-under-the-tree" target=""><img src="https://ucarecdn.com/067efd1d-2666-406c-abff-ec5740e674c3/-/format/auto/-/preview/3000x3000/-/quality/lighter/Layer%205.jpg" alt="" class="gf_image" data-gemlang="en" width="2400" height="684" data-width="100%" data-height="auto" title="" natural-width="2400" natural-height="684"></a></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1636138425531" data-icon="gpicon-row" data-id="1636138425531" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1634760244734" data-id="1634760244734"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425527" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425527" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.vietri.com/collections/sets/bakeware-set" target=""><img src="https://ucarecdn.com/369c8e70-ce61-4b5d-b984-9727452b5967/-/format/auto/-/preview/3000x3000/-/quality/lighter/SPLIT-1.jpg" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" width="780" height="1148" natural-width="780" natural-height="1148"></a></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1634760244623" data-id="1634760244623"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425485" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425485" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.vietri.com/collections/papersoft-napkins" target=""><img src="https://ucarecdn.com/9b73d434-bacf-47fc-a15e-fd58f5f2e74c/-/format/auto/-/preview/3000x3000/-/quality/lighter/SPLIT-2.jpg" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" width="1200" height="1766" natural-width="1200" natural-height="1766"></a></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1636138425514" data-icon="gpicon-row" data-id="1636138425514" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1634734401589" data-id="1634734401589"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425483" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425483" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.vietri.com/collections/dinnerware/white" target=""><img src="https://ucarecdn.com/c3392c69-89d0-486d-96be-e72f8d286c92/-/format/auto/-/preview/3000x3000/-/quality/lighter/7.jpg" alt="" class="gf_image" data-gemlang="en" width="2400" height="1085" data-width="100%" data-height="auto" title="" natural-width="2400" natural-height="1085"></a></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1636138425554" data-icon="gpicon-row" data-id="1636138425554" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-md-12 gf_col-sm-12 gf_col-xs-12 gf_col-lg-12" id="c-1634734401589" data-id="1634734401589"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425496" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425496" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.vietri.com/collections/sets/bakeware-set" target=""><img src="https://ucarecdn.com/6ca50e06-cc6c-4c07-92ff-596fbc9b4199/-/format/auto/-/preview/3000x3000/-/quality/lighter/8.jpg" alt="" class="gf_image" data-gemlang="en" width="2400" height="1476" data-width="100%" data-height="auto" title="" natural-width="2400" natural-height="1476"></a></div></div></div></div><!--gfsplit--><div data-label="Row" class="gf_row gf_row-gap-0" id="r-1636138425523" data-icon="gpicon-row" data-id="1636138425523" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1634760327277" data-id="1634760327277"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425583" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425583" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.vietri.com/collections/drinkware/drinkware" target=""><img src="https://ucarecdn.com/bc326c4c-ec47-47cf-a28b-0b382f38647b/-/format/auto/-/preview/3000x3000/-/quality/lighter/9.jpg" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" width="1200" height="1762" natural-width="1200" natural-height="1762"></a></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1634760327285" data-id="1634760327285"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425530" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425530" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.vietri.com/collections/old-st-nick-le" target=""><img src="https://ucarecdn.com/009d9ed3-3fdf-47d7-b04c-53f27bcf9ee7/-/format/auto/-/preview/3000x3000/-/quality/lighter/10.jpg" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" width="1200" height="1762" natural-width="1200" natural-height="1762"></a></div></div></div></div><!--gfsplit--><div data-label="Row" data-key="row" data-atomgroup="row" id="r-1636138425573" class="gf_row gf_row-gap-0" data-icon="gpicon-row" data-id="1636138425573" data-row-gap="0px" data-extraclass=""><div class="gf_column gf_col-lg-12 gf_col-md-12 gf_col-sm-12 gf_col-xs-12" id="c-1634761647916" data-id="1634761647916"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425458" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425458" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><a href="https://www.vietri.com/collections/the-holiday-shop-by-vietri" target=""><img src="https://ucarecdn.com/42e9b08f-a11c-4a93-b77d-50d30193905f/-/format/auto/-/preview/3000x3000/-/quality/lighter/Layer%201.jpg" alt="" class="gf_image" data-gemlang="en" width="2200" height="1325" data-width="100%" data-height="auto" title="" natural-width="2200" natural-height="1325"></a></div></div><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425494" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425494" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><a href="https://www.vietri.com/collections/drinkware" target=""><img src="https://ucarecdn.com/f2f3ad98-f3dd-4908-8cab-f3478787cbb5/-/format/auto/-/preview/3000x3000/-/quality/lighter/Layer%202%20copy.jpg" alt="" class="gf_image" data-gemlang="en" width="2200" height="1364" data-width="100%" data-height="auto" title="" natural-width="2200" natural-height="1364"></a></div></div><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425467" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425467" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><a href="https://www.vietri.com/collections/lastra-holiday" target=""><img src="https://ucarecdn.com/7507a207-1974-4316-b99c-cf3bdff106f4/-/format/auto/-/preview/3000x3000/-/quality/lighter/Layer%203.jpg" alt="" class="gf_image" data-gemlang="en" width="1430" height="1222" data-width="100%" data-height="auto" title="" natural-width="1430" natural-height="1222"></a></div></div><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425497" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425497" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><a href="https://www.vietri.com/collections/home-garden" target=""><img src="https://ucarecdn.com/dfbac4d9-ad32-410e-9fe3-d2f9cc58e26c/-/format/auto/-/preview/3000x3000/-/quality/lighter/Layer%204.jpg" alt="" class="gf_image" data-gemlang="en" width="1430" height="710" data-width="100%" data-height="auto" title="" natural-width="1430" natural-height="710"></a></div></div></div></div><!--gfsplit--><div data-label="Carousel" data-key="carousel" data-atomgroup="module" id="m-1636138425598" class="module-wrap" data-icon="gpicon-carousel" data-ver="1.0" data-id="1636138425598"><div class="module main-slider owl-carousel owl-theme " data-collg="3" data-colmd="3" data-colsm="3" data-colxs="2" data-marginlg="5px" data-marginmd="5px" data-marginsm="5px" data-marginxs="6px" data-dotslg="1" data-dotsmd="1" data-dotssm="1" data-dotsxs="1" data-navlg="1" data-navmd="1" data-navsm="0" data-navxs="0" data-navspeed="1200" data-autoplay="1" data-autoplaytimeout="5000" data-autoplayhoverpause="1" data-loop="1"><div class="item"><div data-index="1" class="item-content"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425550" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425550" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/551db385-cbf5-4cfc-b405-d3069e536723/-/format/auto/-/preview/3000x3000/-/quality/lighter/Vietri_FoodSeen_08_2021__0634%20Frame.jpg" alt="" class="gf_image" data-gemlang="en" width="647" height="803" data-width="100%" data-height="auto" title="" natural-width="647" natural-height="803"></div></div></div></div><div class="item"><div data-index="2" class="item-content"><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425525" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425525" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><img src="https://ucarecdn.com/ecde051e-19a9-4e8b-980d-da83550f9236/-/format/auto/-/preview/3000x3000/-/quality/lighter/Vierti_Jan_2021_Food%20Seen_0317%20Frame.jpg" alt="" class="gf_image" data-gemlang="en" data-width="100%" data-height="auto" title="" width="190" height="183" natural-width="190" natural-height="183"></div></div></div></div></div><div class="gf-carousel-loading"><div class="gf-caousel-ripple"><div></div><div></div></div></div></div><!--gfsplit--><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425534" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425534" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><a href="https://www.vietri.com/collections/guaranteed-under-the-tree" target=""><img src="https://ucarecdn.com/42e23739-1a3e-4d3e-94e4-8c5f633352f7/-/format/auto/-/preview/3000x3000/-/quality/lighter/Layer%205.jpg" alt="" class="gf_image" data-gemlang="en" width="1430" height="710" data-width="100%" data-height="auto" title="" natural-width="1430" natural-height="710"></a></div></div><!--gfsplit--><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425521" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425521" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><a href="https://www.vietri.com/collections/sets/bakeware-set" target=""><img src="https://ucarecdn.com/e6238a86-a476-487d-a0d4-10ce357f1de5/-/format/auto/-/preview/3000x3000/-/quality/lighter/A%20SECTION.jpg" alt="" class="gf_image" data-gemlang="en" width="1430" height="1856" data-width="100%" data-height="auto" title="" natural-width="1430" natural-height="1856"></a></div></div><!--gfsplit--><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425559" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425559" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><a href="https://www.vietri.com/collections/papersoft-napkins" target=""><img src="https://ucarecdn.com/83516fe7-6ba5-41d6-aa99-5cb7186e37f9/-/format/auto/-/preview/3000x3000/-/quality/lighter/Group%202.jpg" alt="" class="gf_image" data-gemlang="en" width="2200" height="2856" data-width="100%" data-height="auto" title="" natural-width="2200" natural-height="2856"></a></div></div><!--gfsplit--><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425533" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425533" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><a href="https://www.vietri.com/collections/dinnerware/white" target=""><img src="https://ucarecdn.com/3bde7609-7d8b-4a01-ba7a-161c79493fc9/-/format/auto/-/preview/3000x3000/-/quality/lighter/MINIMALIST.jpg" alt="" class="gf_image" data-gemlang="en" width="1430" height="2042" data-width="100%" data-height="auto" title="" natural-width="1430" natural-height="2042"></a></div></div><!--gfsplit--><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425486" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425486" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><a href="https://www.vietri.com/collections/sets/bakeware-set" target=""><img src="https://ucarecdn.com/8731b976-89d4-41a7-875a-54e39a491773/-/format/auto/-/preview/3000x3000/-/quality/lighter/CHEF%20SECTION.jpg" alt="" class="gf_image" data-gemlang="en" width="1430" height="1336" data-width="100%" data-height="auto" title="" natural-width="1430" natural-height="1336"></a></div></div><!--gfsplit--><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425504" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425504" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><a href="https://www.vietri.com/collections/old-st-nick-le" target=""><img src="https://ucarecdn.com/fb5577fc-7acd-4b3a-9a44-aaffb9ea58d5/-/format/auto/-/preview/3000x3000/-/quality/lighter/Group%201.jpg" alt="" class="gf_image" data-gemlang="en" width="2200" height="2805" data-width="100%" data-height="auto" title="" natural-width="2200" natural-height="2805"></a></div></div><!--gfsplit--><div data-label="Image" data-key="image" data-atomgroup="element" id="e-1636138425568" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1636138425568" data-resolution="3000x3000"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-xs" data-exc=""><a href="https://www.vietri.com/collections/drinkware/drinkware" target=""><img src="https://ucarecdn.com/24ecaa6b-4162-45e3-9eeb-d8bd563ec1d0/-/format/auto/-/preview/3000x3000/-/quality/lighter/Group%202.jpg" alt="" class="gf_image" data-gemlang="en" width="1430" height="1823" data-width="100%" data-height="auto" title="" natural-width="1430" natural-height="1823"></a></div></div><!--gfsplit--><script>window.__gemStoreData = {};window.__gemStoreData.gemKeyValid = {};window.__gemStoreData.gemKeyValid.bestWayAddToCart = 1;</script>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}      {%- if blog.comments_enabled? -%}        {%- if number_of_comments > 0 -%}
+          <hr class="hr--large">
+          <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          <hr class="hr--small hr--clear">
+        {%- endif -%}        {%- paginate article.comments by 5 -%}
+          
+          <div id="comments">            {%- if comment and comment.errors == blank -%}
+              <hr class="hr--small hr--clear">
+              <p class="note note--success">
+                {%- if blog.moderated? -%}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {%- else -%}
+                  {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}            {%- if number_of_comments > 0 -%}
+              <ul class="no-bullets">
+                {%- if comment and comment.errors == blank -%}
+                  <li id="{{ comment.id }}" class="comment{% if article.comments_count == 0 %} last{% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>
+                {%- endif -%}                {%- for comment in article.comments -%}
+                  <li id="{{ comment.id }}" class="comment{% unless number_of_comments > article.comments_count %}{% endunless %}{% if forloop.last %} last {% endif %}">
+                    {%- render 'comment', comment: comment -%}
+                  </li>                  {%- unless forloop.last -%}
+                    <li><hr class="hr--clear"></li>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}            {%- endif -%}            <hr class="hr--large">            <header class="section-header{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}">
+              <h3 class="section-header__title">{{ 'blogs.comments.title' | t }}</h3>
+            </header>            <div class="form-vertical">
+              {%- form 'new_comment', article -%}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {%- if blog.moderated? -%}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {%- endif -%}                <button type="submit" class="btn btn--secondary">
+                  {{ 'blogs.comments.post' | t }}
+                </button>              {%- endform -%}
+            </div>          </div>
+        {%- endpaginate -%}
+      {%- endif -%}      <hr class="hr--large">    </article>  </div>  <div class="text-center">
+    <a href="/pages/the-blog" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
+  </div>
+</div>
+{% assign article_content = article.content %}
+{% assign article_abc = article_content | strip_html | json %}<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article_abc | replace:'"','' | replace:'/','' | replace:'
+,'' }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: article.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		"https://d1um8515vdn9kb.cloudfront.net/libs/js/owl.carousel.min.js",
+		'{{ 'gem-article-556236767366.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

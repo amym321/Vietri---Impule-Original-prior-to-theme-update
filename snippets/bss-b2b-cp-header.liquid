@@ -1,0 +1,87 @@
+<script id="bss-b2b-store-data" type="application/json">
+{
+  "shop": {
+    "domain": "{{ shop.domain }}",
+    "permanent_domain": "{{ shop.permanent_domain }}",
+    "url": "{{ shop.url }}",
+    "secure_url": "{{ shop.secure_url }}",
+    "money_format": {{ shop.money_format | json }},
+    "currency": {{ shop.currency | json }}
+  },
+  "customer": {
+    "id": {{ customer.id | json }},
+    "tags": {{ customer.tags | json }}
+  },
+  "cart": {{ cart | json }},
+  "line_item_products": {{ cart | map: "items"  | map: "product" | json }},
+  "template": "{{ template | split: "." | first }}",
+  "product": {{ product | json }},
+  "collection": {{ collection.products | json }},
+  "collections": [
+    {% for collection in product.collections %}
+      {{ collection.id }}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<style>
+[bss-b2b-cart-item-key],
+[bss-b2b-product-id],
+[bss-b2b-variant-id],
+[bss-b2b-cart-item-key],
+[bss-b2b-cart-total-price],
+[bss-b2b-cart-total-discount]
+{
+    visibility: hidden;
+}
+.bss-b2b-qty-table-row:hover,
+.bss-b2b-cart-item-qty-table-header:hover
+{
+    cursor: pointer;
+    opacity: 0.7;
+}
+.bss-b2b-qty-table-row.qty-row-active {
+    border: 2px dotted orange;
+    opacity: 0.7;
+    font-weight: bold;
+    color: green;
+}
+.bss-b2b-cart-item-qty-table-header {
+    padding: 2px 5px;
+    background-color: green;
+    color: white;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+}
+
+.bss-b2b-cart-item-qty-table {
+    padding: 2px;
+    border: 2px dotted whitesmoke;
+    width: 100%;
+}
+.bss-b2b-cart-item-qty-table table{
+    margin-bottom: 2px;
+    width: 100%;
+}
+.bss-b2b-cart-item-qty-table table td{
+    padding: 10px 14px;
+}
+@keyframes moneyAnimation { to { visibility: visible; } }
+</style>
+<script id="bss-b2b-config-data">
+              if (typeof BSS_B2B == 'undefined') {
+                  var BSS_B2B = {};
+              }
+              BSS_B2B.configData = [];
+              BSS_B2B.storeId = 361;
+              BSS_B2B.currentPlan = "false";
+              BSS_B2B.planCode = "null";
+              BSS_B2B.isAllowFree = false;
+              BSS_B2B.customPricingSettings = null;
+              BSS_B2B.qbRules = [];
+              BSS_B2B.qbGeneralSettings = {"table_header_text":"Show discount details based on quantity range","table_qty_range_text":"Quantity Range","table_discount_text":"Discount","flat_price_suffix":"for all"};
+              BSS_B2B.rfGeneralSettings = {"form_success_notification":"Created wholesale successfully","form_fail_notification":"Created wholesaler failed"};
+              BSS_B2B.shopModules = [];
+              var bssB2bApiServer = "https://b2b-solution-api.bsscommerce.com"; 
+          </script>

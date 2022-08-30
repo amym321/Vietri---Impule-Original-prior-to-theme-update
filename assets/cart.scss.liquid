@@ -1,0 +1,63 @@
+.template-cart {
+    .cart__row {
+        .additional_checkout_buttons {
+            justify-content: center;
+            display: flex;
+            margin: 0;
+
+            @media only screen and (min-width: 769px) {
+                justify-content: flex-end;
+            }
+
+            .dynamic-checkout__content {
+                width: 320px;
+
+                .shopify-cleanslate {
+                    & > div {
+                        & > div {
+                            flex-direction: column !important;
+
+                            & > div {
+                                flex-basis: 60px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Klarna Widget
+    klarna-placement {
+        margin: 15px 0;
+        display: block;
+
+        iframe {
+            min-width: 100%;
+            margin: 0 auto;
+            height: 70px !important;
+    
+            @media only screen and (min-width: 769px) {
+              min-width: 100%;
+            }
+        }
+    }
+
+    // Route Widget
+    .route-div {
+        display: flex;
+        justify-content: center;
+
+        @media only screen and (min-width: 769px) {
+            justify-content: flex-end;
+        }
+        
+        .route-widget-shopify {
+            width: 320px;
+
+            .route-widget {
+                justify-content: center !important;
+            }
+        }
+    }
+}

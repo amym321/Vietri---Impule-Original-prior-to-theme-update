@@ -1,0 +1,72 @@
+<div class="swell-reward-vietri account-page">
+  <div class="swell-login-section">
+    <h3 class="swell-login-user">Hi, {{ customer.first_name }}! <br> You Have <span class="swell-point-balance">x</span> Points.</h3>
+    <ul class="swell-link-list">
+      <li class="swell-link">
+        <a class="swell-link-redeem btn" href="/checkout">REDEEM NOW</a>
+      </li>
+      <li class="swell-link">
+        <div class="swell-link-history swell-history-link btn">REWARDS HISTORY</div>
+      </li>
+    </ul>
+  </div>
+  <div class="yotpo-widget-instance" data-yotpo-instance-id="53652"></div>
+
+  <div class="swell-redemption-section">
+    <div class="swell-redeem-heading-detail">
+      <h2 class="swell-heading">REDEEM FOR DISCOUNT</h2>
+      <p>Redeeming your hard earned points is easy! Simply apply your rewards balance at checkout!</p>
+    </div>
+    <div class="swell-redeem-points-detail">
+      <img src="{{ 'swell-pts.png' | asset_url }}" alt="caption_img" class="swell-pts-img">  
+      <span>100 Points</span>
+      <span> = </span>
+      <img src="{{ 'swell-Dollar.png' | asset_url }}" alt="caption_img" class="swell-dollar-img">  
+    </div>
+    <a href="/checkout" class="swell-redeem-btn btn">REDEEM NOW</a>
+  </div>
+  <div class="referral-section">
+    <div class="swell-referral-loader">
+      <img src="{{ 'swell-loader.svg' | asset_url }}" >
+    </div>
+    <div class="swell-referral-content">
+      <div class="swell-referral-content-holder">
+        <div class="swell-referral"> 
+        </div>
+        <div class="swell-seprator"></div>
+        <div class="redeem-holder">
+          <div class="check-reward-balance"> 
+            <a href="/pages/rewards">CHECK REWARD BALANCE</a> 
+          </div>
+          <div class="refer-details">
+            <div class="swell-section-content">
+              <div class="swell-referral-heading">
+                <h2>Your Referrals</h2>
+              </div>
+              <div class="table-classes">
+                <div class="swell-table-responsive">
+                  <table class="swell-referral-table">
+                    <thead>
+                      <tr>
+                        <th>Email</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-data">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="heading-area">
+            <div class="heading-holder">
+              <h4>HOW DO I REDEEM MY REWARD BALANCE?</h4>
+            </div>
+            <p>Redeeming your hard earned points is easy! Simply apply your rewards balance at checkout!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

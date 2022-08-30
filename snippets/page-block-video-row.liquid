@@ -1,0 +1,217 @@
+
+
+<div
+  data-subsection
+  data-section-id="{{ block.id }}"
+  {% if enable_zoom %}data-section-type="photoswipe"{% endif %}>
+  <div class="image-row{% if block.settings.enable_gutter %} image-row--gutters{% endif %}">
+
+    {% if block.settings.image_1 %}
+      <div
+  data-subsection
+  data-section-id="{{ block.id }}"
+  data-section-type="video-section"
+  class="video-parent-section hero hero--{{ block.id }} hero--{{  block.settings.section_height }} hero--mobile--{{ block.settings.mobile_height }}"
+  data-aos="hero__animation">
+  {% if block.settings.video_playbtn %}
+    <div class="play"></div>
+  {% endif %}
+  <div class="hero__media hero__media--{{ block.id }}">
+    <div class="hero__media-container">
+
+      {% if block.settings.video_url contains 'youtube.com/watch' %}
+        {%- assign video_id = block.settings.video_url | split: 'v=' -%}
+        {%- assign video_id = video_id[1] | split: '&' | first -%}
+        <div
+          id="YouTubeVideo-{{ block.id }}"
+          data-video-id="{{ video_id }}"></div>
+      {% endif %}
+
+      {% if block.settings.video_url contains 'youtu.be/' %}
+        {%- assign video_id = block.settings.video_url | split: '.be/' -%}
+        {%- assign video_id = video_id[1] | split: '&' | first -%}
+        <div
+          id="YouTubeVideo-{{ block.id }}"
+          data-video-id="{{ video_id }}"></div>
+      {% endif %}
+
+      {% if block.settings.video_url contains 'vimeo.com' %}
+        {%- assign video_id = block.settings.video_url | split: '.com/' -%}
+        {%- assign video_id = video_id[1] | split: '/' | first -%}
+        <div
+          id="Vimeo-{{ block.id }}"
+          data-video-id="{{ video_id }}"></div>
+      {% endif %}
+
+      {% if block.settings.video_url contains '.mp4' %}
+        <video
+          id="Mp4Video-{{ block.id }}"
+          src="{{ block.settings.video_url }}"
+          loop controls playsinline autoplay></video>
+      {% endif %}
+
+    </div>
+  </div>
+
+  <div class="hero__text-wrap">
+    <div class="page-width">
+      <div class="hero__text-content {{ block.settings.text_align }}">
+        <div class="hero__text-shadow">
+
+          {% if block.settings.video_url contains 'vimeo.com' %}
+            <button type="button" id="VimeoTrigger-{{ block.id }}" class="vimeo-mobile-trigger medium-up--hide">
+              {% include 'icon-play' %}
+            </button>
+          {% endif %}
+
+          {% unless block.settings.title == blank %}
+            <h2 class="h1 hero__title">
+              <div class="animation-cropper"><div class="animation-contents">
+              {{ block.settings.title | newline_to_br }}
+              </div></div>
+            </h2>
+          {% endunless %}
+          {% if block.settings.subheading or block.settings.link %}
+            {% unless block.settings.subheading == blank %}
+              <div class="hero__subtitle">
+                <div class="animation-cropper"><div class="animation-contents">
+                  {{ block.settings.subheading | escape }}
+                </div></div>
+              </div>
+            {% endunless %}
+            {% if block.settings.link_text != blank %}
+              {%- assign link_href = block.settings.link -%}
+              {% if block.settings.link == blank %}
+                {%- assign link_href = block.settings.video_url -%}
+              {% endif %}
+              <div class="hero__link">
+                <div class="animation-cropper">
+                  <div class="animation-contents">
+                    <a href="{{ link_href }}" class="btn btn--small btn--inverse js-no-transition">
+                      {{ block.settings.link_text }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    {% endif %}
+    {% if block.settings.image_2 %}
+      {%- assign image_index = image_index | plus: 1 -%}
+      <div data-aos="row-of-{{ image_count | size }}">
+        <div class="image-row__image image-row-{{ block.id }}--2 image-wrap">
+          {% if block.settings.image_2_link != blank %}
+            <a href="{{ block.settings.image_2_link }}">
+          {% endif %}
+          {%- assign img_url = block.settings.image_2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          {%- assign aspect_total = aspect_total | plus: block.settings.image_2.aspect_ratio -%}
+          {%- assign gutter_total = gutter_total | plus: gutter_width -%}
+          <img class="lazyload photoswipe__image"
+            data-index="{{ image_index }}"
+            data-photoswipe-src="{{ block.settings.image_2.src | img_url: '1600x1600' }}"
+            data-photoswipe-width="{{ block.settings.image_2.width }}"
+            data-photoswipe-height="{{ block.settings.image_2.height }}"
+            data-src="{{ img_url }}"
+            data-widths="[180, 360, 540, 720, 900, 1080]"
+            data-aspectratio="{{ block.settings.image_2.aspect_ratio }}"
+            data-sizes="auto"
+            alt="{{ block.settings.image_2.alt }}">
+          {% if block.settings.image_2_link != blank %}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+    {% if block.settings.image_3 %}
+      {%- assign image_index = image_index | plus: 1 -%}
+      <div data-aos="row-of-{{ image_count | size }}">
+        <div class="image-row__image image-row-{{ block.id }}--3 image-wrap">
+          {% if block.settings.image_3_link != blank %}
+            <a href="{{ block.settings.image_3_link }}">
+          {% endif %}
+          {%- assign img_url = block.settings.image_3 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          {%- assign aspect_total = aspect_total | plus: block.settings.image_3.aspect_ratio -%}
+          {%- assign gutter_total = gutter_total | plus: gutter_width -%}
+          <img class="lazyload photoswipe__image"
+            data-index="{{ image_index }}"
+            data-photoswipe-src="{{ block.settings.image_3.src | img_url: '1600x1600' }}"
+            data-photoswipe-width="{{ block.settings.image_3.width }}"
+            data-photoswipe-height="{{ block.settings.image_3.height }}"
+            data-src="{{ img_url }}"
+            data-widths="[180, 360, 540, 720, 900, 1080]"
+            data-aspectratio="{{ block.settings.image_3.aspect_ratio }}"
+            data-sizes="auto"
+            alt="{{ block.settings.image_3.alt }}">
+          {% if block.settings.image_3_link != blank %}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+    {% if block.settings.image_4 %}
+      {%- assign image_index = image_index | plus: 1 -%}
+      <div data-aos="row-of-{{ image_count | size }}">
+        <div class="image-row__image image-row-{{ block.id }}--4">
+          {% if block.settings.image_4_link != blank %}
+            <a href="{{ block.settings.image_4_link }}">
+          {% endif %}
+          {%- assign img_url = block.settings.image_4 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          {%- assign aspect_total = aspect_total | plus: block.settings.image_4.aspect_ratio -%}
+          {%- assign gutter_total = gutter_total | plus: gutter_width -%}
+          <img class="lazyload photoswipe__image"
+            data-index="{{ image_index }}"
+            data-photoswipe-src="{{ block.settings.image_4.src | img_url: '1600x1600' }}"
+            data-photoswipe-width="{{ block.settings.image_4.width }}"
+            data-photoswipe-height="{{ block.settings.image_4.height }}"
+            data-src="{{ img_url }}"
+            data-widths="[180, 360, 540, 720, 900, 1080]"
+            data-aspectratio="{{ block.settings.image_4.aspect_ratio }}"
+            data-sizes="auto"
+            alt="{{ block.settings.image_4.alt }}">
+          {% if block.settings.image_4_link != blank %}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{%- assign images_width = 100.0 | minus: gutter_total -%}
+{% style %}
+  .image-row-{{ block.id }}--1 {
+    margin: 0 0 {{ gutter_width }}% {{ gutter_width }}%;
+    width: {{ block.settings.image_1.aspect_ratio | divided_by: aspect_total | times: images_width }}% !important;
+  }
+  .image-row-{{ block.id }}--1:after {
+    padding-bottom: {{ 100 | divided_by: block.settings.image_1.aspect_ratio }}%;
+  }
+  .image-row-{{ block.id }}--2 {
+    margin: 0 0 {{ gutter_width }}% {{ gutter_width }}%;
+    width: {{ block.settings.image_2.aspect_ratio | divided_by: aspect_total | times: images_width }}% !important;
+  }
+  .image-row-{{ block.id }}--2:after {
+    padding-bottom: {{ 100 | divided_by: block.settings.image_2.aspect_ratio }}%;
+  }
+  .image-row-{{ block.id }}--3 {
+    margin: 0 0 {{ gutter_width }}% {{ gutter_width }}%;
+    width: {{ block.settings.image_3.aspect_ratio | divided_by: aspect_total | times: images_width }}% !important;
+  }
+  .image-row-{{ block.id }}--3:after {
+    padding-bottom: {{ 100 | divided_by: block.settings.image_3.aspect_ratio }}%;
+  }
+  .image-row-{{ block.id }}--4 {
+    margin: 0 0 {{ gutter_width }}% {{ gutter_width }}%;
+    width: {{ block.settings.image_4.aspect_ratio | divided_by: aspect_total | times: images_width }}% !important;
+  }
+  .image-row-{{ block.id }}--4:after {
+    padding-bottom: {{ 100 | divided_by: block.settings.image_4.aspect_ratio }}%;
+  }
+{% endstyle %}

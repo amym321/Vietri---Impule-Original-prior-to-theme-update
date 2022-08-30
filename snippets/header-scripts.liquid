@@ -1,0 +1,90 @@
+<script type="text/javascript" src="https://variant-image-automator.starapps.studio/product_variants.js?shop={{shop.permanent_domain}}" async></script>
+
+{% include 'social-meta-tags' %}
+{% include 'font-face' %}
+{{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+{{ 'footer.scss.css' | asset_url | stylesheet_tag }}
+{{ 'slide-out-cart.scss.css' | asset_url | stylesheet_tag }}
+{{ 'wishlist-plus-swym.scss.css' | asset_url | stylesheet_tag }}
+{%- if template contains 'product' -%}
+  {{ 'pdp.scss.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+{%- if template contains 'our-story' or 'our-mission' -%}
+  {{ 'our-story.scss.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+{%- if template contains 'our-craft' or 'our-artisans' -%}
+  {{ 'our-story.scss.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+{%- if template contains 'collection' -%}
+  <script src="{{ 'tooltipster.bundle.min.js' | asset_url }}" defer="defer"></script>
+  {{ 'tooltipster.bundle.min.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+{% if page.handle == 'store-locator' %}
+  {{ 'store-mapper.scss.css' | asset_url | stylesheet_tag }}
+{% endif %}
+<script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+    window.theme = window.theme || {};
+    theme.strings = {
+      addToCart: {{ 'products.product.add_to_cart' | t | json }},
+      preorder: {{ 'products.product.preorder' | t | json }},
+      soldOut: {{ 'products.product.sold_out' | t | json }},
+      unavailable: {{ 'products.product.unavailable' | t | json }},
+      stockLabel: {{ 'products.product.stock_label' | t: count: '[count]' | json }},
+      preorderTextCopy: {{ 'products.product.preorder_text_copy' | t | json }},
+      notifyWhenBackInStock: {{ 'products.product.notify_when_back_in_stock' | t | json }},
+      notifyWhenAvailable: {{ 'products.product.notify_when_available' | t | json }},
+      savePrice: {{ 'products.general.save_html' | t: saved_amount: '[saved_amount]' | json }},
+      cartSavings: {{ 'cart.general.savings_html' | t: savings: '[savings]' | json }},
+      cartEmpty: {{ 'cart.general.empty' | t | json }},
+      cartTermsConfirmation: {{ 'cart.general.terms_confirm' | t | json }}
+    };
+    theme.settings = {
+      dynamicVariantsEnable: true,
+      dynamicVariantType: {{ settings.variant_type | json }},
+      cartType: {{ settings.cart_type | json }},
+      moneyFormat: {{ shop.money_format | json }},
+      saveType: {{ settings.product_save_type | json }},
+      recentlyViewedEnabled: false,
+      quickView: {{ settings.quick_shop_enable }},
+      themeVersion: "1.5.8"
+    };
+   </script>
+
+
+{% if settings.enable_currencies %}
+    <script src="/services/javascripts/currencies.js" defer="defer"></script>
+    <script src="{{ 'currencies.jquery.min.js' | asset_url | split: '?' | first }}" defer="defer"></script>
+  {% endif %}
+
+  {%- if template contains 'customers' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
+    {%- if template contains 'search' -%}
+      <script src="{{ 'search.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+{%- if template contains 'cart' -%}
+  {{ 'cart.scss.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+{% include 'nosto-script' with 'shopify-8286928959' %}
+  <script src="https://appdevelopergroup.co/apps/wrapitsmart/js/wrapitsmart.js?shop=vietri1" type="text/javascript"></script>
+
+  {% style %}
+    .collection-item__title {
+      font-size: {{ settings.type_collection_size | times: 0.8 }}px;
+    }
+
+    @media screen and (min-width: 769px) {
+      .collection-item__title {
+        font-size: {{ settings.type_collection_size }}px;
+      }
+    }
+  {% endstyle %}
+
+<!-- Yotpo Integration -->
+<script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/jIP8OUuqsoRa2lvahlYQ2IelEV3fUl9bjXykPEOS/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
+
+<!-- WrapItSmart Integration -->
+<script src="https://appdevelopergroup.co/apps/wrapitsmart/js/wrapitsmart.js?shop=vietri1" type="text/javascript"></script>
+
